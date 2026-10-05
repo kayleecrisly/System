@@ -1,0 +1,1876 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_disconnected"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_host_lost"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_link_reset"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_link_suspend"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_link_resume"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_av_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_link_in_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_crc_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_pid_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_bitstuff_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_frame"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_powered"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_link_out_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_pkt_received"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_pkt_sent"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_disconnected"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_host_lost"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_link_reset"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_link_suspend"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_link_resume"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_av_out_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_full"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_av_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_link_in_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_crc_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_pid_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_bitstuff_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_frame"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_powered"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_link_out_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_av_setup_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_pkt_received"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_pkt_sent"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_disconnected"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_host_lost"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_link_reset"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_link_suspend"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_link_resume"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_av_out_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_full"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_av_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_link_in_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_crc_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_pid_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_bitstuff_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_frame"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_powered"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_link_out_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_av_setup_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "usbctrl_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "usbctrl_resume_link_active"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "usbctrl_device_address"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_0"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_1"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_2"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_3"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_4"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_5"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_6"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_7"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_8"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_9"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_10"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ep_out_enable_enable_11"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_0"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_1"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_2"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_3"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_4"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_5"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_6"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_7"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_8"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_9"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_10"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "ep_in_enable_enable_11"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_frame"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_host_lost"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_link_state"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_sense"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_av_out_depth"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_av_setup_depth"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_av_out_full"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_rx_depth"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_av_setup_full"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "usbstat_rx_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "avoutbuffer"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "avsetupbuffer"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "rxfifo_buffer"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "rxfifo_size"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "rxfifo_setup"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "rxfifo_ep"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_0"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_1"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_2"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_3"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_4"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_5"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_6"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_7"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_8"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_9"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_10"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "rxenable_setup_setup_11"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "rxenable_out_out"
+    },
+    {
+      "kind": "re",
+      "offset": 48,
+      "reg": "rxenable_out_out"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "rxenable_out_preserve"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_0"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_1"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_2"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_3"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_4"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_5"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_6"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_7"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_8"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_9"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_10"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "set_nak_out_enable_11"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_0"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_1"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_2"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_3"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_4"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_5"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_6"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_7"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_8"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_9"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_10"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "in_sent_sent_11"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_0"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_1"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_2"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_3"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_4"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_5"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_6"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_7"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_8"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_9"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_10"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "out_stall_endpoint_11"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_0"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_1"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_2"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_3"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_4"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_5"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_6"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_7"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_8"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_9"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_10"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "in_stall_endpoint_11"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "configin_0_buffer_0"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "configin_0_size_0"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "configin_0_sending_0"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "configin_0_pend_0"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "configin_0_rdy_0"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "configin_1_buffer_1"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "configin_1_size_1"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "configin_1_sending_1"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "configin_1_pend_1"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "configin_1_rdy_1"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "configin_2_buffer_2"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "configin_2_size_2"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "configin_2_sending_2"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "configin_2_pend_2"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "configin_2_rdy_2"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "configin_3_buffer_3"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "configin_3_size_3"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "configin_3_sending_3"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "configin_3_pend_3"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "configin_3_rdy_3"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "configin_4_buffer_4"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "configin_4_size_4"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "configin_4_sending_4"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "configin_4_pend_4"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "configin_4_rdy_4"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "configin_5_buffer_5"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "configin_5_size_5"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "configin_5_sending_5"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "configin_5_pend_5"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "configin_5_rdy_5"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "configin_6_buffer_6"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "configin_6_size_6"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "configin_6_sending_6"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "configin_6_pend_6"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "configin_6_rdy_6"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "configin_7_buffer_7"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "configin_7_size_7"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "configin_7_sending_7"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "configin_7_pend_7"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "configin_7_rdy_7"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "configin_8_buffer_8"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "configin_8_size_8"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "configin_8_sending_8"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "configin_8_pend_8"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "configin_8_rdy_8"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "configin_9_buffer_9"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "configin_9_size_9"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "configin_9_sending_9"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "configin_9_pend_9"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "configin_9_rdy_9"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "configin_10_buffer_10"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "configin_10_size_10"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "configin_10_sending_10"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "configin_10_pend_10"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "configin_10_rdy_10"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "configin_11_buffer_11"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "configin_11_size_11"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "configin_11_sending_11"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "configin_11_pend_11"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "configin_11_rdy_11"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_0"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_1"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_2"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_3"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_4"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_5"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_6"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_7"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_8"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_9"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_10"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "out_iso_iso_11"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_0"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_1"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_2"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_3"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_4"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_5"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_6"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_7"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_8"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_9"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_10"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "in_iso_iso_11"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "out_data_toggle_status"
+    },
+    {
+      "kind": "re",
+      "offset": 124,
+      "reg": "out_data_toggle_status"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "out_data_toggle_mask"
+    },
+    {
+      "kind": "re",
+      "offset": 124,
+      "reg": "out_data_toggle_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "in_data_toggle_status"
+    },
+    {
+      "kind": "re",
+      "offset": 128,
+      "reg": "in_data_toggle_status"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "in_data_toggle_mask"
+    },
+    {
+      "kind": "re",
+      "offset": 128,
+      "reg": "in_data_toggle_mask"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_rx_dp_i"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_rx_dn_i"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_rx_d_i"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_tx_dp_o"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_tx_dn_o"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_tx_d_o"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_tx_se0_o"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_tx_oe_o"
+    },
+    {
+      "kind": "re",
+      "offset": 132,
+      "reg": "phy_pins_sense_pwr_sense"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_dp_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_dn_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_d_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_se0_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_oe_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_rx_enable_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_dp_pullup_en_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_dn_pullup_en_o"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "phy_pins_drive_en"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_use_diff_rcvr"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_tx_use_d_se0"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_eop_single_bit"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_pinflip"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_usb_ref_disable"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "phy_config_tx_osc_test_mode"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "fifo_ctrl_avout_rst"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "fifo_ctrl_avsetup_rst"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "fifo_ctrl_rx_rst"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_count"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_datatog_out"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_datatog_out"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_drop_rx"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_drop_rx"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_drop_avout"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_drop_avout"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_ign_avsetup"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_ign_avsetup"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_endpoints"
+    },
+    {
+      "kind": "re",
+      "offset": 156,
+      "reg": "count_out_endpoints"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "count_out_rst"
+    },
+    {
+      "kind": "re",
+      "offset": 160,
+      "reg": "count_in_count"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "count_in_nodata"
+    },
+    {
+      "kind": "re",
+      "offset": 160,
+      "reg": "count_in_nodata"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "count_in_nak"
+    },
+    {
+      "kind": "re",
+      "offset": 160,
+      "reg": "count_in_nak"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "count_in_timeout"
+    },
+    {
+      "kind": "re",
+      "offset": 160,
+      "reg": "count_in_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "count_in_endpoints"
+    },
+    {
+      "kind": "re",
+      "offset": 160,
+      "reg": "count_in_endpoints"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "count_in_rst"
+    },
+    {
+      "kind": "re",
+      "offset": 164,
+      "reg": "count_nodata_in_count"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "count_nodata_in_endpoints"
+    },
+    {
+      "kind": "re",
+      "offset": 164,
+      "reg": "count_nodata_in_endpoints"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "count_nodata_in_rst"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "count_errors_count"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "count_errors_pid_invalid"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "count_errors_pid_invalid"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "count_errors_bitstuff"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "count_errors_bitstuff"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "count_errors_crc16"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "count_errors_crc16"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "count_errors_crc5"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "count_errors_crc5"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "count_errors_rst"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 304,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": true,
+      "processes": 367
+    },
+    {
+      "clock_sigs": 15,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_aon_i",
+      "primary": false,
+      "processes": 18
+    }
+  ],
+  "fifo_instances": [
+    {
+      "instance": "usbdev_avsetupfifo",
+      "module": "prim_fifo_sync",
+      "parent": "usbdev",
+      "wvalid_source": "reg2hw.avsetupbuffer.qe"
+    },
+    {
+      "instance": "usbdev_avoutfifo",
+      "module": "prim_fifo_sync_0",
+      "parent": "usbdev",
+      "wvalid_source": "reg2hw.avoutbuffer.qe"
+    },
+    {
+      "instance": "usbdev_rxfifo",
+      "module": "prim_fifo_sync_1",
+      "parent": "usbdev",
+      "wvalid_source": "rx_wvalid"
+    }
+  ],
+  "interrupts": [
+    "intr_pkt_received_o",
+    "intr_pkt_sent_o",
+    "intr_powered_o",
+    "intr_disconnected_o",
+    "intr_host_lost_o",
+    "intr_link_reset_o",
+    "intr_link_suspend_o",
+    "intr_link_resume_o",
+    "intr_av_out_empty_o",
+    "intr_rx_full_o",
+    "intr_av_overflow_o",
+    "intr_link_in_err_o",
+    "intr_link_out_err_o",
+    "intr_rx_crc_err_o",
+    "intr_rx_pid_err_o",
+    "intr_rx_bitstuff_err_o",
+    "intr_frame_o",
+    "intr_av_setup_empty_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 18
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_aon_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_aon_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "cio_usb_dp_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_usb_dn_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usb_rx_d_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_usb_dp_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_usb_dp_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_usb_dn_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_usb_dn_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_tx_se0_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_tx_d_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_sense_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_dp_pullup_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_dn_pullup_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_rx_enable_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_tx_use_d_se0_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_aon_suspend_req_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_aon_wake_ack_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usb_aon_bus_reset_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usb_aon_sense_lost_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usb_aon_bus_not_idle_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usb_aon_wake_detect_active_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_ref_val_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_ref_pulse_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_pkt_received_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_pkt_sent_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_powered_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_disconnected_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_host_lost_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_link_reset_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_link_suspend_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_link_resume_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_av_out_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_full_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_av_overflow_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_link_in_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_link_out_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_crc_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_pid_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_bitstuff_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_frame_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_av_setup_empty_o",
+      "width": 1
+    }
+  ],
+  "top_module": "usbdev"
+}

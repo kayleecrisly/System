@@ -1,0 +1,117 @@
+{
+  "$schema_version": 1,
+  "project": "opentitan",
+  "sources": [
+    {
+      "id": "rtl",
+      "kind": "ir",
+      "path": "../ir/gpio_llhd.mlir",
+      "revision": "committed LLHD example"
+    }
+  ],
+  "devices": [
+    {
+      "id": "gpio",
+      "top_module": "gpio",
+      "input": {
+        "mlir": "../ir/gpio_llhd.mlir"
+      },
+      "backend": "opentitan",
+      "rtl_adapter": "opentitan",
+      "facts": {
+        "mmio_size": {
+          "value": 4096,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "rtl",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "irq_count": {
+          "value": 32,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "rtl",
+              "location": "gpio intr_gpio_o port and committed gpio binding"
+            }
+          ]
+        },
+        "data_width": {
+          "value": 32,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "rtl",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "byte_order": {
+          "value": "little",
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "rtl",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "access_sizes": {
+          "value": [
+            4
+          ],
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "rtl",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        }
+      },
+      "bus": {
+        "kind": "adapter"
+      },
+      "simulation": {
+        "rationale": "Functional MMIO example. No free-running clock is requested."
+      },
+      "evidence": {
+        "top_module": [
+          {
+            "source": "rtl",
+            "location": "Top module ports and example integration contract"
+          }
+        ],
+        "bus": [
+          {
+            "source": "rtl",
+            "location": "Top module ports and example integration contract"
+          }
+        ]
+      },
+      "binding": {
+        "_doc": "Declarative backend role binding for OT GPIO — the SECOND-device generalization gate (Step 6). GPIO has interrupts but NO chardev/FIFO data path, so this binding has only an `irq` block (no `chardev`). Hand-authored from bindings/gpio.digest.json + bindings/SCHEMA.md; validated by --backend-binding; drives the SAME qemu.irq_blueprint as BackendCharDevDetect, so gpio_qp_shim.c is byte-identical to the auto-detected golden.",
+        "irq": {
+          "intr_state_offset": 0,
+          "intr_enable_offset": 4,
+          "alert_test_offset": 12,
+          "irq_count": 1
+        },
+        "pin_io": {
+          "data_out": {
+            "port": "cio_gpio_o"
+          },
+          "output_enable": {
+            "port": "cio_gpio_en_o"
+          },
+          "data_in": {
+            "port": "cio_gpio_i"
+          }
+        }
+      }
+    }
+  ]
+}

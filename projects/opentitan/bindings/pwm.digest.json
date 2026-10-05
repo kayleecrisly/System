@@ -1,0 +1,79 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "regwen"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_core_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_core_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "cio_pwm_o",
+      "width": 6
+    },
+    {
+      "dir": "out",
+      "name": "cio_pwm_en_o",
+      "width": 6
+    }
+  ],
+  "top_module": "pwm"
+}

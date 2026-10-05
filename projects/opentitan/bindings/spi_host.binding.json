@@ -1,0 +1,34 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT SPI_HOST. irq + pin_io reproduce the auto-detector byte-for-byte (irq from bindings/spi_host.digest.json irq_suggestion; pin_io = the cio_sd_o/cio_sd_en_o/cio_sd_i triple the detector reports). `spi_master` is the SPI-master bridge organ: the model drives sck/csb/sd; the shim watches every model clock and bridges the bit stream to a QEMU SSI bus (`spi<bus-num>`, m25p80-class flash attaches via the board's spiflash0 property).",
+  "design": {
+    "top_module": "spi_host"
+  },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 2
+  },
+  "pin_io": {
+    "data_out": {
+      "port": "cio_sd_o"
+    },
+    "output_enable": {
+      "port": "cio_sd_en_o"
+    },
+    "data_in": {
+      "port": "cio_sd_i"
+    }
+  },
+  "spi_master": {
+    "_doc": "SPI master bridge for the QP shim: model-driven serial clock / chip-select / data lanes -> QEMU SSI bus. MOSI = lane 0 of cio_sd_o (enable lane 0 of cio_sd_en_o), MISO = lane 1 of cio_sd_i. Mode (CPOL/CPHA) is inferred from the pins per transaction; byte direction from the MOSI output enable.",
+    "sck": "cio_sck_o",
+    "csb": "cio_csb_o",
+    "sd_out": "cio_sd_o",
+    "sd_oe": "cio_sd_en_o",
+    "sd_in": "cio_sd_i",
+    "mosi_bit": 0,
+    "miso_bit": 1
+  }
+}

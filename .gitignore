@@ -1,0 +1,11 @@
+tools/build/
+tools/build-*/
+outputs/
+results/
+experiments/*/firmware/build/
+experiments/*/firmware/src/generated/
+experiments/*/host-test/build/
+__pycache__/
+*.pyc
+*.orig
+.claude/settings.local.json

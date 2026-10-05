@@ -1,0 +1,15 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT alert handler (the SoC's alert collector).  irq declared explicitly (4 class interrupts, standard layout).  alert_in: 65 differential alert-source pairs (alert_tx_i_K__alert_p/n after struct explosion) exposed as OT_DEVICE_ALERT named gpio-ins so existing per-device SoC alert wiring lands unchanged.  Escalation outputs + ping timer semantics: later phase.",
+  "design": { "top_module": "alert_handler" },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": -1,
+    "irq_count": 4
+  },
+  "alert_in": {
+    "count": 65,
+    "port_prefix": "alert_tx_i"
+  }
+}

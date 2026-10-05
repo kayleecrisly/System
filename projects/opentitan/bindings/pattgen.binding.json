@@ -1,0 +1,15 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT PATTGEN. irq reproduces the digest suggestion (done_ch0/done_ch1). pin_io exports channel-0 DATA (cio_pda0_tx_o, 1 bit) for the pin-group closed loop; pcl0/pda1/pcl1 stay unexported (single-bus pin_io — known limit).",
+  "design": { "top_module": "pattgen" },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 2
+  },
+  "pin_io": {
+    "data_out":      { "port": "cio_pda0_tx_o" },
+    "output_enable": { "port": "cio_pda0_tx_en_o" }
+  }
+}

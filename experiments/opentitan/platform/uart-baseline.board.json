@@ -1,0 +1,68 @@
+{
+  "$schema_version": 1,
+  "machine": {
+    "name": "qp-opentitan-uart-baseline",
+    "arch": "riscv",
+    "description": "OpenTitan generated UART official firmware baseline with direct ELF boot",
+    "kconfig": "QP_OPENTITAN_UART_BASELINE",
+    "kconfig_selects": ["IBEX"]
+  },
+  "platform": {
+    "reference_machine": "ot-earlgrey",
+    "integration_level": "peripheral-test",
+    "source_files": [
+      "opentitan/hw/top_earlgrey/sw/autogen/top_earlgrey_memory.h",
+      "opentitan/sw/device/lib/testing/test_framework/ottf_start.S",
+      "opentitan/sw/device/lib/arch/device_sim_dv.c"
+    ],
+    "unsupported": [
+      "ROM validation and complete secure boot chain",
+      "flash-controller behavior and scrambling",
+      "OTP, lifecycle and power-manager boot gating",
+      "clock and reset manager behavior",
+      "PLIC interrupt delivery (UART baseline polls)",
+      "pad ring and external UART peers"
+    ]
+  },
+  "cpu": {
+    "qom_type": "lowrisc-opentitan-riscv-cpu",
+    "reset_vector": "0x20000400",
+    "num_harts": 1,
+    "hartid_base": 0,
+    "properties": [{"name": "mseccfg", "kind": "uint", "value": 0}]
+  },
+  "memory": [
+    {"name": "rom", "base": "0x8000", "size": "0x8000", "kind": "rom"},
+    {"name": "sram_main", "base": "0x10000000", "size": "0x20000", "kind": "ram"},
+    {"name": "flash", "base": "0x20000000", "size": "0x100000", "kind": "rom"}
+  ],
+  "models": {
+    "uart": {
+      "qom_type": "ot-uart-core-test",
+      "sources": ["../../opentitan/qemu_passes/uart.c", "ot_uart_core_test.c"],
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    },
+    "observer": {
+      "qom_type": "ot-baseline-observer",
+      "sources": ["ot_baseline_observer.c"],
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    }
+  },
+  "devices": [
+    {
+      "name": "uart0", "model": "uart", "qom_type": "ot-uart-core-test",
+      "mmio": [{"region": 0, "base": "0x40000000", "size": "0x40"}],
+      "properties": [], "irqs": [], "links": []
+    },
+    {
+      "name": "observer", "model": "observer", "qom_type": "ot-baseline-observer",
+      "mmio": [{"region": 0, "base": "0x411f0000", "size": "0x100"}],
+      "properties": [{"name": "status-offset", "kind": "uint", "value": 128}],
+      "irqs": [], "links": []
+    }
+  ],
+  "gpio_connections": [],
+  "boot": {"kind": "direct-elf", "use_elf_entry": true}
+}

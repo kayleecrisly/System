@@ -1,0 +1,13 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT KMAC (SHA-3 / cSHAKE / KMAC accelerator). Three interrupts (kmac_done, fifo_empty, kmac_err) via standard intr auto-detection; two alerts via alert_tx. Translated with -G EnMasking=0 (functional simplification: masking is a side-channel countermeasure with bit-identical digests; drops the second Keccak share and the entropy-driven DOM logic). app_i (keymgr/lc/rom app interfaces) and keymgr_key_i are left unbound: their all-zero defaults mean 'no hardware-app request / no sideload key', which is exactly the software-visible configuration. entropy ties mirror aes (kmac_entropy still handshakes EDN for its internal PRNG even unmasked).",
+  "design": {
+    "top_module": "kmac"
+  },
+  "input_ties": {
+    "entropy_i_edn_ack": 1,
+    "entropy_i_edn_fips": 1,
+    "entropy_i_edn_bus": 2863311530,
+    "lc_escalate_en_i": 10
+  }
+}

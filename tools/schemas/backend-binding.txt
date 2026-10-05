@@ -1,0 +1,333 @@
+# Backend role binding schema (`<dev>.binding.json`)
+
+This is the low-level backend binding format. New AI/manual extraction uses the
+[versioned project contract](../project/README.md) and its JSON Schema; the project
+compiler generates this binding together with catalog and bus files.
+
+Generic bindings support `irq_outputs` (indexed top-port bits), `reset`
+(port/active_level), `input_ties`, `bus_controls` (read/write/idle), `clocks` and
+`timer.pump_hz`, and `pin_io` (data_in/data_out/output_enable top-port roles).
+The generic wrapper exports named `data-in`, `data-out`, and `output-enable` lines;
+port `width`, when supplied, is checked against IR. See the TIM0 project example for a complete input. Bindings are
+validated against actual IR ports, directions and widths.
+
+The legacy `chardev`, `irq`, `spi_slave`, `spi_master`, `bus_master` and `alert_in`
+roles below are OpenTitan compatibility features. They require
+`--rtl-adapter=opentitan`; emission also needs `--device-catalog=inputs/opentitan/catalogs/opentitan.json`.
+The old `producer.py` and oracle workflow target this compatibility format.
+A firmware oracle tests its covered behavior; it is not proof of complete device
+correctness.
+
+## How it fits
+
+```
+IR ──(--dump-ir-digest)──> <dev>.digest.json ─┐
+                                              ├─[AI/human reads]─> <dev>.binding.json
+   generator/bindings/SCHEMA.md (this file) ────────────┘                          │
+                          --backend-binding=<dev>.binding.json ──────────┘
+                                  │ (validate vs IR; attach blueprints)
+                                  ▼
+                          qemu-emit-c → deploy → run-uart-dif-echo (behavioral oracle)
+```
+
+The deterministic loader is the **necessary** gate (signal/instance existence,
+required fields). The firmware oracle (`run-uart-dif-echo`) is a behavioral regression
+gate — a structurally-valid-but-semantically-wrong binding (e.g. wrong fifo or
+offset) passes the loader but fails the byte-compare. Both are required.
+
+## Schema
+
+```jsonc
+{
+  "$schema_version": 1,                 // required, must be 1
+  "design": { "top_module": "uart" },   // required; must match an hw.module in the IR
+
+  // --- chardev (character-device data path). Whole block optional. ---
+  "chardev": {
+    "loopback_field": "uart_core_sys_loopback", // optional — flattened MODEL
+                                        //   state-struct field (from <dev>.h, a
+                                        //   SIGNAL name, NOT an RTL instance) that
+                                        //   gates internal TX->RX system loopback.
+                                        //   When set & nonzero at runtime, the shim
+                                        //   mirrors a TX byte into the RX buffer
+                                        //   instead of the external chardev.
+    "tx": {                             // optional; if present:
+      "fifo_instance": "u_uart_txfifo", //   REQUIRED — exact RTL instance name of the
+                                        //   TX prim_fifo_sync (validated: must exist
+                                        //   AND its module name contains prim_fifo_sync)
+      "trigger_offset": 28,             //   REQUIRED — MMIO byte offset that, on write,
+                                        //   pushes a TX byte (firmware WDATA reg offset)
+      "parent_module": "uart_core",     //   optional, diagnostic
+      "wvalid_source": "reg2hw.wdata.qe",// optional, diagnostic
+      "strobe_reg_name": "wdata",       //   optional, diagnostic
+      "drain_top_port": "cio_tx_o"      //   optional, diagnostic
+    },
+    "rx": {                             // optional; if present:
+      "fifo_instance": "u_uart_rxfifo", //   REQUIRED — RX prim_fifo_sync instance name
+      "pop_offset": 24,                 //   REQUIRED — MMIO byte offset that, on read,
+                                        //   pops an RX byte (firmware RDATA reg offset)
+      "parent_module": "uart_core",     //   optional, diagnostic
+      "wvalid_source": "uart_rx.rx_valid",// optional, diagnostic
+      "namehint": "rx_fifo_wvalid",     //   optional, diagnostic
+      "strobe_reg_name": "rdata",       //   optional, diagnostic
+      "source_top_port": "cio_rx_i"     //   optional, diagnostic
+    }
+  },
+
+  // --- interrupts. Whole block optional. ---
+  "irq": {
+    "intr_state_offset": 0,             // REQUIRED — MMIO offset of INTR_STATE reg
+    "intr_enable_offset": 4,            // optional — MMIO offset of INTR_ENABLE reg;
+                                        //   omit for IPs with no enable (e.g. aon_timer):
+                                        //   shim then drives irqs[i] = INTR_STATE[i]
+    "irq_count": 9,                     // REQUIRED, > 0 — number of intr_*_o outputs
+    "alert_test_offset": 12             // optional — MMIO offset of ALERT_TEST reg
+  },
+
+  // --- data-pin I/O bus. Whole block optional; each role optional. ---
+  // ROLES, not device names: any device with a data-pin bus uses this.
+  "pin_io": {
+    "data_out":      { "port": "cio_gpio_o" },    // top-level OUTPUT data bus
+    "output_enable": { "port": "cio_gpio_en_o" }, // matching OUTPUT enable bus
+    "data_in":       { "port": "cio_gpio_i" }     // top-level INPUT data bus
+  },
+
+  // --- i2c_wire (two-wire open-drain transport). Whole block optional. ---
+  // Port NAMES are device-specific; the roles are not.  All six ports must be
+  // 1-bit, with *_in inputs and all other ports outputs.
+  "i2c_wire": {
+    "scl_in":  "cio_scl_i",
+    "scl_oe":  "cio_scl_en_o",
+    "scl_out": "cio_scl_o",
+    "sda_in":  "cio_sda_i",
+    "sda_oe":  "cio_sda_en_o",
+    "sda_out": "cio_sda_o",
+    "open_drain": true,
+    // Optional simulation defaults applied through the model's normal MMIO
+    // path immediately after reset.  Use only when the surrounding QEMU
+    // platform contract leaves pin timing/configuration implicit; firmware
+    // writes replace these values normally.  Mechanism and offsets are
+    // vendor-neutral data, not C field names.
+    "reset_writes": [
+      { "offset": 60, "value": 262148 }
+    ]
+  },
+
+  // --- timer (virtual-time pump opt-in). Whole block optional. ---
+  // DECLARES "this device is a free-running timer that must keep time
+  // autonomously".  This is NOT structurally inferable (e.g. i2c's timeout
+  // counters feed counter>=threshold comparators driving interrupts exactly
+  // like a timer, yet must NOT be pumped — they advance with bus traffic, not
+  // wall-clock), so it is declared.  When present, the shim emits a periodic
+  // ptimer -> <dev>_advance_tick -> update_irqs so the device counts + fires
+  // its interrupt during CPU wfi.  Only set for genuine timers (rv_timer).
+  "timer": {
+    "pump_hz": 1000                     // optional, advisory — emitter uses a
+                                        //   fixed functional rate (not real-time)
+  },
+
+  // --- input_resets (declared benign reset values for top inputs). Optional. ---
+  // Maps a top-level INPUT port name -> integer value written to s-><port> at
+  // the top of <dev>_reset() (before the reset pulse, so the post-release settle
+  // propagates it through any CDC sync).  Use for inputs that are driven by
+  // ANOTHER block on real silicon but are undriven (zero) in a standalone
+  // functional model — e.g. lc_ctrl drives aon_timer's lc_escalate_en_i to the
+  // lifecycle "Off" encoding (4'b1010 = 10); left at 0, lc_tx_test_false_strict
+  // would gate the whole wkup/wdog tree OFF.  The MECHANISM is generic (any
+  // input default); the VALUE is data an AI/human fills from the IP spec.
+  "input_resets": {
+    "lc_escalate_en_i": 10
+  },
+
+  // --- clocks (beat vs EVENT clock declaration). Whole block optional. ---
+  // Maps a top-level INPUT port that is the ROOT of some detected clock ->
+  // "beat" | "event".
+  //   beat  = a free-running clock that only paces the design (clk_i, clk_aon_i).
+  //           The pipeline strips its edges and lets flops run every settle
+  //           tick — exactly what such a clock means.  DEFAULT for every root.
+  //   event = a clock whose EDGES CARRY INFORMATION: an SPI sck (each edge moves
+  //           one bit) or csb (its rising edge marks "transaction ended").
+  //           Stripping those edges throws the information away (a csb-clocked
+  //           toggle pair oscillates every tick and the "csb deasserted" pulse
+  //           fires spuriously).  For event roots the pipeline keeps the edge as
+  //           DATA: it materializes <sig>_prev (a plain flop, prev <= sig every
+  //           tick) and guards the flop body with `!prev & sig` (posedge) /
+  //           `prev & !sig` (negedge).  QEMU delivers such edges as events (SSI
+  //           chip-select line, byte->8 sck edges expanded by the shim).
+  // NOT inferable from the IP's own IR: clk_aon_i and cio_sck_i look identical
+  // there (i1 input + a set of processes + a 2-flop sync to the main domain);
+  // the difference is SoC knowledge (clkmgr vs pad).  Copy the root names from
+  // the digest's `clock_roots` table.  The PRIMARY root (most processes) is the
+  // bus clock and may not be declared "event".  Undeclared DFT roots that leak
+  // in through scan muxes / clock gating (scan_clk_i, mbist_en_i) are neutral.
+  "clocks": {
+    "cio_sck_i": "event",
+    "cio_csb_i": "event"
+  }
+}
+```
+
+`_`-prefixed keys and `$schema_version` are ignored (use `_doc` for comments).
+
+## What each role means (so a producer can recognize it from the digest)
+
+- **chardev.tx.fifo_instance** — the `prim_fifo_sync` instance whose `wvalid_i` is
+  driven by a *register write strobe* (`*.qe`): firmware writes a byte and it
+  enters this FIFO. **trigger_offset** = the MMIO offset of that write register
+  (find it in the digest's `addr_decode` by the strobe's register name).
+- **chardev.rx.fifo_instance** — the `prim_fifo_sync` whose `wvalid_i` traces to a
+  top-level serial input (`cio_*_i`): bytes arrive from outside. **pop_offset** =
+  the MMIO offset of the read-data register that drains it.
+- **chardev.loopback_field** — the flattened model state field that selects internal
+  TX→RX routing (system loopback). A producer recognizes it in the digest as the
+  signal driven by a CTRL register field whose downstream mux feeds the RX FIFO's
+  data input with the TX path (`rx_in = <field> ? tx_out : ...`). It is a SIGNAL
+  name (post-flattening, dots→underscores), distinct from `fifo_instance` RTL names.
+  Validated at EMISSION time (must resolve to a real model state field); when set,
+  the shim's TX handler mirrors the byte into the RX buffer (and skips the external
+  chardev write) whenever the field is nonzero.
+- **irq.intr_state_offset / intr_enable_offset / alert_test_offset** — MMIO offsets
+  of the INTR_STATE / INTR_ENABLE / ALERT_TEST registers (from `addr_decode`; the
+  register whose name starts with `intr_state` / `intr_enable` / `alert_test`).
+- **irq.irq_count** — number of top-level `intr_*_o` output ports.
+- **pin_io.data_out.port / output_enable.port / data_in.port** — the top-level
+  ports of a data-pin bus. `data_out` and `output_enable` are OUTPUT integer
+  ports of equal width (the pin values + their per-bit drive enable); `data_in`
+  is the same-width INPUT port (external pin values). The emitter wires each as
+  `qdev_init_gpio_out` / `qdev_init_gpio_in` lines. Roles, not device identity —
+  GPIO, pinmux pads, SPI data lines all use the same block.
+
+> **`pin_io_suggestion` (deterministic hint).** When the digest contains a
+> `pin_io_suggestion` object, it carries the `data_out` / `output_enable` /
+> `data_in` ports the structural recognizer found (a same-width
+> output+enable+input triple). **Copy them verbatim into the `pin_io` block.**
+> Absent when the device has no data-pin bus; for non-standard wiring you can
+> override by declaring the roles yourself from the digest's `ports` list.
+
+> **`clock_roots` (deterministic table).** Every top-level input port that is
+> the root of a detected clock, with `clock_sigs` (module-local clock signals
+> resolved to it across all instance paths), `processes` (clock-triggered
+> processes it drives), `primary` (true for the bus/beat clock — most
+> processes) and the current `kind`.  **Every non-primary root is a decision
+> for the `clocks` block**: declare `"event"` if its edges carry data/events
+> (an SPI/I2C-style bus clock or chip-select coming from a PAD), `"beat"` (or
+> omit) if it is a free-running clock from the clock manager.  Roots that are
+> DFT inputs (scan_clk_i, mbist_en_i) can be left undeclared.
+
+> **`irq_suggestion` (deterministic hint).** When the digest contains an
+> `irq_suggestion` object, it carries `intr_state_offset` / `intr_enable_offset` /
+> `alert_test_offset` / `irq_count` already resolved by the SAME `offsetOf` logic
+> the auto-detector uses. **Copy those fields verbatim into the `irq` block.** It
+> exists because weak producers tend to drop the optional `alert_test_offset` or
+> confuse it with `intr_test` (both contain "test"); pushing this resolution into
+> the deterministic layer removes that failure mode. It is present only when the
+> OT-style names resolve; for unknown naming it is absent and you must infer the
+> offsets from `addr_decode` yourself.
+
+## Validation (what the loader checks, fast feedback)
+
+- `$schema_version == 1`; `design.top_module` exists as an `hw.module`.
+- each `fifo_instance` exists AND is a `prim_fifo_sync` instance (the single most
+  fragile coupling — emission substring-matches it).
+- `trigger_offset` / `pop_offset` present when their tx/rx block is present.
+- `irq` requires `intr_state_offset` + `irq_count` (> 0); `intr_enable_offset` is
+  optional (omit for enable-less IPs like aon_timer).
+- each `pin_io` role's `port` (when present) exists on the top module with the
+  right direction (data_out/output_enable = output, data_in = input) + integer type.
+- each `input_resets` key is an integer AND names an actual INPUT port of the top
+  module (rejects typos that would otherwise emit a write to a missing field).
+- each `clocks` key names an INPUT port of the top module that is the root of at
+  least one detected clock signal; value is `"beat"` or `"event"`; the PRIMARY
+  root (the one clocking the most processes — the bus clock) is rejected as
+  `"event"`.  (Checked in ClockSignalDetection, which reads only this block early
+  in the pipeline; the loader re-checks the format.)
+
+A binding that passes validation but is *behaviorally* wrong is caught by the
+oracle, not here — always run the firmware test after.
+
+## `spi_slave` (optional) — SPI-slave transport organ
+
+Declares the SPI pins so the QP shim can accept bytes + chip-select from QEMU
+and pump them into the model as serial-clock edges.  Transport = lowRISC's
+spidev framing over a chardev (`-chardev socket,id=spidev,...`; the same host
+tooling as ot_spi_device.c: `python/qemu/ot/spi/spi_device.py` in the
+lowRISC QEMU source tree).  Mode 0, MSB first.
+
+```json
+"spi_slave": {
+  "sck": "cio_sck_i",      // 1-bit input port: serial clock  (declare event in `clocks`)
+  "csb": "cio_csb_i",      // 1-bit input port: chip select   (declare event in `clocks`)
+  "sd_in": "cio_sd_i",     // input data bus port
+  "sd_out": "cio_sd_o",    // output data bus port
+  "mosi_bit": 0,           // lane of sd_in carrying MOSI
+  "miso_bit": 1            // lane of sd_out carrying MISO
+}
+```
+
+Loader checks: ports exist with the right direction/width, bit lanes in range;
+warns if sck/csb are not declared `event` clocks (then the sck-domain logic runs
+every settle tick and the pump has no effect).  Emitted shim: per byte
+8 × {set MOSI lane, sck=1, sample MISO lane, sck=0} via the model setters, then
+`<dev>_settle()`; CS follows the packet's release bit.
+
+## `spi_master` (optional) — SPI-master bridge organ
+
+Declares the SPI pins the model DRIVES so the QP shim can bridge the serial
+bit stream to a QEMU SSI bus (byte-level; m25p80-class flash devices attach on
+`spi<bus-num>` — the Earl Grey board's `spiflash0=<type>` property does the
+attach + CS wiring exactly as for upstream ot_spi_host).
+
+```json
+"spi_master": {
+  "sck": "cio_sck_o",       // 1-bit output port: serial clock
+  "csb": "cio_csb_o",       // output port: chip select(s), one bit per CS, active low
+  "sd_out": "cio_sd_o",     // output data bus port
+  "sd_oe": "cio_sd_en_o",   // output-enable bus port (same width as sd_out)
+  "sd_in": "cio_sd_i",      // input data bus port
+  "mosi_bit": 0,            // lane of sd_out / sd_oe carrying MOSI
+  "miso_bit": 1             // lane of sd_in carrying MISO
+}
+```
+
+Loader checks: ports exist with the right direction/width, lanes in range.
+Emitted shim: the model gets a per-clock observer (`_qp_on_tick`, invoked after
+every `tick()` — the SPI FSM produces its sck edges inside the MMIO settles);
+the observer drives the CS lines from `csb`, infers CPOL (sck level at CS
+assert) and CPHA (data launched on the first edge or not), samples MOSI on the
+sample edge, and per byte: master driving (MOSI output enable) -> the byte goes
+to `ssi_transfer` when its 8th bit is sampled; master not driving (RX-only /
+dummy) -> the slave byte is fetched (transfer value 0xFF) before the byte's
+first sample edge and shifted onto MISO.  Full-duplex (bidirectional) segments
+get the slave's reply one byte late — inherent to a byte-level bus.  Adds the
+`bus-num` / `num-cs` properties when the catalog entry lacks them.
+
+## `bus_master` (optional) — memory-bus host-port bridge organ
+
+For devices that DRIVE a bus (a DMA engine): declares the request/response
+port pair(s) so the shim can execute the model's bus beats against a QEMU
+AddressSpace.
+
+```json
+"bus_master": [
+  {
+    "req_port": "host_tl_h_o",   // output port: TL-UL h2d request bundle (a_valid...)
+    "rsp_port": "host_tl_h_i",   // input port: TL-UL d2h response bundle (d_valid...)
+    "protocol": "tlul",          // only tlul today
+    "address_space": "ot"        // which QEMU AddressSpace this port reaches
+  }
+]
+```
+
+Loader checks: req_port is a struct output carrying `a_valid`, rsp_port a
+struct input carrying `d_valid`.  Effects: the emitter bridges the request
+port's leaves into state fields (`[bus_master] bridged request port`), and the
+shim gains a per-clock observer: request beat (a_valid, constant a_ready=1) →
+`address_space_read/write` (Get/Put, byte enables honoured) → TL-UL response
+presented next clock (d_opcode AccessAckData/AccessAck, source/size echoed) —
+dropped when the engine takes it (d_ready).  No settle special-casing is
+needed: the settle loop's exits are fixed-point / revisited-state (Brent
+cycle detection over the full-state fingerprint) / a single per-access budget,
+and a working transfer never revisits a state, so long runs pass through
+untouched (budget leftovers continue on the next access — firmware polling a
+status register IS the continuation).  AddressSpace binding: system memory by
+default; the SoC glue may pass `ot_address_space` links later ([AI-2]).

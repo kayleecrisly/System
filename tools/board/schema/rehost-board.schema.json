@@ -1,0 +1,309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qemu-passes.local/schema/rehost-board.schema.json",
+  "title": "qemu-passes rehosting board specification",
+  "type": "object",
+  "required": ["$schema_version", "machine", "cpu", "memory", "models", "devices", "boot"],
+  "properties": {
+    "$schema_version": { "const": 1 },
+    "machine": {
+      "type": "object",
+      "required": ["name", "arch"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+        "arch": { "const": "riscv" },
+        "description": { "type": "string" },
+        "kconfig": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+        "kconfig_selects": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "platform": {
+      "type": "object",
+      "required": ["reference_machine", "integration_level", "source_files", "unsupported"],
+      "properties": {
+        "reference_machine": { "type": "string", "minLength": 1 },
+        "integration_level": { "enum": ["peripheral-test", "full-system"] },
+        "source_files": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "unsupported": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cpu": {
+      "type": "object",
+      "required": ["qom_type", "reset_vector"],
+      "properties": {
+        "qom_type": { "type": "string", "minLength": 1 },
+        "reset_vector": { "$ref": "#/$defs/address" },
+        "num_harts": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+        "hartid_base": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "properties": { "$ref": "#/$defs/properties" }
+      },
+      "additionalProperties": false
+    },
+    "memory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "base", "size", "kind"],
+        "properties": {
+          "name": { "$ref": "#/$defs/id" },
+          "base": { "$ref": "#/$defs/address" },
+          "size": { "$ref": "#/$defs/address" },
+          "kind": { "enum": ["ram", "rom"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["qom_type", "mmio_regions", "irq_outputs"],
+        "properties": {
+          "qom_type": { "type": "string", "minLength": 1 },
+          "header": { "type": "string" },
+          "sources": { "type": "array", "items": { "type": "string" } },
+          "mmio_regions": { "type": "integer", "minimum": 1 },
+          "irq_outputs": { "type": "integer", "minimum": 0 },
+          "gpio_inputs": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "interrupt_controllers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/sysbusDevice" }
+    },
+    "riscv_interrupts": {
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "plic": { "$ref": "#/$defs/sifivePlic" },
+        "aclint": { "$ref": "#/$defs/riscvAclint" }
+      },
+      "additionalProperties": false
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/sysbusDevice" },
+          {
+            "type": "object",
+            "required": ["model"],
+            "properties": {
+              "model": { "$ref": "#/$defs/id" },
+              "irqs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["output", "controller", "input"],
+                  "properties": {
+                    "output": { "type": "integer", "minimum": 0 },
+                    "controller": { "$ref": "#/$defs/id" },
+                    "input": { "type": "integer", "minimum": 0 }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["property", "target"],
+                  "properties": {
+                    "property": { "type": "string" },
+                    "target": { "$ref": "#/$defs/id" }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "chardev": {
+                "type": "object",
+                "required": ["property", "serial_index"],
+                "properties": {
+                  "property": { "type": "string" },
+                  "serial_index": { "type": "integer", "minimum": 0 }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    "gpio_connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "$ref": "#/$defs/gpioEndpoint" },
+          "to": { "$ref": "#/$defs/gpioEndpoint" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "boot": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": { "enum": ["direct-elf", "none"] },
+        "use_elf_entry": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$" },
+    "address": {
+      "oneOf": [
+        { "type": "integer", "minimum": 0 },
+        { "type": "string", "pattern": "^0x[0-9A-Fa-f]+$" }
+      ]
+    },
+    "properties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "kind", "value"],
+        "properties": {
+          "name": { "type": "string" },
+          "kind": { "enum": ["string", "uint", "int", "bool", "enum"] },
+          "value": {}
+        },
+        "additionalProperties": false
+      }
+    },
+    "mmio": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["region", "base", "size"],
+        "properties": {
+          "region": { "type": "integer", "minimum": 0 },
+          "base": { "$ref": "#/$defs/address" },
+          "size": { "$ref": "#/$defs/address" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sysbusDevice": {
+      "type": "object",
+      "required": ["name", "qom_type", "mmio"],
+      "properties": {
+        "name": { "$ref": "#/$defs/id" },
+        "qom_type": { "type": "string", "minLength": 1 },
+        "model": { "$ref": "#/$defs/id" },
+        "mmio": { "$ref": "#/$defs/mmio" },
+        "properties": { "$ref": "#/$defs/properties" },
+        "irqs": { "type": "array" },
+        "links": { "type": "array" },
+        "chardev": { "type": "object" },
+        "cpu_irqs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["output", "cpu_input"],
+            "properties": {
+              "output": { "type": "integer", "minimum": 0 },
+              "cpu_input": { "type": "integer", "minimum": 0 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "input_count": { "type": "integer", "minimum": 1 },
+        "output_kind": { "enum": ["sysbus", "gpio"] }
+      }
+    },
+    "sifivePlic": {
+      "type": "object",
+      "required": [
+        "name", "kind", "base", "size", "hart_config", "num_sources",
+        "num_priorities", "priority_base", "pending_base", "enable_base",
+        "enable_stride", "context_base", "context_stride"
+      ],
+      "properties": {
+        "name": { "$ref": "#/$defs/id" },
+        "kind": { "const": "sifive-plic" },
+        "base": { "$ref": "#/$defs/address" },
+        "size": { "$ref": "#/$defs/address" },
+        "hart_config": { "type": "string", "pattern": "^[USM]+(,[USM]+)*$" },
+        "num_sources": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+        "num_priorities": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+        "priority_base": { "$ref": "#/$defs/address" },
+        "pending_base": { "$ref": "#/$defs/address" },
+        "enable_base": { "$ref": "#/$defs/address" },
+        "enable_stride": { "$ref": "#/$defs/address" },
+        "context_base": { "$ref": "#/$defs/address" },
+        "context_stride": { "$ref": "#/$defs/address" },
+        "edge_triggered": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "riscvAclint": {
+      "type": "object",
+      "required": ["kind"],
+      "anyOf": [
+        { "required": ["mswi"] },
+        { "required": ["mtimer"] }
+      ],
+      "properties": {
+        "kind": { "const": "riscv-aclint" },
+        "mswi": {
+          "type": "object",
+          "required": ["base"],
+          "properties": {
+            "base": { "$ref": "#/$defs/address" },
+            "supervisor": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        },
+        "mtimer": {
+          "type": "object",
+          "required": ["base", "size", "timecmp_base", "time_base", "timebase_frequency"],
+          "properties": {
+            "base": { "$ref": "#/$defs/address" },
+            "size": { "$ref": "#/$defs/address" },
+            "timecmp_base": { "$ref": "#/$defs/address" },
+            "time_base": { "$ref": "#/$defs/address" },
+            "timebase_frequency": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4294967295
+            },
+            "provide_rdtime": { "type": "boolean" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "gpioEndpoint": {
+      "type": "object",
+      "required": ["device", "name", "index"],
+      "properties": {
+        "device": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "index": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "$schema_version": 1,
+  "machine": {
+    "name": "qp-opentitan-rv-timer",
+    "arch": "riscv",
+    "description": "OpenTitan generated RV_TIMER with generated QEMU adapter and CPU MTIP",
+    "kconfig": "QP_OPENTITAN_RV_TIMER",
+    "kconfig_selects": ["IBEX", "PTIMER", "OT_RV_TIMER_QP"]
+  },
+  "platform": {
+    "reference_machine": "ot-earlgrey",
+    "integration_level": "peripheral-test",
+    "source_files": [
+      "opentitan/hw/top_earlgrey/sw/autogen/top_earlgrey_memory.h",
+      "opentitan/hw/top_earlgrey/rtl/top_earlgrey.sv",
+      "opentitan/sw/device/tests/rv_timer_smoketest.c"
+    ],
+    "unsupported": ["Complete secure boot", "Full EarlGrey peripheral set", "Cycle accurate peripheral clock mapping"]
+  },
+  "cpu": {
+    "qom_type": "lowrisc-opentitan-riscv-cpu",
+    "reset_vector": "0x20000400",
+    "num_harts": 1,
+    "hartid_base": 0,
+    "properties": [{"name": "mseccfg", "kind": "uint", "value": 0}]
+  },
+  "memory": [
+    {"name": "rom", "base": "0x8000", "size": "0x8000", "kind": "rom"},
+    {"name": "sram_main", "base": "0x10000000", "size": "0x20000", "kind": "ram"},
+    {"name": "flash", "base": "0x20000000", "size": "0x100000", "kind": "rom"}
+  ],
+  "models": {
+    "rv_timer": {
+      "qom_type": "ot-rv-timer-qp",
+      "sources": [],
+      "mmio_regions": 1,
+      "irq_outputs": 1
+    },
+    "observer": {
+      "qom_type": "ot-baseline-observer",
+      "sources": ["ot_baseline_observer.c"],
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    }
+  },
+  "interrupt_controllers": [
+    {
+      "name": "rv_timer", "model": "rv_timer", "qom_type": "ot-rv-timer-qp",
+      "mmio": [{"region": 0, "base": "0x40100000", "size": "0x1000"}],
+      "properties": [],
+      "cpu_irqs": [{"output": 0, "cpu_input": 7}]
+    }
+  ],
+  "devices": [
+    {
+      "name": "observer", "model": "observer", "qom_type": "ot-baseline-observer",
+      "mmio": [{"region": 0, "base": "0x411f0000", "size": "0x100"}],
+      "properties": [{"name": "status-offset", "kind": "uint", "value": 128}],
+      "irqs": [], "links": []
+    }
+  ],
+  "gpio_connections": [],
+  "boot": {"kind": "direct-elf", "use_elf_entry": true}
+}

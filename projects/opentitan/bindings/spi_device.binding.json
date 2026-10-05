@@ -1,0 +1,52 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT SPI_DEVICE. irq + pin_io reproduce the auto-detector byte-for-byte (irq from bindings/spi_device.digest.json irq_suggestion; pin_io = the cio_sd_o/cio_sd_en_o/cio_sd_i triple the detector reports). `clocks` is the new third clock verdict: cio_csb_i (chip select) and cio_sck_i (SPI serial clock) are EVENT clocks whose edges carry information; clk_i is the primary (bus) clock and stays beat. aux_pin_groups exports the raw SPI pins as named qdev lines (sck-in/csb-in/sd-in[4]/sd-out[4]) so an in-machine SSI bridge can drive the device from a generated spi_host \u2014 the SPI self-loop group.",
+  "design": {
+    "top_module": "spi_device"
+  },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 8
+  },
+  "pin_io": {
+    "data_out": {
+      "port": "cio_sd_o"
+    },
+    "output_enable": {
+      "port": "cio_sd_en_o"
+    },
+    "data_in": {
+      "port": "cio_sd_i"
+    }
+  },
+  "clocks": {
+    "cio_sck_i": "event",
+    "cio_csb_i": "event"
+  },
+  "spi_slave": {
+    "_doc": "SPI slave transport for the QP shim: QEMU delivers bytes + chip-select (lowRISC spidev '/CS' framing on a chardev); the shim expands each byte into 8 sck edges on the declared pins (mode 0, MSB first) and samples MISO. sck/csb must be declared event clocks above.",
+    "sck": "cio_sck_i",
+    "csb": "cio_csb_i",
+    "sd_in": "cio_sd_i",
+    "sd_out": "cio_sd_o",
+    "mosi_bit": 0,
+    "miso_bit": 1
+  },
+  "aux_pin_groups": [
+    {
+      "name": "sck",
+      "in_port": "cio_sck_i"
+    },
+    {
+      "name": "csb",
+      "in_port": "cio_csb_i"
+    },
+    {
+      "name": "sd",
+      "in_port": "cio_sd_i",
+      "out_port": "cio_sd_o"
+    }
+  ]
+}

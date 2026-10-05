@@ -1,0 +1,51 @@
+{
+  "$schema_version": 1,
+  "_doc": "Vendor-neutral I2C wire-role binding.  Port spellings are specific to this IP; the i2c_wire role and generated bridge are not.  live_ring_modules: the FMT/RX/ACQ FIFO pointer counters step on MMIO push/FSM pop events - pump-gated they drop the push (same disease and same cure as hmac's msg_fifo).",
+  "design": {
+    "top_module": "i2c"
+  },
+  "i2c_wire": {
+    "scl_in": "cio_scl_i",
+    "scl_oe": "cio_scl_en_o",
+    "scl_out": "cio_scl_o",
+    "sda_in": "cio_sda_i",
+    "sda_oe": "cio_sda_en_o",
+    "sda_out": "cio_sda_o",
+    "open_drain": true,
+    "reset_writes": [
+      {
+        "offset": 60,
+        "value": 262148
+      },
+      {
+        "offset": 64,
+        "value": 65537
+      },
+      {
+        "offset": 68,
+        "value": 131074
+      },
+      {
+        "offset": 72,
+        "value": 65537
+      },
+      {
+        "offset": 76,
+        "value": 131074
+      }
+    ]
+  },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 10
+  },
+  "live_ring_modules": [
+    "prim_fifo_sync_cnt",
+    "i2c_core",
+    "i2c_bus_monitor",
+    "i2c_controller_fsm",
+    "i2c_target_fsm"
+  ]
+}

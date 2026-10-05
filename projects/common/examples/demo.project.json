@@ -1,0 +1,168 @@
+{
+  "$schema_version": 1,
+  "project": "example",
+  "sources": [
+    {
+      "id": "fixture",
+      "kind": "integration",
+      "path": "demo.mlir",
+      "revision": "unified-v1"
+    }
+  ],
+  "devices": [
+    {
+      "id": "demo",
+      "top_module": "demo",
+      "input": {
+        "mlir": "demo.mlir"
+      },
+      "backend": "generic-sysbus",
+      "rtl_adapter": "none",
+      "facts": {
+        "mmio_size": {
+          "value": 4096,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "fixture",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "irq_count": {
+          "value": 0,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "fixture",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "data_width": {
+          "value": 32,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "fixture",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "byte_order": {
+          "value": "little",
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "fixture",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        },
+        "access_sizes": {
+          "value": [
+            4
+          ],
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "fixture",
+              "location": "Example integration contract; not an asserted silicon timing specification"
+            }
+          ]
+        }
+      },
+      "bus": {
+        "kind": "functional-mmio",
+        "roles": {
+          "addr": {
+            "port": "addr",
+            "width": 32
+          },
+          "wdata": {
+            "port": "wdata",
+            "width": 32
+          },
+          "rdata": {
+            "port": "rdata",
+            "width": 32
+          },
+          "wr_enable": {
+            "port": "wr",
+            "width": 1
+          }
+        },
+        "noise_signals": [],
+        "controls": {
+          "read": {},
+          "write": {},
+          "idle": {}
+        }
+      },
+      "irq_outputs": [],
+      "reset": null,
+      "simulation": {
+        "rationale": "Functional MMIO example. No free-running clock is requested."
+      },
+      "evidence": {
+        "top_module": [
+          {
+            "source": "fixture",
+            "location": "Top module ports and example integration contract"
+          }
+        ],
+        "bus": [
+          {
+            "source": "fixture",
+            "location": "Top module ports and example integration contract"
+          }
+        ]
+      }
+    }
+  ],
+  "board": {
+    "$schema_version": 1,
+    "machine": {
+      "name": "qp-demo",
+      "arch": "riscv",
+      "description": "Unified input example RV32 board",
+      "kconfig": "QP_DEMO"
+    },
+    "cpu": {
+      "qom_type": "rv32-riscv-cpu",
+      "reset_vector": "0x80000000",
+      "num_harts": 1,
+      "hartid_base": 0,
+      "properties": []
+    },
+    "memory": [
+      {
+        "name": "ram",
+        "base": "0x80000000",
+        "size": "0x10000",
+        "kind": "ram"
+      }
+    ],
+    "devices": [
+      {
+        "name": "demo0",
+        "model": "demo",
+        "mmio": [
+          {
+            "region": 0,
+            "base": "0x40000000",
+            "size": "0x1000"
+          }
+        ],
+        "properties": [],
+        "irqs": [],
+        "links": []
+      }
+    ],
+    "gpio_connections": [],
+    "boot": {
+      "kind": "direct-elf",
+      "use_elf_entry": true
+    }
+  }
+}

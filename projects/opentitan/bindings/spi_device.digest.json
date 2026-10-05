@@ -1,0 +1,3568 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_upload_cmdfifo_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_upload_payload_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_upload_payload_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_readbuf_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_readbuf_flip"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_tpm_rdfifo_cmd_end"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_tpm_rdfifo_drop"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_upload_cmdfifo_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_upload_payload_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_upload_payload_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_readbuf_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_readbuf_flip"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tpm_header_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tpm_rdfifo_cmd_end"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tpm_rdfifo_drop"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_upload_cmdfifo_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_upload_payload_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_upload_payload_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_readbuf_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_readbuf_flip"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tpm_header_not_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tpm_rdfifo_cmd_end"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tpm_rdfifo_drop"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_flash_status_fifo_clr"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_flash_read_buffer_clr"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_mode"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cfg_tx_order"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cfg_rx_order"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cfg_mailbox_en"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_csb"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_tpm_csb"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "intercept_en_status"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "intercept_en_jedec"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "intercept_en_sfdp"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "intercept_en_mbx"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "addr_mode_addr_4b_en"
+    },
+    {
+      "kind": "re",
+      "offset": 32,
+      "reg": "addr_mode_addr_4b_en"
+    },
+    {
+      "kind": "re",
+      "offset": 32,
+      "reg": "addr_mode_pending"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "last_read_addr"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "flash_status_busy"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "flash_status_busy"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "flash_status_wel"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "flash_status_wel"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "flash_status_status"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "flash_status_status"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "jedec_cc_cc"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "jedec_cc_num_cc"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "jedec_id_id"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "jedec_id_mf"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "read_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "mailbox_addr"
+    },
+    {
+      "kind": "re",
+      "offset": 68,
+      "reg": "upload_cmdfifo_data"
+    },
+    {
+      "kind": "re",
+      "offset": 68,
+      "reg": "upload_cmdfifo_busy"
+    },
+    {
+      "kind": "re",
+      "offset": 68,
+      "reg": "upload_cmdfifo_wel"
+    },
+    {
+      "kind": "re",
+      "offset": 68,
+      "reg": "upload_cmdfifo_addr4b_mode"
+    },
+    {
+      "kind": "re",
+      "offset": 72,
+      "reg": "upload_addrfifo"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_0"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_1"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_2"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_3"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_4"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_5"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_6"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_7"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_8"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_9"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_10"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_11"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_12"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_13"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_14"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_15"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_16"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_17"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_18"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_19"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_20"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_21"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_22"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_23"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_24"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_25"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_26"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_27"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_28"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_29"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_30"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "cmd_filter_0_filter_31"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_32"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_33"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_34"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_35"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_36"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_37"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_38"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_39"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_40"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_41"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_42"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_43"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_44"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_45"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_46"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_47"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_48"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_49"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_50"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_51"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_52"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_53"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_54"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_55"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_56"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_57"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_58"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_59"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_60"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_61"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_62"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "cmd_filter_1_filter_63"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_64"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_65"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_66"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_67"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_68"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_69"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_70"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_71"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_72"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_73"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_74"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_75"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_76"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_77"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_78"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_79"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_80"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_81"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_82"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_83"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_84"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_85"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_86"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_87"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_88"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_89"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_90"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_91"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_92"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_93"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_94"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "cmd_filter_2_filter_95"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_96"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_97"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_98"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_99"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_100"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_101"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_102"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_103"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_104"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_105"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_106"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_107"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_108"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_109"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_110"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_111"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_112"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_113"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_114"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_115"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_116"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_117"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_118"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_119"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_120"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_121"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_122"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_123"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_124"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_125"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_126"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "cmd_filter_3_filter_127"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_128"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_129"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_130"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_131"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_132"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_133"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_134"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_135"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_136"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_137"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_138"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_139"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_140"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_141"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_142"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_143"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_144"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_145"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_146"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_147"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_148"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_149"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_150"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_151"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_152"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_153"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_154"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_155"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_156"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_157"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_158"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "cmd_filter_4_filter_159"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_160"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_161"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_162"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_163"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_164"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_165"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_166"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_167"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_168"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_169"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_170"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_171"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_172"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_173"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_174"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_175"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_176"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_177"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_178"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_179"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_180"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_181"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_182"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_183"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_184"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_185"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_186"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_187"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_188"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_189"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_190"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "cmd_filter_5_filter_191"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_192"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_193"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_194"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_195"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_196"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_197"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_198"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_199"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_200"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_201"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_202"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_203"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_204"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_205"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_206"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_207"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_208"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_209"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_210"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_211"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_212"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_213"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_214"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_215"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_216"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_217"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_218"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_219"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_220"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_221"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_222"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "cmd_filter_6_filter_223"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_224"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_225"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_226"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_227"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_228"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_229"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_230"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_231"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_232"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_233"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_234"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_235"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_236"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_237"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_238"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_239"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_240"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_241"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_242"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_243"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_244"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_245"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_246"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_247"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_248"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_249"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_250"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_251"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_252"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_253"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_254"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "cmd_filter_7_filter_255"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "addr_swap_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "addr_swap_data"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "payload_swap_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "payload_swap_data"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_opcode_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_addr_mode_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_addr_swap_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_mbyte_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_dummy_size_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_dummy_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_payload_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_payload_dir_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_payload_swap_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_read_pipeline_mode_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_upload_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_busy_0"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "cmd_info_0_valid_0"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_opcode_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_addr_mode_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_addr_swap_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_mbyte_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_dummy_size_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_dummy_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_payload_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_payload_dir_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_payload_swap_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_read_pipeline_mode_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_upload_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_busy_1"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "cmd_info_1_valid_1"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_opcode_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_addr_mode_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_addr_swap_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_mbyte_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_dummy_size_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_dummy_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_payload_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_payload_dir_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_payload_swap_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_read_pipeline_mode_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_upload_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_busy_2"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "cmd_info_2_valid_2"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_opcode_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_addr_mode_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_addr_swap_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_mbyte_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_dummy_size_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_dummy_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_payload_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_payload_dir_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_payload_swap_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_read_pipeline_mode_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_upload_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_busy_3"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "cmd_info_3_valid_3"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_opcode_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_addr_mode_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_addr_swap_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_mbyte_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_dummy_size_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_dummy_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_payload_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_payload_dir_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_payload_swap_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_read_pipeline_mode_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_upload_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_busy_4"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "cmd_info_4_valid_4"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_opcode_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_addr_mode_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_addr_swap_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_mbyte_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_dummy_size_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_dummy_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_payload_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_payload_dir_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_payload_swap_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_read_pipeline_mode_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_upload_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_busy_5"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "cmd_info_5_valid_5"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_opcode_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_addr_mode_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_addr_swap_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_mbyte_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_dummy_size_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_dummy_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_payload_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_payload_dir_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_payload_swap_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_read_pipeline_mode_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_upload_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_busy_6"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "cmd_info_6_valid_6"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_opcode_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_addr_mode_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_addr_swap_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_mbyte_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_dummy_size_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_dummy_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_payload_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_payload_dir_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_payload_swap_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_read_pipeline_mode_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_upload_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_busy_7"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "cmd_info_7_valid_7"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_opcode_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_addr_mode_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_addr_swap_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_mbyte_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_dummy_size_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_dummy_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_payload_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_payload_dir_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_payload_swap_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_read_pipeline_mode_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_upload_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_busy_8"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "cmd_info_8_valid_8"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_opcode_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_addr_mode_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_addr_swap_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_mbyte_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_dummy_size_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_dummy_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_payload_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_payload_dir_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_payload_swap_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_read_pipeline_mode_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_upload_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_busy_9"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "cmd_info_9_valid_9"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_opcode_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_addr_mode_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_addr_swap_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_mbyte_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_dummy_size_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_dummy_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_payload_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_payload_dir_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_payload_swap_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_read_pipeline_mode_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_upload_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_busy_10"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "cmd_info_10_valid_10"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_opcode_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_addr_mode_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_addr_swap_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_mbyte_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_dummy_size_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_dummy_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_payload_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_payload_dir_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_payload_swap_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_read_pipeline_mode_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_upload_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_busy_11"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "cmd_info_11_valid_11"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_opcode_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_addr_mode_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_addr_swap_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_mbyte_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_dummy_size_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_dummy_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_payload_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_payload_dir_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_payload_swap_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_read_pipeline_mode_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_upload_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_busy_12"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "cmd_info_12_valid_12"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_opcode_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_addr_mode_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_addr_swap_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_mbyte_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_dummy_size_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_dummy_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_payload_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_payload_dir_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_payload_swap_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_read_pipeline_mode_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_upload_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_busy_13"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "cmd_info_13_valid_13"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_opcode_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_addr_mode_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_addr_swap_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_mbyte_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_dummy_size_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_dummy_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_payload_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_payload_dir_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_payload_swap_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_read_pipeline_mode_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_upload_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_busy_14"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "cmd_info_14_valid_14"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_opcode_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_addr_mode_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_addr_swap_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_mbyte_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_dummy_size_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_dummy_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_payload_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_payload_dir_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_payload_swap_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_read_pipeline_mode_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_upload_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_busy_15"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "cmd_info_15_valid_15"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_opcode_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_addr_mode_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_addr_swap_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_mbyte_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_dummy_size_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_dummy_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_payload_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_payload_dir_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_payload_swap_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_read_pipeline_mode_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_upload_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_busy_16"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "cmd_info_16_valid_16"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_opcode_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_addr_mode_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_addr_swap_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_mbyte_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_dummy_size_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_dummy_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_payload_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_payload_dir_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_payload_swap_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_read_pipeline_mode_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_upload_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_busy_17"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "cmd_info_17_valid_17"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_opcode_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_addr_mode_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_addr_swap_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_mbyte_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_dummy_size_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_dummy_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_payload_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_payload_dir_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_payload_swap_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_read_pipeline_mode_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_upload_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_busy_18"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "cmd_info_18_valid_18"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_opcode_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_addr_mode_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_addr_swap_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_mbyte_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_dummy_size_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_dummy_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_payload_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_payload_dir_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_payload_swap_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_read_pipeline_mode_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_upload_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_busy_19"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "cmd_info_19_valid_19"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_opcode_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_addr_mode_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_addr_swap_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_mbyte_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_dummy_size_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_dummy_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_payload_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_payload_dir_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_payload_swap_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_read_pipeline_mode_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_upload_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_busy_20"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "cmd_info_20_valid_20"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_opcode_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_addr_mode_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_addr_swap_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_mbyte_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_dummy_size_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_dummy_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_payload_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_payload_dir_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_payload_swap_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_read_pipeline_mode_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_upload_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_busy_21"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "cmd_info_21_valid_21"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_opcode_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_addr_mode_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_addr_swap_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_mbyte_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_dummy_size_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_dummy_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_payload_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_payload_dir_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_payload_swap_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_read_pipeline_mode_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_upload_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_busy_22"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "cmd_info_22_valid_22"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_opcode_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_addr_mode_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_addr_swap_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_mbyte_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_dummy_size_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_dummy_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_payload_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_payload_dir_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_payload_swap_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_read_pipeline_mode_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_upload_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_busy_23"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "cmd_info_23_valid_23"
+    },
+    {
+      "kind": "we",
+      "offset": 220,
+      "reg": "cmd_info_en4b_opcode"
+    },
+    {
+      "kind": "we",
+      "offset": 220,
+      "reg": "cmd_info_en4b_valid"
+    },
+    {
+      "kind": "we",
+      "offset": 224,
+      "reg": "cmd_info_ex4b_opcode"
+    },
+    {
+      "kind": "we",
+      "offset": 224,
+      "reg": "cmd_info_ex4b_valid"
+    },
+    {
+      "kind": "we",
+      "offset": 228,
+      "reg": "cmd_info_wren_opcode"
+    },
+    {
+      "kind": "we",
+      "offset": 228,
+      "reg": "cmd_info_wren_valid"
+    },
+    {
+      "kind": "we",
+      "offset": 232,
+      "reg": "cmd_info_wrdi_opcode"
+    },
+    {
+      "kind": "we",
+      "offset": 232,
+      "reg": "cmd_info_wrdi_valid"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "tpm_cfg_en"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "tpm_cfg_tpm_mode"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "tpm_cfg_hw_reg_dis"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "tpm_cfg_tpm_reg_chk_dis"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "tpm_cfg_invalid_locality"
+    },
+    {
+      "kind": "re",
+      "offset": 2056,
+      "reg": "tpm_status_cmdaddr_notempty"
+    },
+    {
+      "kind": "we",
+      "offset": 2056,
+      "reg": "tpm_status_wrfifo_pending"
+    },
+    {
+      "kind": "re",
+      "offset": 2056,
+      "reg": "tpm_status_wrfifo_pending"
+    },
+    {
+      "kind": "re",
+      "offset": 2056,
+      "reg": "tpm_status_rdfifo_aborted"
+    },
+    {
+      "kind": "we",
+      "offset": 2060,
+      "reg": "tpm_access_0_access_0"
+    },
+    {
+      "kind": "we",
+      "offset": 2060,
+      "reg": "tpm_access_0_access_1"
+    },
+    {
+      "kind": "we",
+      "offset": 2060,
+      "reg": "tpm_access_0_access_2"
+    },
+    {
+      "kind": "we",
+      "offset": 2060,
+      "reg": "tpm_access_0_access_3"
+    },
+    {
+      "kind": "we",
+      "offset": 2064,
+      "reg": "tpm_access_1"
+    },
+    {
+      "kind": "we",
+      "offset": 2068,
+      "reg": "tpm_sts"
+    },
+    {
+      "kind": "we",
+      "offset": 2072,
+      "reg": "tpm_intf_capability"
+    },
+    {
+      "kind": "we",
+      "offset": 2076,
+      "reg": "tpm_int_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 2080,
+      "reg": "tpm_int_vector"
+    },
+    {
+      "kind": "we",
+      "offset": 2084,
+      "reg": "tpm_int_status"
+    },
+    {
+      "kind": "we",
+      "offset": 2088,
+      "reg": "tpm_did_vid_vid"
+    },
+    {
+      "kind": "we",
+      "offset": 2088,
+      "reg": "tpm_did_vid_did"
+    },
+    {
+      "kind": "we",
+      "offset": 2092,
+      "reg": "tpm_rid"
+    },
+    {
+      "kind": "re",
+      "offset": 2096,
+      "reg": "tpm_cmd_addr_addr"
+    },
+    {
+      "kind": "re",
+      "offset": 2096,
+      "reg": "tpm_cmd_addr_cmd"
+    },
+    {
+      "kind": "we",
+      "offset": 2100,
+      "reg": "tpm_read_fifo"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 734,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": true,
+      "processes": 766
+    },
+    {
+      "clock_sigs": 74,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "cio_sck_i",
+      "primary": false,
+      "processes": 152
+    },
+    {
+      "clock_sigs": 3,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "cio_csb_i",
+      "primary": false,
+      "processes": 3
+    },
+    {
+      "clock_sigs": 58,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "mbist_en_i",
+      "primary": false,
+      "processes": 122
+    },
+    {
+      "clock_sigs": 77,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "scan_clk_i",
+      "primary": false,
+      "processes": 155
+    }
+  ],
+  "fifo_instances": [
+    {
+      "instance": "u_sram_fifo",
+      "module": "prim_fifo_sync",
+      "parent": "spid_readsram",
+      "wvalid_source": "sram_l2m_o.rvalid"
+    },
+    {
+      "instance": "u_fifo",
+      "module": "prim_fifo_sync_41",
+      "parent": "spid_readsram",
+      "wvalid_source": "fifo_wvalid"
+    },
+    {
+      "instance": "u_sram_fifo",
+      "module": "prim_fifo_sync",
+      "parent": "spi_tpm",
+      "wvalid_source": "sck_sram_rvalid[0]"
+    }
+  ],
+  "interrupts": [
+    "intr_upload_cmdfifo_not_empty_o",
+    "intr_upload_payload_not_empty_o",
+    "intr_upload_payload_overflow_o",
+    "intr_readbuf_watermark_o",
+    "intr_readbuf_flip_o",
+    "intr_tpm_header_not_empty_o",
+    "intr_tpm_rdfifo_cmd_end_o",
+    "intr_tpm_rdfifo_drop_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 8
+  },
+  "pin_io_suggestion": {
+    "data_in_port": "cio_sd_i",
+    "data_in_width": 4,
+    "data_out_port": "cio_sd_o",
+    "data_out_width": 4,
+    "output_enable_port": "cio_sd_en_o",
+    "output_enable_width": 4
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "cio_sck_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_csb_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_sd_o",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "cio_sd_en_o",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "cio_sd_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "cio_tpm_csb_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "passthrough_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "passthrough_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_upload_cmdfifo_not_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_upload_payload_not_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_upload_payload_overflow_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_readbuf_watermark_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_readbuf_flip_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tpm_header_not_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tpm_rdfifo_cmd_end_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tpm_rdfifo_drop_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_sys2spi_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_sys2spi_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_spi2sys_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_spi2sys_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "sck_monitor_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "mbist_en_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "scan_clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "scan_rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "scanmode_i",
+      "width": 4
+    }
+  ],
+  "top_module": "spi_device"
+}

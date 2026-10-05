@@ -1,0 +1,31 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT UART. Produced (here, by hand from the detector's output; in general, by an AI from the IR digest) and validated by --backend-binding. Drives the SAME qemu.chardev_blueprint / qemu.irq_blueprint as BackendCharDevDetect, so the generated shim is byte-identical. See bindings/SCHEMA.md.",
+  "design": { "top_module": "uart" },
+  "chardev": {
+    "loopback_field": "uart_core_sys_loopback",
+    "tx": {
+      "fifo_instance": "u_uart_txfifo",
+      "parent_module": "uart_core",
+      "wvalid_source": "reg2hw.wdata.qe",
+      "strobe_reg_name": "wdata",
+      "trigger_offset": 28,
+      "drain_top_port": "cio_tx_o"
+    },
+    "rx": {
+      "fifo_instance": "u_uart_rxfifo",
+      "parent_module": "uart_core",
+      "wvalid_source": "uart_rx.rx_valid",
+      "namehint": "rx_fifo_wvalid",
+      "strobe_reg_name": "rdata",
+      "pop_offset": 24,
+      "source_top_port": "cio_rx_i"
+    }
+  },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 9
+  }
+}

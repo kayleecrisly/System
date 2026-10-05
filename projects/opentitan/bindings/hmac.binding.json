@@ -1,0 +1,11 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT HMAC (SHA-256 engine). irq/alert auto-detected (uart-class INTR_STATE shape). live_ring_modules: the msg FIFO's pointer counters and the reg-window socket's outstanding-request tracker step on external events (TL-UL window writes) — pump-gating them left the FIFO permanently empty / the socket stuck; declared live because pulse-vs-level enables are statically indistinguishable (see BACKEND_CONFLICTS.md hmac campaign).",
+  "design": {
+    "top_module": "hmac"
+  },
+  "live_ring_modules": [
+    "prim_fifo_sync_cnt",
+    "tlul_socket_1n"
+  ]
+}

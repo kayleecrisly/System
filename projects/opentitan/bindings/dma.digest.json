@@ -1,0 +1,408 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_dma_done"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_dma_chunk_done"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_dma_error"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_dma_done"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_dma_chunk_done"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_dma_error"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "src_addr_lo"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "src_addr_hi"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "dst_addr_lo"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "dst_addr_hi"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "addr_space_id_src_asid"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "addr_space_id_dst_asid"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "enabled_memory_range_base"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "enabled_memory_range_limit"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "range_valid"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "range_regwen"
+    },
+    {
+      "kind": "re",
+      "offset": 52,
+      "reg": "cfg_regwen"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "total_data_size"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "chunk_data_size"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "transfer_width"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_opcode"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_hardware_handshake_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_digest_swap"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_initial_transfer"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_abort"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "control_go"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "src_config_increment"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "src_config_wrap"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "dst_config_increment"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "dst_config_wrap"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "status_done"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "status_aborted"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "status_error"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "status_chunk_done"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "handshake_intr_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "clear_intr_src"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "clear_intr_bus"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "intr_src_addr_0"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "intr_src_addr_1"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "intr_src_addr_2"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "intr_src_addr_3"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "intr_src_addr_4"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "intr_src_addr_5"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "intr_src_addr_6"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "intr_src_addr_7"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "intr_src_addr_8"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "intr_src_addr_9"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "intr_src_addr_10"
+    },
+    {
+      "kind": "we",
+      "offset": 292,
+      "reg": "intr_src_wr_val_0"
+    },
+    {
+      "kind": "we",
+      "offset": 296,
+      "reg": "intr_src_wr_val_1"
+    },
+    {
+      "kind": "we",
+      "offset": 300,
+      "reg": "intr_src_wr_val_2"
+    },
+    {
+      "kind": "we",
+      "offset": 304,
+      "reg": "intr_src_wr_val_3"
+    },
+    {
+      "kind": "we",
+      "offset": 308,
+      "reg": "intr_src_wr_val_4"
+    },
+    {
+      "kind": "we",
+      "offset": 312,
+      "reg": "intr_src_wr_val_5"
+    },
+    {
+      "kind": "we",
+      "offset": 316,
+      "reg": "intr_src_wr_val_6"
+    },
+    {
+      "kind": "we",
+      "offset": 320,
+      "reg": "intr_src_wr_val_7"
+    },
+    {
+      "kind": "we",
+      "offset": 324,
+      "reg": "intr_src_wr_val_8"
+    },
+    {
+      "kind": "we",
+      "offset": 328,
+      "reg": "intr_src_wr_val_9"
+    },
+    {
+      "kind": "we",
+      "offset": 332,
+      "reg": "intr_src_wr_val_10"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_dma_done_o",
+    "intr_dma_chunk_done_o",
+    "intr_dma_error_o"
+  ],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "scanmode_i",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "intr_dma_done_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_dma_chunk_done_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_dma_error_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "lsio_trigger_i",
+      "width": 11
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "tl_d_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_d_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "ctn_tl_d2h_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ctn_tl_h2d_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "host_tl_h_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "host_tl_h_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "sys_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "sys_o",
+      "width": 0
+    }
+  ],
+  "top_module": "dma"
+}

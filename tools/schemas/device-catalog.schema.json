@@ -1,0 +1,367 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qemu-passes project device catalog v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema_version": {
+      "const": 1
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fallback": {
+      "enum": [
+        "generic",
+        "error"
+      ]
+    },
+    "naming": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "qom_prefix": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "state_prefix": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "macro_prefix": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "_comment": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "qom_prefix",
+        "state_prefix",
+        "macro_prefix"
+      ]
+    },
+    "generic_properties": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/property"
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/device"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "_comment": {
+      "type": "string"
+    },
+    "backend": {
+      "enum": [
+        "opentitan",
+        "generic-sysbus"
+      ]
+    }
+  },
+  "required": [
+    "$schema_version",
+    "project",
+    "fallback",
+    "naming",
+    "devices"
+  ],
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string"
+        },
+        "_comment": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "document",
+        "location"
+      ]
+    },
+    "property": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "string",
+            "chardev",
+            "uint8",
+            "uint32",
+            "bool",
+            "link"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "name_macro": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "field": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "default": {
+          "type": [
+            "integer",
+            "boolean"
+          ]
+        },
+        "target_type_macro": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "_comment": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "field"
+      ],
+      "oneOf": [
+        {
+          "required": [
+            "name"
+          ],
+          "not": {
+            "required": [
+              "name_macro"
+            ]
+          }
+        },
+        {
+          "required": [
+            "name_macro"
+          ],
+          "not": {
+            "required": [
+              "name"
+            ]
+          }
+        }
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "bool"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "default"
+            ],
+            "properties": {
+              "default": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "uint8"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "default"
+            ],
+            "properties": {
+              "default": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "uint32"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "default"
+            ],
+            "properties": {
+              "default": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4294967295
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "chardev"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "field": {
+                "const": "chr"
+              },
+              "name": {
+                "const": "chardev"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "link"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "target_type_macro"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "target_type_macro"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "string",
+                  "chardev",
+                  "link"
+                ]
+              }
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "default"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "device": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "module": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "qom_type": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "state_type": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "type_macro": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "irq_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        },
+        "mmio_size": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9223372036854775807
+            },
+            {
+              "type": "string",
+              "pattern": "^(0[xX]0*[1-9a-fA-F][0-9a-fA-F]*|[1-9][0-9]*)$"
+            }
+          ]
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/property"
+          }
+        },
+        "key_sink": {
+          "type": "boolean"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "_comment": {
+          "type": "string"
+        },
+        "backend": {
+          "enum": [
+            "opentitan",
+            "generic-sysbus"
+          ]
+        }
+      },
+      "required": [
+        "module"
+      ]
+    }
+  }
+}

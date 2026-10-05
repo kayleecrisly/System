@@ -1,0 +1,12 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT ROM_CTRL. No interrupts; one alert via alert_tx. TWO top-level TL-UL targets: regs_tl (CSRs: FATAL_ALERT_CAUSE, DIGEST_0..7, EXP_DIGEST_0..7) and rom_tl (the scrambled-ROM read window) — the machine maps them at separate bases. kmac_data_o/i is the hardware-app request/response pair toward kmac (cSHAKE-256 of the ROM image at boot); in the QEMU integration it becomes a generated-to-generated signal-level link. pwrmgr_data_o carries the boot done/good handshake. rom_cfg_i is a test-mode config, tied 0.",
+  "design": {
+    "top_module": "rom_ctrl"
+  },
+  "input_ties": {
+    "rom_cfg_i_test": 0,
+    "rom_cfg_i_cfg": 0,
+    "rom_cfg_i_cfg_en": 0
+  }
+}

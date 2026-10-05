@@ -1,0 +1,26 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT DMA. irq declared explicitly: the auto-detector cannot resolve INTR_STATE here (dma's intr_state qs feed the read mux through the hw2reg d/de path shaped differently from the uart-class devices), offsets are the regtool ground truth (dma.hjson: INTR_STATE=0x0 INTR_ENABLE=0x4 INTR_TEST=0x8 ALERT_TEST=0xC, 3 interrupts: dma_done, dma_chunk_done, dma_error). bus_master comes in Phase 2. bus_master: the engine's OT-internal host port bridged to a QEMU AddressSpace (system memory until the SoC glue passes ot_address_space links); ctn/sys ports stay stubbed. pin_io data_in: the 11 hardware-handshake trigger lines (lsio_trigger_i) exported as qdev gpio-ins so the SoC can wire peripheral irq lines (via a splitter) into handshake mode.",
+  "design": {
+    "top_module": "dma"
+  },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 3
+  },
+  "bus_master": [
+    {
+      "req_port": "host_tl_h_o",
+      "rsp_port": "host_tl_h_i",
+      "protocol": "tlul",
+      "address_space": "ot"
+    }
+  ],
+  "pin_io": {
+    "data_in": {
+      "port": "lsio_trigger_i"
+    }
+  }
+}

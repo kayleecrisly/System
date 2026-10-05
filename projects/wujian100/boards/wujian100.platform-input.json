@@ -1,0 +1,296 @@
+{
+  "format_version": 1,
+  "record_kind": "agent-prepared-platform-input",
+  "project": "wujian100",
+  "prepared_by": "agents",
+  "purpose": "Platform facts and component candidates for rehosting the existing official Timer baseline; provisional input data for a future AI-assisted workflow.",
+  "path_base": "directory containing this file",
+  "current_generator_consumes_this_file": false,
+  "ready_for_board_generation": false,
+  "runtime_validated": false,
+  "note": "This record is not a BoardSpec or a finalized AI interface. Confirmed facts describe inspected sources and artifacts, not successful firmware execution.",
+  "project_input": "../projects/wujian100-timer-baseline.project.json",
+  "sources": [
+    {
+      "id": "official",
+      "path": "../../../../wujian100_open_original",
+      "repository": "https://github.com/XUANTIE-RV/wujian100_open",
+      "revision": "83e297583bb3454b688f9f27d6bc20ff3276ad32"
+    },
+    {
+      "id": "peripheral-input",
+      "path": "../projects/wujian100-timer-baseline.project.json",
+      "sha256": "bcdb3a5d4ee48dd3ced2dec4e788b6d5a34732ce7829ba860f9bf73ac355a1c2"
+    },
+    {
+      "id": "generated",
+      "path": "../../../outputs/wujian100/rtl-83e29758"
+    },
+    {
+      "id": "firmware",
+      "path": "../../../experiments/wujian100/firmware/build/timer/baseline/wujian100_open_evb.elf",
+      "sha256": "e6d83668369765f55447520d3d4ca2b32f6a7544fe5df1445efe3a25d99e0d9c"
+    },
+    {
+      "id": "build-record",
+      "path": "../../../experiments/wujian100/firmware/build/timer/baseline/build.json"
+    },
+    {
+      "id": "xuantie-qemu",
+      "repository": "https://github.com/XUANTIE-RV/qemu",
+      "revision": "3287d345c7f5d60d5c8774d90752f5f710744f85",
+      "source_url_prefix": "https://github.com/XUANTIE-RV/qemu/blob/3287d345c7f5d60d5c8774d90752f5f710744f85/"
+    },
+    {
+      "id": "board-generator",
+      "path": "../../../tools/board/rehost_gen.py",
+      "sha256": "eb9f8e4303627fe7066121ad50cd51cc484df5118db2cf02d5f55a9da0325cda"
+    }
+  ],
+  "hardware": {
+    "cpu_requirements": {
+      "value": {
+        "core_family": "E902",
+        "rtl_file": "soc/E902_20191018.v",
+        "xlen": 32,
+        "num_harts": 1,
+        "endianness": "little",
+        "firmware_march": "rv32emc",
+        "firmware_abi": "ilp32e",
+        "reset_vector": "0x00000000",
+        "requires_csr_instructions": true,
+        "requires_mret": true,
+        "requires_mtvec_mode": 3,
+        "mtvt_csr_number": "0x307"
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "soc/E902_20191018.v: GPR_16 and CLIC_MODE configuration"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/startup.S: Reset_Handler, mtvec and mtvt"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/vectors.S: interrupt handlers return using mret"},
+        {"source": "build-record", "location": "/environment/target_flags"},
+        {"source": "firmware", "location": "ELF header and startup disassembly; entry 0, mtvec write at PC 0x14, mtvt write at PC 0x1c"}
+      ]
+    },
+    "memory": {
+      "value": [
+        {"name": "instruction_sram", "kind": "ram", "base": "0x00000000", "size": "0x00010000"},
+        {"name": "data_sram", "kind": "ram", "base": "0x20000000", "size": "0x00030000"}
+      ],
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "soc/matrix.v:33634, data SRAM address decoding across three 64 KiB banks"},
+        {"source": "official", "location": "sdk/board/wujian100_open_evb/gcc_csky.ld: MEMORY, __ram_end and __heap_end"}
+      ],
+      "note": "The linker script writes SRAM LENGTH as 0x20030000. Use the RTL capacity 0x30000, not that anomalous LENGTH literal. The heap requires the full data SRAM range."
+    },
+    "clic": {
+      "value": {
+        "name": "clic0",
+        "register_base": "0xe000e100",
+        "layout": "separate byte arrays",
+        "register_offsets": {"INTIP": "0x000", "INTIE": "0x400", "INTCFG": "0x800", "CLICCFG": "0xb00"},
+        "external_input_count": 64
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "sdk/csi_core/include/core_rv32.h: CLIC_Type and CLIC_BASE"},
+        {"source": "official", "location": "soc/E902_20191018.v: cr_clic_reg_if, CLICINTNUM, CLICINTIP_BASE, CLICINTIE_BASE, CLICINTCFG_BASE and CLICCFG"}
+      ],
+      "note": "Offsets are relative to register_base. The SDK array lengths are address spacing, not a claim that all array entries are implemented IRQs. No historical CLIC specification version is assigned."
+    },
+    "coret": {
+      "value": {
+        "name": "coret0",
+        "register_base": "0xe000e010",
+        "register_offsets": {"CTRL": "0x0", "LOAD": "0x4", "VAL": "0x8", "CALIB": "0xc"},
+        "irq": {"controller": "clic0", "input": 7}
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "sdk/csi_core/include/core_rv32.h: CORET_Type and CORET_BASE"},
+        {"source": "official", "location": "soc/core_top.v: ip_cpu_int_vld[7] = cpu_wic_ctim_int_vld"}
+      ]
+    },
+    "peripheral_instances": {
+      "value": [
+        {
+          "name": "tim0",
+          "model": "tim0",
+          "qom_type": "wujian100-tim0-sec-top-qp",
+          "generated_model_directory": "models/tim0/tim0_sec_top",
+          "mmio": [{"region": 0, "base": "0x50000000", "size": "0x400"}],
+          "irqs": [
+            {"output": 0, "rtl_port": "intr", "rtl_bit": 0, "controller": "clic0", "input": 17},
+            {"output": 1, "rtl_port": "intr", "rtl_bit": 1, "controller": "clic0", "input": 18}
+          ]
+        },
+        {
+          "name": "usi0",
+          "model": "usi0",
+          "qom_type": "wujian100-usi0-sec-top-qp",
+          "generated_model_directory": "models/usi0/usi0_sec_top",
+          "mmio": [{"region": 0, "base": "0x50028000", "size": "0x1000"}],
+          "irqs": [{"output": 0, "rtl_port": "usi_intr", "rtl_bit": 0, "controller": "clic0", "input": 28}]
+        }
+      ],
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "soc/params/apb0_params.v: APB_LEAF_SLV0 and APB_LEAF_SLV4 address ranges"},
+        {"source": "official", "location": "soc/core_top.v: ip_cpu_int_vld[18:17] and ip_cpu_int_vld[28]"},
+        {"source": "peripheral-input", "location": "/devices: top_module and irq_outputs"},
+        {"source": "generated", "location": "models/tim0/tim0_sec_top/tim0_sec_top_qp_shim.h: TYPE_WUJIAN100_TIM0_SEC_TOP_QP"},
+        {"source": "generated", "location": "models/usi0/usi0_sec_top/usi0_sec_top_qp_shim.h: TYPE_WUJIAN100_USI0_SEC_TOP_QP"}
+      ],
+      "note": "Model directories are relative to source generated. Reset, bus roles, input ties and clock port descriptions remain in project_input. These instances cover the Timer baseline, not every peripheral on the SoC."
+    }
+  },
+  "baseline": {
+    "firmware_source": "firmware",
+    "sdk_example": "sdk/projects/examples/driver/timer",
+    "firmware_modified": false,
+    "toolchain_release": "Xuantie 2.6.1",
+    "boot_requirements": {
+      "value": {
+        "kind": "direct-elf",
+        "entry": "0x00000000",
+        "load_using_elf_physical_addresses": true,
+        "data_initial_image_address": "0x00005c90",
+        "data_runtime_address": "0x20000000",
+        "startup_copies_data": true,
+        "startup_mtvec": "0x000001c3",
+        "startup_mtvt": "0x20000000"
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "firmware", "location": "ELF PT_LOAD program headers and Reset_Handler disassembly"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/startup.S: Reset_Handler data copy"}
+      ]
+    },
+    "clock_and_interrupt_configuration": {
+      "value": {
+        "timer_clock_hz": 20000000,
+        "usi_clock_hz": 20000000,
+        "coret_clock_hz": 20000000,
+        "cliccfg": "0x04",
+        "irqs_enabled_during_normal_execution": [3, 17, 28],
+        "coret_initial_register_writes": {"LOAD": 199999, "VAL": 0, "CTRL": 7},
+        "coret_irq7_enabled_in_clic": false,
+        "timer_channels_exercised": [0]
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/system.c: SystemInit and _system_init_for_baremetal"},
+        {"source": "official", "location": "sdk/csi_core/include/core_rv32.h: csi_coret_config"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/sys_freq.c: drv_get_timer_freq and drv_get_usi_freq"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/include/soc.h: IHS_VALUE and IRQn definitions"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/wj_oip_timer.c: csi_timer_initialize"},
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/wj_usi_usart.c: drv_usi_usart_initialize and drv_irq_enable"},
+        {"source": "official", "location": "sdk/projects/examples/driver/timer/example_timer.c: main invokes example_timer(0)"}
+      ],
+      "note": "Fixed clocks and tied inputs describe this experiment environment. An asserted CORET output must still respect CLIC enable state."
+    },
+    "uart_observation_requirements": {
+      "value": {
+        "device": "usi0",
+        "requested_baud": 115200,
+        "data_bits": 8,
+        "parity": "none",
+        "stop_bits": 1,
+        "rtl_tx_port": "sd0_out",
+        "qemu_output": {"gpio_name": "data-out", "index": 0},
+        "rtl_rx_port": "sclk_in",
+        "rx_idle_level": 1,
+        "existing_model_has_chardev": false
+      },
+      "status": "confirmed",
+      "evidence": [
+        {"source": "official", "location": "sdk/board/wujian100_open_evb/board_init.c: console UART configuration"},
+        {"source": "official", "location": "soc/usi0.v: UART TX sd0_out and RX sclk_in routing"},
+        {"source": "generated", "location": "configs/usi0.binding.json: input_ties and pin_io"},
+        {"source": "generated", "location": "models/usi0/usi0_sec_top/usi0_sec_top_qp_shim.c: named data-out GPIO, no chardev property"}
+      ]
+    },
+    "acceptance": {
+      "status": "not_run",
+      "required_uart_messages_in_order": [
+        "timer free_running test passed",
+        "enter cb for mode user_defined",
+        "time out after 10s passed",
+        "test timer0 successfully"
+      ],
+      "required_execution_observations": [
+        "Firmware startup reaches main without unsupported CSR exceptions.",
+        "Timer count advances while firmware executes.",
+        "Timer IRQ17 enters the SDK interrupt handler and returns correctly.",
+        "The official example completes without its timeout or failure path."
+      ],
+      "evidence": [{"source": "official", "location": "sdk/projects/examples/driver/timer/example_timer.c: test_free_running_fun, test_user_defined_fun and example_timer"}],
+      "note": "Success strings support the original baseline only; they do not establish complete peripheral fidelity or exact timing. Stronger tests remain deferred."
+    }
+  },
+  "component_candidates": {
+    "cpu": {
+      "source": "xuantie-qemu",
+      "candidate_cpu_option": "e902m",
+      "selected_implementation": null,
+      "status": "candidate_pending_integration",
+      "evidence": [{"source": "xuantie-qemu", "location": "target/riscv/cpu.c: E902M CPU initialization and registration"}],
+      "note": "Candidate supplies RV32 E/M/C and CLIC CPU support. Firmware CSR behavior and legacy CLIC interrupt entry/return still require integration validation."
+    },
+    "coret": {
+      "source": "xuantie-qemu",
+      "candidate_source_file": "hw/timer/csky_coret.c",
+      "selected_implementation": null,
+      "status": "register_layout_candidate_pending_runtime_validation",
+      "required_mapping": {"base": "0xe000e000", "size": "0x100"},
+      "required_clock_setup": "Call csky_coret_set_freq(20000000) before creating the device; instance initialization captures this global frequency.",
+      "required_irq": {"controller": "clic0", "input": 7},
+      "evidence": [{"source": "xuantie-qemu", "location": "hw/timer/csky_coret.c: csky_coret_read, csky_coret_write, csky_coret_init and csky_coret_set_freq"}],
+      "note": "Candidate register offsets start at 0x10, hence the mapping base differs from hardware.coret.register_base. Counting, reset and interrupt semantics have not been established as equivalent."
+    },
+    "clic": {
+      "source": "xuantie-qemu",
+      "reviewed_source_file": "hw/intc/xt_clic.c",
+      "selected_implementation": null,
+      "status": "reviewed_candidate_has_incompatible_mmio_layout",
+      "evidence": [{"source": "xuantie-qemu", "location": "hw/intc/xt_clic.c: xt_clic_read/write subtract 0x1000; xt_clic_hart_read/write use addr / 4"}],
+      "note": "Reviewed implementation interleaves IRQ registers at base + 0x1000 + 4*n; the official SDK expects separate byte arrays. Changing only the mapping base cannot reconcile these layouts. This is a bounded candidate assessment, not a claim that no compatible implementation exists anywhere."
+    },
+    "machine": {
+      "proposed_name": "wujian100",
+      "selected_implementation": null,
+      "status": "not_generated_or_registered"
+    }
+  },
+  "unresolved": [
+    {
+      "id": "legacy_clic_and_cpu_connection",
+      "status": "open",
+      "required_result": "A selected implementation matching the SDK and RTL CLIC layout, with correct CPU interrupt selection, entry, return and acknowledgement. A plain machine-external-interrupt wire alone is insufficient."
+    },
+    {
+      "id": "timer_access_widths",
+      "status": "static_mismatch_pending_execution_validation",
+      "firmware_access_sizes_bytes": [1, 4],
+      "current_generated_model_access_sizes_bytes": [4],
+      "evidence": [
+        {"source": "official", "location": "sdk/csi_driver/wujian100_open/include/wj_oip_timer.h: uint8_t TxControl, TxEOI and TxIntStatus bitfields; uint32_t counter registers"},
+        {"source": "firmware", "location": "Timer driver disassembly: lbu/sb control register accesses"},
+        {"source": "generated", "location": "models/tim0/tim0_sec_top/tim0_sec_top_qp_shim.c: MemoryRegionOps valid/impl access sizes are 4"}
+      ],
+      "required_result": "Determine the required generic MMIO access behavior before proposing any generator change; the input record does not change the existing model or establish a firmware-run failure."
+    },
+    {
+      "id": "uart_output_observer",
+      "status": "open",
+      "required_result": "Connect an observer to USI0 data-out and decode the configured UART output so the baseline result can be observed. Observer implementation has not been selected."
+    },
+    {
+      "id": "board_generator_and_qemu_api_integration",
+      "status": "not_validated",
+      "evidence": [{"source": "board-generator", "location": "validate and emit: generic controller creation, CPU IRQ wiring and generated QEMU API calls"}],
+      "required_result": "Confirm how the chosen core components perform CPU coupling and pre-creation clock setup, and compile against the selected QEMU revision. Existing BoardSpec validation does not prove QOM availability or runtime compatibility."
+    }
+  ]
+}

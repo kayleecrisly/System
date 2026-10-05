@@ -1,0 +1,14 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend binding for OT rv_timer. Reproduces the structurally-detected irq_blueprint (so the IRQ->PLIC path is byte-identical to BackendCharDevDetect) AND opts into the virtual-time PUMP. The pump is declared, not detected: 'this is a free-running timer that must keep time autonomously' is a SEMANTIC property not structurally inferable (e.g. i2c's timeout counters feed counter>=threshold comparators driving interrupts exactly like a timer, yet must NOT be pumped). See bindings/SCHEMA.md.",
+  "design": { "top_module": "rv_timer" },
+  "irq": {
+    "intr_state_offset": 260,
+    "intr_enable_offset": 256,
+    "alert_test_offset": 0,
+    "irq_count": 1
+  },
+  "timer": {
+    "pump_hz": 1000
+  }
+}

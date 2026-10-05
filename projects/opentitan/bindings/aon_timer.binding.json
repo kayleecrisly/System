@@ -1,0 +1,16 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend binding for OT aon_timer. (1) Reproduces the structurally-detected irq_blueprint (INTR_STATE at 0x2C; aon_timer has NO INTR_ENABLE register, so intr_enable_offset is omitted; 2 interrupts: wkup_timer_expired, wdog_timer_bark). (2) Opts into the virtual-time PUMP so the wkup/wdog count advances while firmware is parked in WFI (aon_timer's count is a plain seq register, not an ACCUMULATE counter, but still needs the pump). (3) input_resets declares the lifecycle-escalation input's benign value: on silicon lc_ctrl drives lc_escalate_en_i to the lc_tx 'Off' encoding (4'b1010 = 10); standalone it is undriven (0), which makes lc_tx_test_false_strict(escalate) false and gates the whole wkup/wdog tree OFF. See bindings/SCHEMA.md.",
+  "design": { "top_module": "aon_timer" },
+  "irq": {
+    "intr_state_offset": 44,
+    "alert_test_offset": 0,
+    "irq_count": 2
+  },
+  "timer": {
+    "pump_hz": 1000
+  },
+  "input_resets": {
+    "lc_escalate_en_i": 10
+  }
+}

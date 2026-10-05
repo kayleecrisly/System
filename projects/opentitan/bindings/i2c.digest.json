@@ -1,0 +1,781 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_scl_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_sda_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_stretch_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_sda_unstable"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_cmd_complete"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_unexp_stop"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_host_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_fmt_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_acq_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_controller_halt"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_scl_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_sda_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_stretch_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_sda_unstable"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_cmd_complete"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tx_stretch"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tx_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_acq_stretch"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_unexp_stop"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_host_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_fmt_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_acq_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_controller_halt"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_scl_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_sda_interference"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_stretch_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_sda_unstable"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_cmd_complete"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tx_stretch"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tx_threshold"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_acq_stretch"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_unexp_stop"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_host_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_enablehost"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_enabletarget"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_llpbk"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_nack_addr_after_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_ack_ctrl_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_multi_controller_monitor_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_tx_stretch_ctrl_en"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_fmtfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_rxfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_fmtempty"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_hostidle"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_targetidle"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_rxempty"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_txfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_acqfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_txempty"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_acqempty"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_ack_ctrl_stretch"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "rdata"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_fbyte"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_start"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_stop"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_readb"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_rcont"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "fdata_nakok"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_rxrst"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_fmtrst"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_acqrst"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_txrst"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "host_fifo_config_rx_thresh"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "host_fifo_config_fmt_thresh"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "target_fifo_config_tx_thresh"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "target_fifo_config_acq_thresh"
+    },
+    {
+      "kind": "re",
+      "offset": 44,
+      "reg": "host_fifo_status_fmtlvl"
+    },
+    {
+      "kind": "re",
+      "offset": 44,
+      "reg": "host_fifo_status_rxlvl"
+    },
+    {
+      "kind": "re",
+      "offset": 48,
+      "reg": "target_fifo_status_txlvl"
+    },
+    {
+      "kind": "re",
+      "offset": 48,
+      "reg": "target_fifo_status_acqlvl"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "ovrd_txovrden"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "ovrd_sclval"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "ovrd_sdaval"
+    },
+    {
+      "kind": "re",
+      "offset": 56,
+      "reg": "val_scl_rx"
+    },
+    {
+      "kind": "re",
+      "offset": 56,
+      "reg": "val_sda_rx"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "timing0_thigh"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "timing0_tlow"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "timing1_t_r"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "timing1_t_f"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "timing2_tsu_sta"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "timing2_thd_sta"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "timing3_tsu_dat"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "timing3_thd_dat"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "timing4_tsu_sto"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "timing4_t_buf"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "timeout_ctrl_val"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "timeout_ctrl_mode"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "timeout_ctrl_en"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "target_id_address0"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "target_id_mask0"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "target_id_address1"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "target_id_mask1"
+    },
+    {
+      "kind": "re",
+      "offset": 88,
+      "reg": "acqdata_abyte"
+    },
+    {
+      "kind": "re",
+      "offset": 88,
+      "reg": "acqdata_signal"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "txdata"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "host_timeout_ctrl"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "target_timeout_ctrl_val"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "target_timeout_ctrl_en"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "target_nack_count"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "target_ack_ctrl_nbytes"
+    },
+    {
+      "kind": "re",
+      "offset": 108,
+      "reg": "target_ack_ctrl_nbytes"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "target_ack_ctrl_nack"
+    },
+    {
+      "kind": "re",
+      "offset": 112,
+      "reg": "acq_fifo_next_data"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "host_nack_handler_timeout_val"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "host_nack_handler_timeout_en"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "controller_events_nack"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "controller_events_unhandled_nack_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "controller_events_bus_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "controller_events_arbitration_lost"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "target_events_tx_pending"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "target_events_bus_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "target_events_arbitration_lost"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_fmt_threshold_o",
+    "intr_rx_threshold_o",
+    "intr_acq_threshold_o",
+    "intr_rx_overflow_o",
+    "intr_controller_halt_o",
+    "intr_scl_interference_o",
+    "intr_sda_interference_o",
+    "intr_stretch_timeout_o",
+    "intr_sda_unstable_o",
+    "intr_cmd_complete_o",
+    "intr_tx_stretch_o",
+    "intr_tx_threshold_o",
+    "intr_acq_stretch_o",
+    "intr_unexp_stop_o",
+    "intr_host_timeout_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 15
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "cio_scl_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_scl_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_scl_en_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_sda_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_sda_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_sda_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "lsio_trigger_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_fmt_threshold_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_threshold_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_acq_threshold_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_overflow_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_controller_halt_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_scl_interference_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_sda_interference_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_stretch_timeout_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_sda_unstable_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_cmd_complete_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tx_stretch_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tx_threshold_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_acq_stretch_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_unexp_stop_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_host_timeout_o",
+      "width": 1
+    }
+  ],
+  "top_module": "i2c"
+}

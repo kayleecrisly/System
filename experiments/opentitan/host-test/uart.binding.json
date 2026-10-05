@@ -1,0 +1,15 @@
+{
+  "$schema_version": 1,
+  "design": {"top_module": "uart"},
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 9
+  },
+  "pin_io": {
+    "data_out": {"port": "cio_tx_o"},
+    "output_enable": {"port": "cio_tx_en_o"},
+    "data_in": {"port": "cio_rx_i"}
+  }
+}

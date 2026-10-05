@@ -1,0 +1,12 @@
+{
+  "source_repository": "https://github.com/XUANTIE-RV/wujian100_open",
+  "source_commit": "83e297583bb3454b688f9f27d6bc20ff3276ad32",
+  "sdk_project": "sdk/projects/examples/driver/timer",
+  "copied_files": {
+    "example_timer.c": "sdk/projects/examples/driver/timer/example_timer.c",
+    "configs/csi_config.h": "sdk/projects/examples/driver/timer/configs/csi_config.h"
+  },
+  "modified_from_upstream": false,
+  "dependencies": "CSI drivers, board initialization, startup code, libraries and linker script remain in the pinned official SDK.",
+  "build_integration": "The current build-official entry builds from the pinned Git SDK. It does not yet consume these local copies."
+}

@@ -1,0 +1,223 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_done_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_done_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_done_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_done_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_done_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_done_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_enable_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_enable_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_polarity_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_polarity_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_inactive_level_pcl_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_inactive_level_pda_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_inactive_level_pcl_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_inactive_level_pda_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "prediv_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "prediv_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "data_ch0_0"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "data_ch0_1"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "data_ch1_0"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "data_ch1_1"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "size_len_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "size_reps_ch0"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "size_len_ch1"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "size_reps_ch1"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_done_ch0_o",
+    "intr_done_ch1_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 2
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "cio_pda0_tx_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pcl0_tx_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pda1_tx_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pcl1_tx_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pda0_tx_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pcl0_tx_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pda1_tx_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pcl1_tx_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_done_ch0_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_done_ch1_o",
+      "width": 1
+    }
+  ],
+  "top_module": "pattgen"
+}

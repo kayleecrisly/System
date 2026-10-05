@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/lowRISC/opentitan",
+  "commit": "c7510599254dcbaa6153468e696aa11299cb5b5f",
+  "official_path": "sw/device/tests/rv_timer_smoketest.c",
+  "copied_path": "official/rv_timer_smoketest.c",
+  "sha256": "352cc80a69c5741d580ea5d49bc3a0cc5ffd9b082e4eb648f6abefa80520fa80",
+  "matches_commit": true,
+  "test_changes": [],
+  "harness": "Direct ELF _ottf_main, official startup and ISR assembly/C, official logging/status; no FreeRTOS or secure boot"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT PWM. No interrupts (alert only — digest irq_suggestion is null). pin_io exports the 6-bit cio_pwm_o/cio_pwm_en_o bus as qdev gpio-out lines so the SoC can route channels into pinmux (pin-group closed loop).",
+  "design": { "top_module": "pwm" },
+  "pin_io": {
+    "data_out":      { "port": "cio_pwm_o" },
+    "output_enable": { "port": "cio_pwm_en_o" }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "board_sha256": "fbeb5552ac6a7cd9be8a446dd3f1f491fa29b7ce670598c023a798576476813d",
+  "generator": "tools/board/rehost_gen.py",
+  "machine": "qp-opentitan-rv-timer",
+  "schema_version": 1
+}

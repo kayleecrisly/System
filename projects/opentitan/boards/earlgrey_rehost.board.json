@@ -1,0 +1,1015 @@
+{
+  "$schema_version": 1,
+  "machine": {
+    "name": "qp-earlgrey-rehost",
+    "arch": "riscv",
+    "description": "Earl Grey-derived peripheral rehosting machine for qemu-passes models",
+    "kconfig": "QP_EARLGREY_REHOST",
+    "kconfig_selects": [
+      "IBEX",
+      "I2C",
+      "OT_ADC_CTRL_QP",
+      "OT_AES_QP",
+      "OT_ALERT_HANDLER_QP",
+      "OT_AON_TIMER_QP",
+      "OT_COMMON",
+      "OT_DMA_QP",
+      "OT_GPIO_QP",
+      "OT_HMAC_QP",
+      "OT_I2C_QP",
+      "OT_KMAC_QP",
+      "OT_PATTGEN_QP",
+      "OT_PINMUX_QP",
+      "OT_PWM_QP",
+      "OT_RV_PLIC_QP",
+      "OT_RV_TIMER_QP",
+      "OT_SPI_DEVICE_QP",
+      "OT_SPI_HOST_QP",
+      "OT_SYSRST_CTRL_QP",
+      "OT_UART_QP",
+      "SSI"
+    ]
+  },
+  "platform": {
+    "reference_machine": "ot-earlgrey",
+    "integration_level": "peripheral-test",
+    "source_files": [
+      "../../../../system-backups/manual-boards-20260927-002502/archive/experiment/experiments/opentitan/test_support/qemu-overlay/new-files/hw/riscv/ot_earlgrey.c",
+      "earlgrey.soc.json",
+      "soc.digest.json"
+    ],
+    "unsupported": [
+      "alert and escalation network",
+      "clock and reset manager links",
+      "debug module and JTAG",
+      "flash, OTP and lifecycle state",
+      "official ROM_CTRL and power-manager boot sequence",
+      "pad ring and complete pinmux wiring"
+    ]
+  },
+  "cpu": {
+    "qom_type": "lowrisc-opentitan-riscv-cpu",
+    "reset_vector": "0x00008080",
+    "num_harts": 1,
+    "hartid_base": 0,
+    "properties": [
+      {
+        "name": "mtvec",
+        "kind": "uint",
+        "value": 32769
+      },
+      {
+        "name": "start-powered-off",
+        "kind": "bool",
+        "value": false
+      }
+    ]
+  },
+  "memory": [
+    {
+      "name": "rom",
+      "base": "0x00008000",
+      "size": "0x00004000",
+      "kind": "rom"
+    },
+    {
+      "name": "sram_main",
+      "base": "0x10000000",
+      "size": "0x00020000",
+      "kind": "ram"
+    }
+  ],
+  "models": {
+    "rv_plic": {
+      "qom_type": "ot-rv-plic-qp",
+      "header": "hw/opentitan/rv_plic_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 2,
+      "gpio_inputs": 186
+    },
+    "alert_handler": {
+      "qom_type": "ot-alert-handler-qp",
+      "header": "hw/opentitan/alert_handler_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 4
+    },
+    "sysrst_ctrl": {
+      "qom_type": "ot-sysrst-ctrl-qp",
+      "header": "hw/opentitan/sysrst_ctrl_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 1
+    },
+    "adc_ctrl": {
+      "qom_type": "ot-adc-ctrl-qp",
+      "header": "hw/opentitan/adc_ctrl_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 1
+    },
+    "dma": {
+      "qom_type": "ot-dma-qp",
+      "header": "hw/opentitan/dma_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 3
+    },
+    "aes": {
+      "qom_type": "ot-aes-qp",
+      "header": "hw/opentitan/aes_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    },
+    "hmac": {
+      "qom_type": "ot-hmac-qp",
+      "header": "hw/opentitan/hmac_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 3
+    },
+    "kmac": {
+      "qom_type": "ot-kmac-qp",
+      "header": "hw/opentitan/kmac_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 3
+    },
+    "uart": {
+      "qom_type": "ot-uart-qp",
+      "header": "hw/opentitan/uart_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 9
+    },
+    "gpio": {
+      "qom_type": "ot-gpio-qp",
+      "header": "hw/opentitan/gpio_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 32
+    },
+    "spi_device": {
+      "qom_type": "ot-spi-device-qp",
+      "header": "hw/opentitan/spi_device_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 8
+    },
+    "i2c": {
+      "qom_type": "ot-i2c-qp",
+      "header": "hw/opentitan/i2c_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 10
+    },
+    "pattgen": {
+      "qom_type": "ot-pattgen-qp",
+      "header": "hw/opentitan/pattgen_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 2
+    },
+    "rv_timer": {
+      "qom_type": "ot-rv-timer-qp",
+      "header": "hw/opentitan/rv_timer_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 1
+    },
+    "spi_host": {
+      "qom_type": "ot-spi-host-qp",
+      "header": "hw/opentitan/spi_host_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 2
+    },
+    "aon_timer": {
+      "qom_type": "ot-aon-timer-qp",
+      "header": "hw/opentitan/aon_timer_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 2
+    },
+    "pwm": {
+      "qom_type": "ot-pwm-qp",
+      "header": "hw/opentitan/pwm_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    },
+    "pinmux": {
+      "qom_type": "ot-pinmux-qp",
+      "header": "hw/opentitan/pinmux_qp_shim.h",
+      "mmio_regions": 1,
+      "irq_outputs": 0
+    }
+  },
+  "interrupt_controllers": [
+    {
+      "name": "plic0",
+      "model": "rv_plic",
+      "qom_type": "ot-rv-plic-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x48000000",
+          "size": "0x08000000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "rv_plic"
+        }
+      ],
+      "input_count": 186,
+      "output_kind": "gpio",
+      "cpu_irqs": [
+        {
+          "output": 0,
+          "cpu_input": 11
+        },
+        {
+          "output": 1,
+          "cpu_input": 3
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "name": "uart0",
+      "model": "uart",
+      "qom_type": "ot-uart-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40000000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "u0"
+        },
+        {
+          "name": "clock-name",
+          "kind": "string",
+          "value": "peri.io_div4"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 1
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 2
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 3
+        },
+        {
+          "output": 3,
+          "controller": "plic0",
+          "input": 4
+        },
+        {
+          "output": 4,
+          "controller": "plic0",
+          "input": 5
+        },
+        {
+          "output": 5,
+          "controller": "plic0",
+          "input": 6
+        },
+        {
+          "output": 6,
+          "controller": "plic0",
+          "input": 7
+        },
+        {
+          "output": 7,
+          "controller": "plic0",
+          "input": 8
+        },
+        {
+          "output": 8,
+          "controller": "plic0",
+          "input": 9
+        }
+      ],
+      "links": [],
+      "chardev": {
+        "property": "chardev",
+        "serial_index": 0
+      }
+    },
+    {
+      "name": "gpio",
+      "model": "gpio",
+      "qom_type": "ot-gpio-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40040000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 37
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 38
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 39
+        },
+        {
+          "output": 3,
+          "controller": "plic0",
+          "input": 40
+        },
+        {
+          "output": 4,
+          "controller": "plic0",
+          "input": 41
+        },
+        {
+          "output": 5,
+          "controller": "plic0",
+          "input": 42
+        },
+        {
+          "output": 6,
+          "controller": "plic0",
+          "input": 43
+        },
+        {
+          "output": 7,
+          "controller": "plic0",
+          "input": 44
+        },
+        {
+          "output": 8,
+          "controller": "plic0",
+          "input": 45
+        },
+        {
+          "output": 9,
+          "controller": "plic0",
+          "input": 46
+        },
+        {
+          "output": 10,
+          "controller": "plic0",
+          "input": 47
+        },
+        {
+          "output": 11,
+          "controller": "plic0",
+          "input": 48
+        },
+        {
+          "output": 12,
+          "controller": "plic0",
+          "input": 49
+        },
+        {
+          "output": 13,
+          "controller": "plic0",
+          "input": 50
+        },
+        {
+          "output": 14,
+          "controller": "plic0",
+          "input": 51
+        },
+        {
+          "output": 15,
+          "controller": "plic0",
+          "input": 52
+        },
+        {
+          "output": 16,
+          "controller": "plic0",
+          "input": 53
+        },
+        {
+          "output": 17,
+          "controller": "plic0",
+          "input": 54
+        },
+        {
+          "output": 18,
+          "controller": "plic0",
+          "input": 55
+        },
+        {
+          "output": 19,
+          "controller": "plic0",
+          "input": 56
+        },
+        {
+          "output": 20,
+          "controller": "plic0",
+          "input": 57
+        },
+        {
+          "output": 21,
+          "controller": "plic0",
+          "input": 58
+        },
+        {
+          "output": 22,
+          "controller": "plic0",
+          "input": 59
+        },
+        {
+          "output": 23,
+          "controller": "plic0",
+          "input": 60
+        },
+        {
+          "output": 24,
+          "controller": "plic0",
+          "input": 61
+        },
+        {
+          "output": 25,
+          "controller": "plic0",
+          "input": 62
+        },
+        {
+          "output": 26,
+          "controller": "plic0",
+          "input": 63
+        },
+        {
+          "output": 27,
+          "controller": "plic0",
+          "input": 64
+        },
+        {
+          "output": 28,
+          "controller": "plic0",
+          "input": 65
+        },
+        {
+          "output": 29,
+          "controller": "plic0",
+          "input": 66
+        },
+        {
+          "output": 30,
+          "controller": "plic0",
+          "input": 67
+        },
+        {
+          "output": 31,
+          "controller": "plic0",
+          "input": 68
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "spi_device",
+      "model": "spi_device",
+      "qom_type": "ot-spi-device-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40050000",
+          "size": "0x2000"
+        }
+      ],
+      "properties": [],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 69
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 70
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 71
+        },
+        {
+          "output": 3,
+          "controller": "plic0",
+          "input": 72
+        },
+        {
+          "output": 4,
+          "controller": "plic0",
+          "input": 73
+        },
+        {
+          "output": 5,
+          "controller": "plic0",
+          "input": 74
+        },
+        {
+          "output": 6,
+          "controller": "plic0",
+          "input": 75
+        },
+        {
+          "output": 7,
+          "controller": "plic0",
+          "input": 76
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "i2c0",
+      "model": "i2c",
+      "qom_type": "ot-i2c-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40080000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "i2c0"
+        },
+        {
+          "name": "clock-name",
+          "kind": "string",
+          "value": "peri.io_div4"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 77
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 78
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 79
+        },
+        {
+          "output": 3,
+          "controller": "plic0",
+          "input": 80
+        },
+        {
+          "output": 4,
+          "controller": "plic0",
+          "input": 81
+        },
+        {
+          "output": 5,
+          "controller": "plic0",
+          "input": 82
+        },
+        {
+          "output": 6,
+          "controller": "plic0",
+          "input": 83
+        },
+        {
+          "output": 7,
+          "controller": "plic0",
+          "input": 84
+        },
+        {
+          "output": 8,
+          "controller": "plic0",
+          "input": 85
+        },
+        {
+          "output": 9,
+          "controller": "plic0",
+          "input": 86
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "pattgen",
+      "model": "pattgen",
+      "qom_type": "ot-pattgen-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x400e0000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "pattgen"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 122
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 123
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "rv_timer",
+      "model": "rv_timer",
+      "qom_type": "ot-rv-timer-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40100000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "clock-name",
+          "kind": "string",
+          "value": "timers.io_div4"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 124
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "alert_handler",
+      "model": "alert_handler",
+      "qom_type": "ot-alert-handler-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40150000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "alert_handler"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 127
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 128
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 129
+        },
+        {
+          "output": 3,
+          "controller": "plic0",
+          "input": 130
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "spi_host0",
+      "model": "spi_host",
+      "qom_type": "ot-spi-host-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40300000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "spi0"
+        },
+        {
+          "name": "bus-num",
+          "kind": "uint",
+          "value": 0
+        },
+        {
+          "name": "clock-name",
+          "kind": "string",
+          "value": "peri.io_div4"
+        },
+        {
+          "name": "version",
+          "kind": "uint",
+          "value": 2
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 131
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 132
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "sysrst_ctrl",
+      "model": "sysrst_ctrl",
+      "qom_type": "ot-sysrst-ctrl-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40430000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "sysrst_ctrl"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 154
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "adc_ctrl",
+      "model": "adc_ctrl",
+      "qom_type": "ot-adc-ctrl-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40440000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "adc_ctrl"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 155
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "pwm",
+      "model": "pwm",
+      "qom_type": "ot-pwm-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40450000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "pwm"
+        }
+      ],
+      "irqs": [],
+      "links": []
+    },
+    {
+      "name": "pinmux",
+      "model": "pinmux",
+      "qom_type": "ot-pinmux-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40460000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "pinmux"
+        }
+      ],
+      "irqs": [],
+      "links": []
+    },
+    {
+      "name": "aon_timer",
+      "model": "aon_timer",
+      "qom_type": "ot-aon-timer-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x40470000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "clock-name",
+          "kind": "string",
+          "value": "timers.io_div4"
+        },
+        {
+          "name": "clock-name-aon",
+          "kind": "string",
+          "value": "timers.aon"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 156
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 157
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "dma",
+      "model": "dma",
+      "qom_type": "ot-dma-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x404a0000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "dma"
+        }
+      ],
+      "irqs": [],
+      "links": []
+    },
+    {
+      "name": "aes",
+      "model": "aes",
+      "qom_type": "ot-aes-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x41100000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "aes"
+        }
+      ],
+      "irqs": [],
+      "links": []
+    },
+    {
+      "name": "hmac",
+      "model": "hmac",
+      "qom_type": "ot-hmac-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x41110000",
+          "size": "0x2000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "hmac"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 166
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 167
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 168
+        }
+      ],
+      "links": []
+    },
+    {
+      "name": "kmac",
+      "model": "kmac",
+      "qom_type": "ot-kmac-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x41120000",
+          "size": "0x1000"
+        }
+      ],
+      "properties": [
+        {
+          "name": "ot_id",
+          "kind": "string",
+          "value": "kmac"
+        }
+      ],
+      "irqs": [
+        {
+          "output": 0,
+          "controller": "plic0",
+          "input": 169
+        },
+        {
+          "output": 1,
+          "controller": "plic0",
+          "input": 170
+        },
+        {
+          "output": 2,
+          "controller": "plic0",
+          "input": 171
+        }
+      ],
+      "links": []
+    }
+  ],
+  "gpio_connections": [],
+  "boot": {
+    "kind": "direct-elf",
+    "use_elf_entry": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT PINMUX. No interrupts (alert only). Primary pin_io = the 47 MIO pads (mio_out_o/mio_oe_o out, mio_in_i in) — reproduces the auto-detector wiring byte-for-byte. aux_pin_groups adds the PERIPHERAL side for the pin-group closed loop: mio_to_periph_o (57 lines to peripherals, 'periph-out' qdev lines), periph_to_mio_i (75 lines from peripherals, 'periph-in' qdev lines), with periph_to_mio_oe_i tied all-ones (peripheral output-enables are the peripherals' own concern; the pinmux model only routes).",
+  "design": { "top_module": "pinmux" },
+  "pin_io": {
+    "data_out":      { "port": "mio_out_o" },
+    "output_enable": { "port": "mio_oe_o" },
+    "data_in":       { "port": "mio_in_i" }
+  },
+  "aux_pin_groups": [
+    {
+      "name": "periph",
+      "out_port": "mio_to_periph_o",
+      "in_port": "periph_to_mio_i",
+      "in_tie_ones": ["periph_to_mio_oe_i"]
+    }
+  ]
+}

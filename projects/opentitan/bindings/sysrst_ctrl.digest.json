@@ -1,0 +1,319 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "regwen"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "ulp_status"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "combo_intr_status_combo0_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "combo_intr_status_combo1_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "combo_intr_status_combo2_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "combo_intr_status_combo3_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_pwrb_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key0_in_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key1_in_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key2_in_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_ac_present_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_ec_rst_l_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_flash_wp_l_h2l"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_pwrb_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key0_in_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key1_in_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_key2_in_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_ac_present_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_ec_rst_l_l2h"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "key_intr_status_flash_wp_l_l2h"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 221,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": false,
+      "processes": 258
+    },
+    {
+      "clock_sigs": 290,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_aon_i",
+      "primary": true,
+      "processes": 341
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_event_detected_o"
+  ],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_aon_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_aon_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "wkup_req_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "rst_req_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_event_detected_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_ac_present_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_ec_rst_l_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_key0_in_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_key1_in_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_key2_in_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_pwrb_in_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_lid_open_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_flash_wp_l_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_bat_disable_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_flash_wp_l_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_ec_rst_l_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key0_out_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key1_out_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key2_out_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pwrb_out_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_z3_wakeup_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_bat_disable_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_flash_wp_l_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_ec_rst_l_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key0_out_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key1_out_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_key2_out_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_pwrb_out_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_z3_wakeup_en_o",
+      "width": 1
+    }
+  ],
+  "top_module": "sysrst_ctrl"
+}

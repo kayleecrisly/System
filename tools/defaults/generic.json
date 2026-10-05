@@ -1,0 +1,13 @@
+{
+  "$schema_version": 1,
+  "project": "generic",
+  "backend": "generic-sysbus",
+  "fallback": "generic",
+  "naming": {
+    "qom_prefix": "qp",
+    "state_prefix": "Qp",
+    "macro_prefix": "QP"
+  },
+  "generic_properties": [],
+  "devices": []
+}

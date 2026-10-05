@@ -1,0 +1,39 @@
+{
+  "name": "uart-smoketest-baseline-direct-load",
+  "upstream": "https://github.com/lowRISC/opentitan",
+  "source_commit": "c7510599254dcbaa6153468e696aa11299cb5b5f",
+  "official_test": "sw/device/tests/uart_smoketest.c",
+  "official_test_sha256": "a4113934a43cd8b40c19cde22e6fd1f8461e363f7f5de2681cd5ed12e4e23987",
+  "test_source_modifications": [],
+  "test_bytes": 12,
+  "official_sources_retained": [
+    "sw/device/lib/dif/dif_uart.c",
+    "sw/device/lib/base/math.c",
+    "sw/device/lib/base/status.c",
+    "sw/device/lib/arch/device_sim_dv.c",
+    "sw/device/lib/testing/test_framework/check.h",
+    "sw/device/lib/testing/test_framework/ottf_test_config.h",
+    "sw/device/lib/testing/test_framework/ottf_start.S",
+    "sw/device/lib/crt/crt.S"
+  ],
+  "generated_from_official_source": ["UART register definitions", "RV_CORE_IBEX register definitions", "UART DIF autogen"],
+  "adaptations": [
+    "Experiment-local ottf_main.h excludes FreeRTOS declarations while retaining official test configuration.",
+    "Experiment-local _ottf_main invokes test_main directly and reports its actual return value.",
+    "Platform input headers supply Earl Grey UART and Ibex base addresses.",
+    "Experiment-local log/status handlers use the official SimDV window, with failures terminal.",
+    "All unexpected exceptions and interrupts report failure.",
+    "Custom linker script places code in flash and data/stack in main SRAM; ELF entry is official _ottf_start."
+  ],
+  "excluded_from_first_experiment": ["Full security boot chain", "Full OTTF runtime and FreeRTOS", "PLIC interrupt testing"],
+  "runtime_addresses": {
+    "uart0": "0x40000000",
+    "status": "0x411f0080",
+    "log": "0x411f0084",
+    "flash": "0x20000000",
+    "flash_size": "0x100000",
+    "sram": "0x10000000",
+    "sram_size": "0x20000"
+  },
+  "pass_condition": "The official test's UART configure, system-loopback, FIFO reset, polled sends/receives and every byte equality CHECK complete; only then test_main returns true and the harness writes 0x900d."
+}

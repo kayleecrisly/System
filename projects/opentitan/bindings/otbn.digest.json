@@ -1,0 +1,393 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test_fatal"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test_recov"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cmd"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "ctrl"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "ctrl"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_bad_data_addr"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_bad_data_addr"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_bad_insn_addr"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_bad_insn_addr"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_call_stack"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_call_stack"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_illegal_insn"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_illegal_insn"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_loop"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_loop"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_key_invalid"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_key_invalid"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_rnd_rep_chk_fail"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_rnd_rep_chk_fail"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_rnd_fips_chk_fail"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_rnd_fips_chk_fail"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_imem_intg_violation"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_imem_intg_violation"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_dmem_intg_violation"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_dmem_intg_violation"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_reg_intg_violation"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_reg_intg_violation"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_bus_intg_violation"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_bus_intg_violation"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_bad_internal_state"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_bad_internal_state"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_illegal_bus_access"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_illegal_bus_access"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_lifecycle_escalation"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_lifecycle_escalation"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "err_bits_fatal_software"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "err_bits_fatal_software"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "insn_cnt"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "insn_cnt"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "load_checksum"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "load_checksum"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 137,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": true,
+      "processes": 226
+    },
+    {
+      "clock_sigs": 6,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_edn_i",
+      "primary": false,
+      "processes": 6
+    },
+    {
+      "clock_sigs": 3,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_otp_i",
+      "primary": false,
+      "processes": 3
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_done_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 1
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "idle_o",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "intr_done_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "lc_escalate_en_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "lc_rma_req_i",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "lc_rma_ack_o",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_imem_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "ram_cfg_dmem_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_imem_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "ram_cfg_rsp_dmem_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "clk_edn_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_edn_ni",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "edn_rnd_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "edn_rnd_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "edn_urnd_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "edn_urnd_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "clk_otp_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_otp_ni",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "otbn_otp_key_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "otbn_otp_key_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "keymgr_key_i",
+      "width": 0
+    }
+  ],
+  "top_module": "otbn"
+}

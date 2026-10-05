@@ -1,0 +1,15 @@
+{
+  "title": "wujian100_open Userguide",
+  "revision": "1.0",
+  "document_date": "2019-10-15",
+  "publisher": "T-HEAD Semiconductor Co.,Ltd.",
+  "source": "/home/kaylee/circt-workspace/circt/workspace/wujian100_open/doc/wujian100_open Userguide v1.0.docx",
+  "destination": "docs/wujian100/manuals/wujian100_open Userguide v1.0.docx",
+  "sha256": "0616eb5cb9c0fea948a0cd4193d3e9fa40e094df1d9a15b14485c28af861e741",
+  "size_bytes": 390240,
+  "source_preserved": true,
+  "reused_existing_copy": "inputs/wujian100/reference/wujian100_open Userguide v1.0.docx",
+  "compatibility_symlink": "../../../docs/wujian100/manuals/wujian100_open Userguide v1.0.docx",
+  "backup": "/home/kaylee/circt-workspace/circt/workspace/zhx-main-latest-backups/manual-archive-20260923-151419",
+  "archived_at": "2026-09-23T15:14:19.497242+08:00"
+}

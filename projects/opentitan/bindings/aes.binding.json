@@ -1,0 +1,13 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT AES. No interrupts (the block has no INTR_STATE); two alerts via the standard alert_tx auto-detection. Translated with -G AESGCMEnable=0 (Earl Grey instantiates GCM disabled \u2014 hw/top_earlgrey/data/top_earlgrey.hjson), -G SecMasking=0 and -G SecSBoxImpl=SBoxImplLut (functional simplification: masking is a side-channel countermeasure with bit-identical ciphertext; the masked DOM S-box and PRNG are microarchitecture the MMIO model cannot observe).",
+  "design": {
+    "top_module": "aes"
+  },
+  "input_ties": {
+    "edn_i_edn_ack": 1,
+    "edn_i_edn_fips": 1,
+    "edn_i_edn_bus": 2863311530,
+    "lc_escalate_en_i": 10
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "direct_out"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "direct_out"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "masked_out_lower_data"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "masked_out_lower_data"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "masked_out_lower_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "masked_out_upper_data"
+    },
+    {
+      "kind": "re",
+      "offset": 28,
+      "reg": "masked_out_upper_data"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "masked_out_upper_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "direct_oe"
+    },
+    {
+      "kind": "re",
+      "offset": 32,
+      "reg": "direct_oe"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "masked_oe_lower_data"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "masked_oe_lower_data"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "masked_oe_lower_mask"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "masked_oe_lower_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "masked_oe_upper_data"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "masked_oe_upper_data"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "masked_oe_upper_mask"
+    },
+    {
+      "kind": "re",
+      "offset": 40,
+      "reg": "masked_oe_upper_mask"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "intr_ctrl_en_rising"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "intr_ctrl_en_falling"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "intr_ctrl_en_lvlhigh"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "intr_ctrl_en_lvllow"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "ctrl_en_input_filter"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_gpio_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 1
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "strap_en_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "sampled_straps_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_gpio_o",
+      "width": 32
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "cio_gpio_i",
+      "width": 32
+    },
+    {
+      "dir": "out",
+      "name": "cio_gpio_o",
+      "width": 32
+    },
+    {
+      "dir": "out",
+      "name": "cio_gpio_en_o",
+      "width": 32
+    }
+  ],
+  "top_module": "gpio"
+}

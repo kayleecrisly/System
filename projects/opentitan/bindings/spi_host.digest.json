@@ -1,0 +1,337 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_error"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_error"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_spi_event"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_error"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_spi_event"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_rx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_tx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_output_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_sw_rst"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "control_spien"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_clkdiv"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_csnidle"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_csntrail"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_csnlead"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_fullcyc"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_cpha"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "configopts_cpol"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "csid"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "command_csaat"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "command_speed"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "command_direction"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "command_len"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "error_enable_cmdbusy"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "error_enable_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "error_enable_underflow"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "error_enable_cmdinval"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "error_enable_csidinval"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_cmdbusy"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_underflow"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_cmdinval"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_csidinval"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "error_status_accessinval"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_rxfull"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_txempty"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_rxwm"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_txwm"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_ready"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "event_enable_idle"
+    }
+  ],
+  "fifo_instances": [
+    {
+      "instance": "cmd_fifo",
+      "module": "prim_fifo_sync",
+      "parent": "spi_host_command_queue",
+      "wvalid_source": "command_valid_i"
+    },
+    {
+      "instance": "u_tx_fifo",
+      "module": "prim_fifo_sync_14",
+      "parent": "spi_host_data_fifos",
+      "wvalid_source": "tx_valid_i"
+    },
+    {
+      "instance": "u_rx_fifo",
+      "module": "prim_fifo_sync_15",
+      "parent": "spi_host_data_fifos",
+      "wvalid_source": "core_tx_valid_o"
+    }
+  ],
+  "interrupts": [
+    "intr_error_o",
+    "intr_spi_event_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 2
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "cio_sck_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_sck_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_csb_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_csb_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_sd_o",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "cio_sd_en_o",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "cio_sd_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "passthrough_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "passthrough_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "lsio_trigger_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_error_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_spi_event_o",
+      "width": 1
+    }
+  ],
+  "top_module": "spi_host"
+}

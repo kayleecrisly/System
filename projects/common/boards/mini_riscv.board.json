@@ -1,0 +1,94 @@
+{
+  "$schema_version": 1,
+  "machine": {
+    "name": "qp-mini-riscv",
+    "arch": "riscv",
+    "description": "qemu-passes generated RV32 rehosting machine",
+    "kconfig": "QP_MINI_RISCV"
+  },
+  "cpu": {
+    "qom_type": "rv32-riscv-cpu",
+    "reset_vector": "0x80000000",
+    "num_harts": 1,
+    "hartid_base": 0,
+    "properties": []
+  },
+  "memory": [
+    {
+      "name": "ram",
+      "base": "0x80000000",
+      "size": "0x02000000",
+      "kind": "ram"
+    }
+  ],
+  "models": {
+    "uart": {
+      "qom_type": "ot-uart-qp",
+      "header": "hw/opentitan/uart_qp_shim.h",
+      "sources": [
+        "../../opentitan/qemu_passes/uart.c",
+        "../../opentitan/uart_qp_shim.c"
+      ],
+      "mmio_regions": 1,
+      "irq_outputs": 1
+    }
+  },
+  "riscv_interrupts": {
+    "plic": {
+      "name": "plic0",
+      "kind": "sifive-plic",
+      "base": "0x0c000000",
+      "size": "0x04000000",
+      "hart_config": "M",
+      "num_sources": 53,
+      "num_priorities": 7,
+      "priority_base": "0x000000",
+      "pending_base": "0x001000",
+      "enable_base": "0x002000",
+      "enable_stride": "0x80",
+      "context_base": "0x200000",
+      "context_stride": "0x1000",
+      "edge_triggered": false
+    },
+    "aclint": {
+      "kind": "riscv-aclint",
+      "mswi": {
+        "base": "0x02000000",
+        "supervisor": false
+      },
+      "mtimer": {
+        "base": "0x02004000",
+        "size": "0x00008000",
+        "timecmp_base": "0x0000",
+        "time_base": "0x7ff8",
+        "timebase_frequency": 10000000,
+        "provide_rdtime": false
+      }
+    }
+  },
+  "devices": [
+    {
+      "name": "uart0",
+      "model": "uart",
+      "qom_type": "ot-uart-qp",
+      "mmio": [
+        {
+          "region": 0,
+          "base": "0x10000000",
+          "size": "0x00001000"
+        }
+      ],
+      "properties": [],
+      "irqs": [
+        {"output": 0, "controller": "plic0", "input": 5}
+      ],
+      "links": [],
+      "chardev": {"property": "chardev", "serial_index": 0}
+    }
+  ],
+  "gpio_connections": [],
+  "boot": {
+    "kind": "direct-elf",
+    "use_elf_entry": true
+  }
+}

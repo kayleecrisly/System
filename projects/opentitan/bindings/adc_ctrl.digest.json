@@ -1,0 +1,134 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "adc_intr_ctl_match_en"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "adc_intr_ctl_trans_en"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "adc_intr_ctl_oneshot_en"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "adc_intr_status_match"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "adc_intr_status_trans"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "adc_intr_status_oneshot"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 71,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": false,
+      "processes": 83
+    },
+    {
+      "clock_sigs": 138,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_aon_i",
+      "primary": true,
+      "processes": 158
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_match_pending_o"
+  ],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_aon_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_aon_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "adc_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "adc_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_match_pending_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "wkup_req_o",
+      "width": 1
+    }
+  ],
+  "top_module": "adc_ctrl"
+}

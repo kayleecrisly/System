@@ -1,0 +1,131 @@
+{
+  "addr_decode": [],
+  "clock_roots": [
+    {
+      "clock_sigs": 1340,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": true,
+      "processes": 1564
+    },
+    {
+      "clock_sigs": 3,
+      "decision": "declare in binding.clocks: \"event\" if its edges carry data/events (bus clock or chip-select from a pad), \"beat\" or omit if free-running",
+      "kind": "beat",
+      "port": "clk_edn_i",
+      "primary": false,
+      "processes": 3
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_classa_o",
+    "intr_classb_o",
+    "intr_classc_o",
+    "intr_classd_o"
+  ],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_shadowed_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_edn_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_edn_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_classa_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_classb_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_classc_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_classd_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "lpg_cg_en_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "lpg_rst_en_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "crashdump_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "edn_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "edn_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_tx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_rx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "esc_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "esc_tx_o",
+      "width": 0
+    }
+  ],
+  "top_module": "alert_handler"
+}

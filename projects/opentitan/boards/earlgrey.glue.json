@@ -1,0 +1,251 @@
+{
+  "$schema_version": 1,
+  "source": "lowrisc-qemu/hw/riscv/ot_earlgrey.c",
+  "glue": {
+    "uart": {
+      "type": "TYPE_OT_UART_QP",
+      "instance": 0,
+      "cfg": "ot_eg_soc_uart_configure",
+      "links": [
+        {
+          "prop": "clock-src",
+          "target": "CLKMGR"
+        }
+      ],
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"u0\""
+        },
+        {
+          "kind": "string",
+          "key": "\"clock-name\"",
+          "value": "\"peri.io_div4\""
+        }
+      ],
+      "irq_taps": [
+        {
+          "irq": 1,
+          "splitter": "UART0_RX_DMA",
+          "in": 0
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: UART0 routes through the auto-generated\n         * frontend wrapped by ot_uart_qp.c.  UART1/2/3 below stay on\n         * TYPE_OT_UART so a regression here is isolated to UART0. */",
+      "_fields": [
+        "cfg",
+        "gpio",
+        "instance",
+        "link",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "gpio": {
+      "type": "TYPE_OT_GPIO_QP",
+      "_doc": "/* qemu-passes drop-in: route GPIO through ot_gpio_qp.c, which\n         * wraps the auto-generated model in qemu_passes/gpio.c.  Switch\n         * back to TYPE_OT_GPIO_EG to fall back to the upstream model. */",
+      "_fields": [
+        "gpio",
+        "memmap",
+        "type"
+      ]
+    },
+    "spi_device": {
+      "type": "TYPE_OT_SPI_DEVICE_QP",
+      "instance": 0,
+      "cfg": "ot_eg_soc_spi_device_configure",
+      "links": [
+        {
+          "prop": "spi-host",
+          "target": "SPI_HOST1"
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: route through spi_device_qp_shim.c which\n         * wraps the auto-generated spi_device model.  shim exposes the\n         * upstream `chardev` property for the spidev transport (SPI-slave\n         * organ, qemu.spi_slave_blueprint) plus `ot_id` and `spi-host` link.  Link is typed TYPE_DEVICE so it accepts\n         * either the QP or upstream SPI_HOST flavour. */",
+      "_fields": [
+        "cfg",
+        "gpio",
+        "instance",
+        "link",
+        "memmap",
+        "type"
+      ]
+    },
+    "i2c": {
+      "type": "TYPE_OT_I2C_QP",
+      "instance": 0,
+      "links": [
+        {
+          "prop": "clock-src",
+          "target": "CLKMGR"
+        }
+      ],
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"i2c0\""
+        },
+        {
+          "kind": "string",
+          "key": "\"clock-name\"",
+          "value": "\"peri.io_div4\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: route I2C0 through i2c_qp_shim.c, which\n         * wraps the auto-generated model in qemu_passes/i2c.c.  I2C1/I2C2\n         * stay on TYPE_OT_I2C upstream so a regression here is isolated.\n         *\n         * IRQ 10..14 (TX_STRETCH / TX_THRESHOLD / ACQ_STRETCH / UNEXP_STOP /\n         * HOST_TIMEOUT) dropped: they don't exist in the LLHD IR (older OT\n         * version) and the auto-emitted shim has irqCount=10.  PLIC lines\n         * 87..91 stay unconnected. */",
+      "_fields": [
+        "gpio",
+        "instance",
+        "link",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "pattgen": {
+      "type": "TYPE_OT_PATTGEN_QP",
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"pattgen\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: pattgen was unimp upstream; we replace with\n         * the auto-generated model.  2 IRQ outputs (intr_done_ch{0,1}) are\n         * unwired in frontend mode (upstream UNIMP didn't connect them to\n         * PLIC either).  cio_p{c,d}{a,l}{0,1}_tx_o channels go nowhere. */",
+      "_fields": [
+        "gpio",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "rv_timer": {
+      "type": "TYPE_OT_RV_TIMER_QP",
+      "links": [
+        {
+          "prop": "clock-src",
+          "target": "CLKMGR"
+        }
+      ],
+      "props": [
+        {
+          "kind": "string",
+          "key": "\"clock-name\"",
+          "value": "\"timers.io_div4\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: route rv_timer through rv_timer_qp_shim.c,\n         * which wraps the auto-generated model in qemu_passes/rv_timer.c.\n         * Switch back to TYPE_OT_TIMER to fall back to the upstream model.\n         *\n         * The HART/M_TIMER connection (`OT_EG_SOC_GPIO(0, HART, IRQ_M_TIMER)`)\n         * is intentionally dropped: it requires an unnamed gpio_out pin\n         * which the auto-emitted shim does not register (it only sets up\n         * sysbus IRQs + named alert).  Frontend-only doesn't fire IRQs\n         * anyway, so HART won't get a timer wakeup \u2014 fine for register\n         * round-trip testing.  Backend wiring milestone will revisit. */",
+      "_fields": [
+        "gpio",
+        "link",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "spi_host": {
+      "type": "TYPE_OT_SPI_HOST_QP",
+      "instance": 0,
+      "links": [
+        {
+          "prop": "clock-src",
+          "target": "CLKMGR"
+        }
+      ],
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"spi0\""
+        },
+        {
+          "kind": "uint",
+          "key": "\"bus-num\"",
+          "value": "0"
+        },
+        {
+          "kind": "string",
+          "key": "\"clock-name\"",
+          "value": "\"peri.io_div4\""
+        },
+        {
+          "kind": "uint",
+          "key": "\"version\"",
+          "value": "2u"
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: route SPI_HOST0 through spi_host_qp_shim.c,\n         * which wraps the auto-generated model in qemu_passes/spi_host.c.\n         * SPI_HOST1 stays on TYPE_OT_SPI_HOST upstream so a regression\n         * here is isolated to SPI_HOST0. */",
+      "_fields": [
+        "gpio",
+        "instance",
+        "link",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "aon_timer": {
+      "type": "TYPE_OT_AON_TIMER_QP",
+      "links": [
+        {
+          "prop": "clock-src",
+          "target": "CLKMGR"
+        }
+      ],
+      "props": [
+        {
+          "kind": "string",
+          "key": "\"clock-name\"",
+          "value": "\"timers.io_div4\""
+        },
+        {
+          "kind": "string",
+          "key": "\"clock-name-aon\"",
+          "value": "\"timers.aon\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: routes aon_timer through aon_timer_qp_shim.c\n         * which wraps the auto-generated model.  AON_TIMER_WKUP /\n         * AON_TIMER_BITE named-GPIO outputs to PWRMGR are dropped \u2014 the\n         * QP shim doesn't register those output GPIO lines (frontend-only\n         * doesn't exercise PWRMGR wakeup/reset paths). */",
+      "_fields": [
+        "gpio",
+        "link",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "pwm": {
+      "type": "TYPE_OT_PWM_QP",
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"pwm\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: pwm was an unimp placeholder upstream;\n         * we replace it with a real auto-generated model.  6 cio_pwm\n         * outputs go nowhere in frontend-only mode (no external pad\n         * receiver), so dropping the cio* GPIO connections is fine. */",
+      "_fields": [
+        "gpio",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    },
+    "pinmux": {
+      "type": "TYPE_OT_PINMUX_QP",
+      "props": [
+        {
+          "kind": "string",
+          "key": "OT_COMMON_DEV_ID",
+          "value": "\"pinmux\""
+        }
+      ],
+      "_doc": "/* qemu-passes drop-in: routes pinmux through pinmux_qp_shim.c\n         * which wraps the auto-generated model.  Pinmux's 568-bit\n         * addr_hit / 2047-bit one-hot trees exercise Bug G's wide-array\n         * (uint64_t arr[N]) storage path. */",
+      "_fields": [
+        "gpio",
+        "memmap",
+        "prop",
+        "type"
+      ]
+    }
+  }
+}

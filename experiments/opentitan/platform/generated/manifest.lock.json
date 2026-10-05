@@ -1,0 +1,6 @@
+{
+  "board_sha256": "97ad132fffb57d1428345efb16ad4d1f41dd8804fe72515a31b6a55def3cbfb3",
+  "generator": "tools/board/rehost_gen.py",
+  "machine": "qp-opentitan-uart-baseline",
+  "schema_version": 1
+}

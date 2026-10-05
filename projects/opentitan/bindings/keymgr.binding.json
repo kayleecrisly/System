@@ -1,0 +1,19 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT keymgr. Single TL target; kmac_data_o/i is app channel 0 (KMAC mode) toward the generated kmac; rom_digest_i comes from rom_ctrl's keymgr_data_o (generated-to-generated). Narrow ties here: lc_keymgr_en On(5), masking off (kmac translated with EnMasking=0), EDN like kmac's, all OTP/flash valid bits high. The WIDE seed/key/device-id/div constants (128..256-bit) exceed the tie width and are injected by the host harness / machine bridge instead.",
+  "design": {
+    "top_module": "keymgr"
+  },
+  "input_ties": {
+    "kmac_en_masking_i": 0,
+    "lc_keymgr_en_i": 5,
+    "edn_i_edn_ack": 1,
+    "edn_i_edn_fips": 1,
+    "edn_i_edn_bus": 2863311530,
+    "otp_key_i_creator_root_key_share0_valid": 1,
+    "otp_key_i_creator_root_key_share1_valid": 1,
+    "otp_key_i_creator_seed_valid": 1,
+    "otp_key_i_owner_seed_valid": 1,
+    "rom_digest_i_valid": 1
+  }
+}

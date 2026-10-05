@@ -1,0 +1,13 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT RV_PLIC (Earl Grey ip_autogen). No irq block: a PLIC has no INTR_STATE bank — its outward faces are 186 interrupt-source INPUTS (pin_io.data_in -> qdev gpio-in lines the SoC table routes every peripheral's intr outputs to) and two 1-bit OUTPUTS to the CPU (out_lines: external-interrupt and software-interrupt, exported as sysbus IRQs 0/1).",
+  "design": {
+    "top_module": "rv_plic"
+  },
+  "pin_io": {
+    "data_in": {
+      "port": "intr_src_i"
+    }
+  },
+  "out_lines": ["irq_o", "msip_o"]
+}

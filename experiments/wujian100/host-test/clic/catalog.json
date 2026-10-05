@@ -1,0 +1,12 @@
+{
+  "$schema_version": 1,
+  "project": "wujian100-clic-prototype",
+  "backend": "generic-sysbus",
+  "fallback": "error",
+  "naming": {"macro_prefix": "WUJIANTEST", "qom_prefix": "wujiantest", "state_prefix": "WujianTest"},
+  "devices": [{
+    "module": "cr_clic_top", "irq_count": 0, "mmio_size": 65536,
+    "properties": [], "qom_type": "wujiantest-clic-core",
+    "state_type": "WujianTestClicCoreState", "type_macro": "WUJIANTEST_CLIC_CORE"
+  }]
+}

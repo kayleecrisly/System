@@ -1,0 +1,11 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT sysrst controller (aon domain).  irq declared explicitly: single interrupt (event_detected), intr wiring routed through a prim_intr_hw instance whose bridges the auto-detector does not model; offsets are regtool ground truth.",
+  "design": { "top_module": "sysrst_ctrl" },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 1
+  }
+}

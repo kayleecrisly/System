@@ -1,0 +1,127 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "wdog_regwen"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "intr_state_wkup_timer_expired"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "intr_state_wdog_timer_bark"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "intr_test_wkup_timer_expired"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "intr_test_wdog_timer_bark"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_wkup_timer_expired_o",
+    "intr_wdog_timer_bark_o"
+  ],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "clk_aon_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_aon_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "lc_escalate_en_i",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "intr_wkup_timer_expired_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_wdog_timer_bark_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "nmi_wdog_timer_bark_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "wkup_req_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "aon_timer_rst_req_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "sleep_mode_i",
+      "width": 1
+    }
+  ],
+  "top_module": "aon_timer"
+}

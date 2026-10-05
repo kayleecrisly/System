@@ -1,0 +1,37 @@
+/dts-v1/;
+
+/* Synthetic NON-OT mini-SoC (e.g. a CLIC-based RISC-V part like wujian100's
+ * style) — used to demonstrate the SoC-layer INPUT ADAPTER swap [AI-1].
+ * soc_digest_dts.py turns this into the SAME vendor-neutral soc.digest.json
+ * schema that soc_digest.py produces from OpenTitan's top_earlgrey.h, so the
+ * downstream (soc_gen.py / soc_glue.py validator + emit) is unchanged. */
+/ {
+    compatible = "acme,mini-soc";
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    soc {
+        clic: interrupt-controller@c000000 {
+            compatible = "riscv,clic";
+            reg = <0x0c000000 0x10000>;
+        };
+        uart0: serial@10000000 {
+            compatible = "acme,uart";
+            reg = <0x10000000 0x1000>;
+            interrupts = <5>;
+            interrupt-parent = <&clic>;
+        };
+        gpio0: gpio@10001000 {
+            compatible = "acme,gpio";
+            reg = <0x10001000 0x1000>;
+            interrupts = <6 7>;
+            interrupt-parent = <&clic>;
+        };
+        timer0: timer@10002000 {
+            compatible = "acme,timer";
+            reg = <0x10002000 0x1000>;
+            interrupts = <8>;
+            interrupt-parent = <&clic>;
+        };
+    };
+};

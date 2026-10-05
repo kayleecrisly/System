@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+experiment_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+workspace_dir=$(cd -- "$experiment_dir/../../../.." && pwd)
+source_dir="$workspace_dir/opentitan"
+environment_dir=/home/kaylee/circt-workspace/environments/opentitan
+toolchain_dir="$environment_dir/lowrisc-20251111-1"
+clang="$toolchain_dir/bin/riscv32-unknown-elf-clang"
+private_src="$experiment_dir/src/uart/baseline"
+build_dir="$experiment_dir/build/uart/baseline"
+expected_commit=c7510599254dcbaa6153468e696aa11299cb5b5f
+test "$(git -C "$source_dir" rev-parse HEAD)" = "$expected_commit"
+git -C "$source_dir" diff --quiet HEAD -- sw/device util/reggen util/make_new_dif \
+  hw/ip/uart/data/uart.hjson hw/top_earlgrey/ip_autogen/rv_core_ibex/data/rv_core_ibex.hjson
+test -x "$clang"
+mkdir -p "$build_dir/objects" "$private_src/official"
+cp "$source_dir/sw/device/tests/uart_smoketest.c" "$private_src/official/uart_smoketest.c"
+cmp "$source_dir/sw/device/tests/uart_smoketest.c" "$private_src/official/uart_smoketest.c"
+"$environment_dir/python/bin/python" "$experiment_dir/generate_headers.py" "$source_dir" "$build_dir/generated"
+common=(--target=riscv32-unknown-elf -march=rv32imc -mabi=ilp32
+  -mcmodel=medany -ffreestanding -fno-builtin -fno-stack-protector
+  -ffile-prefix-map="$workspace_dir/"=
+  -ffunction-sections -fdata-sections -O2 -g -nostdinc -DOT_PLATFORM_RV32
+  -I"$private_src/include" -I"$build_dir/generated" -I"$source_dir"
+  -I"$source_dir/sw/device/lib/dif" -isystem "$source_dir/sw/device/lib/base/freestanding")
+sources=(
+  "$private_src/official/uart_smoketest.c"
+  "$source_dir/sw/device/lib/dif/dif_uart.c"
+  "$build_dir/generated/sw/device/lib/dif/autogen/dif_uart_autogen.c"
+  "$source_dir/sw/device/lib/base/math.c"
+  "$source_dir/sw/device/lib/base/status.c"
+  "$source_dir/sw/device/lib/arch/device_sim_dv.c"
+  "$source_dir/sw/device/lib/testing/test_framework/ottf_start.S"
+  "$source_dir/sw/device/lib/crt/crt.S"
+  "$private_src/runtime.c" "$private_src/traps.S")
+objects=()
+for source in "${sources[@]}"; do
+  object="$build_dir/objects/$(basename -- "$source").o"
+  "$clang" "${common[@]}" -std=gnu11 -MD -MF "$object.d" -c "$source" -o "$object"
+  objects+=("$object")
+done
+"$clang" --target=riscv32-unknown-elf -march=rv32imc -mabi=ilp32 \
+  -nostdlib -fuse-ld=lld "${objects[@]}" -Wl,--gc-sections \
+  -Wl,-Map,"$build_dir/uart_smoketest.map" -Wl,-T,"$private_src/link.ld" \
+  -o "$build_dir/uart_smoketest.elf"
+"$toolchain_dir/bin/riscv32-unknown-elf-objcopy" -O binary "$build_dir/uart_smoketest.elf" "$build_dir/uart_smoketest.bin"
+"$toolchain_dir/bin/riscv32-unknown-elf-objdump" -d "$build_dir/uart_smoketest.elf" > "$build_dir/uart_smoketest.dis"
+"$environment_dir/python/bin/python" "$experiment_dir/record_build.py" "$source_dir" "$build_dir" "$toolchain_dir"
+sha256sum "$build_dir/uart_smoketest.elf" "$private_src/official/uart_smoketest.c"

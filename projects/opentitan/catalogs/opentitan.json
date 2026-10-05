@@ -1,0 +1,429 @@
+{
+  "$schema_version": 1,
+  "project": "opentitan",
+  "fallback": "generic",
+  "naming": {
+    "qom_prefix": "ot",
+    "state_prefix": "Ot",
+    "macro_prefix": "OT"
+  },
+  "generic_properties": [
+    {
+      "kind": "string",
+      "name_macro": "OT_COMMON_DEV_ID",
+      "field": "ot_id"
+    }
+  ],
+  "devices": [
+    {
+      "module": "uart",
+      "qom_type": "ot-uart-qp",
+      "state_type": "OtUARTQpState",
+      "type_macro": "OT_UART_QP",
+      "irq_count": 9,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "chardev",
+          "field": "chr",
+          "name": "chardev"
+        },
+        {
+          "kind": "string",
+          "field": "clock_name",
+          "name": "clock-name"
+        },
+        {
+          "kind": "link",
+          "field": "clock_src",
+          "name": "clock-src",
+          "target_type_macro": "TYPE_DEVICE"
+        },
+        {
+          "kind": "bool",
+          "field": "oversample_break",
+          "name": "oversample-break",
+          "default": false
+        },
+        {
+          "kind": "bool",
+          "field": "toggle_break",
+          "name": "toggle-break",
+          "default": false
+        }
+      ]
+    },
+    {
+      "module": "gpio",
+      "qom_type": "ot-gpio-qp",
+      "state_type": "OtGpioQpState",
+      "type_macro": "OT_GPIO_QP",
+      "irq_count": 32,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "uint32",
+          "field": "reset_in",
+          "name": "in",
+          "default": 0
+        },
+        {
+          "kind": "uint32",
+          "field": "reset_out",
+          "name": "out",
+          "default": 0
+        },
+        {
+          "kind": "uint32",
+          "field": "reset_oe",
+          "name": "oe",
+          "default": 0
+        },
+        {
+          "kind": "bool",
+          "field": "wipe",
+          "name": "wipe",
+          "default": false
+        },
+        {
+          "kind": "chardev",
+          "field": "chr",
+          "name": "chardev"
+        }
+      ]
+    },
+    {
+      "module": "rv_timer",
+      "qom_type": "ot-rv-timer-qp",
+      "state_type": "OtRvTimerQpState",
+      "type_macro": "OT_RV_TIMER_QP",
+      "irq_count": 1,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "string",
+          "field": "clock_name",
+          "name": "clock-name"
+        },
+        {
+          "kind": "link",
+          "field": "clock_src",
+          "name": "clock-src",
+          "target_type_macro": "TYPE_DEVICE"
+        }
+      ]
+    },
+    {
+      "module": "i2c",
+      "qom_type": "ot-i2c-qp",
+      "state_type": "OtI2CQpState",
+      "type_macro": "OT_I2C_QP",
+      "irq_count": 10,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "string",
+          "field": "clock_name",
+          "name": "clock-name"
+        },
+        {
+          "kind": "link",
+          "field": "clock_src",
+          "name": "clock-src",
+          "target_type_macro": "TYPE_DEVICE"
+        }
+      ]
+    },
+    {
+      "module": "spi_host",
+      "qom_type": "ot-spi-host-qp",
+      "state_type": "OtSPIHostQpState",
+      "type_macro": "OT_SPI_HOST_QP",
+      "irq_count": 2,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "uint32",
+          "field": "num_cs",
+          "name": "num-cs",
+          "default": 1
+        },
+        {
+          "kind": "uint32",
+          "field": "bus_num",
+          "name": "bus-num",
+          "default": 0
+        },
+        {
+          "kind": "string",
+          "field": "clock_name",
+          "name": "clock-name"
+        },
+        {
+          "kind": "link",
+          "field": "clock_src",
+          "name": "clock-src",
+          "target_type_macro": "TYPE_DEVICE"
+        },
+        {
+          "kind": "uint32",
+          "field": "start_delay_ns",
+          "name": "start-delay",
+          "default": 0
+        },
+        {
+          "kind": "uint32",
+          "field": "completion_delay_ns",
+          "name": "completion-delay",
+          "default": 0
+        },
+        {
+          "kind": "uint8",
+          "field": "version",
+          "name": "version",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "module": "spi_device",
+      "qom_type": "ot-spi-device-qp",
+      "state_type": "OtSPIDeviceQpState",
+      "type_macro": "OT_SPI_DEVICE_QP",
+      "irq_count": 8,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "link",
+          "field": "spi_host",
+          "name": "spi-host",
+          "target_type_macro": "TYPE_DEVICE"
+        }
+      ]
+    },
+    {
+      "module": "aon_timer",
+      "qom_type": "ot-aon-timer-qp",
+      "state_type": "OtAonTimerQpState",
+      "type_macro": "OT_AON_TIMER_QP",
+      "irq_count": 2,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        },
+        {
+          "kind": "string",
+          "field": "clock_name",
+          "name": "clock-name"
+        },
+        {
+          "kind": "string",
+          "field": "clock_name_aon",
+          "name": "clock-name-aon"
+        },
+        {
+          "kind": "link",
+          "field": "clock_src",
+          "name": "clock-src",
+          "target_type_macro": "TYPE_DEVICE"
+        }
+      ]
+    },
+    {
+      "module": "pwm",
+      "qom_type": "ot-pwm-qp",
+      "state_type": "OtPwmQpState",
+      "type_macro": "OT_PWM_QP",
+      "irq_count": 0,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "pattgen",
+      "qom_type": "ot-pattgen-qp",
+      "state_type": "OtPattgenQpState",
+      "type_macro": "OT_PATTGEN_QP",
+      "irq_count": 2,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "pinmux",
+      "qom_type": "ot-pinmux-qp",
+      "state_type": "OtPinmuxQpState",
+      "type_macro": "OT_PINMUX_QP",
+      "irq_count": 0,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "rv_plic",
+      "qom_type": "ot-rv-plic-qp",
+      "state_type": "OtRvPlicQpState",
+      "type_macro": "OT_RV_PLIC_QP",
+      "irq_count": 0,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "hmac",
+      "qom_type": "ot-hmac-qp",
+      "state_type": "OtHmacQpState",
+      "type_macro": "OT_HMAC_QP",
+      "irq_count": 3,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "kmac",
+      "qom_type": "ot-kmac-qp",
+      "state_type": "OtKmacQpState",
+      "type_macro": "OT_KMAC_QP",
+      "irq_count": 3,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "rom_ctrl",
+      "qom_type": "ot-rom-ctrl-qp",
+      "state_type": "OtRomCtrlQpState",
+      "type_macro": "OT_ROM_CTRL_QP",
+      "irq_count": 0,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "adc_ctrl",
+      "qom_type": "ot-adc-ctrl-qp",
+      "state_type": "OtAdcCtrlQpState",
+      "type_macro": "OT_ADC_CTRL_QP",
+      "irq_count": 1,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "sysrst_ctrl",
+      "qom_type": "ot-sysrst-ctrl-qp",
+      "state_type": "OtSysrstCtrlQpState",
+      "type_macro": "OT_SYSRST_CTRL_QP",
+      "irq_count": 1,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "alert_handler",
+      "qom_type": "ot-alert-handler-qp",
+      "state_type": "OtAlertHandlerQpState",
+      "type_macro": "OT_ALERT_HANDLER_QP",
+      "irq_count": 4,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "dma",
+      "qom_type": "ot-dma-qp",
+      "state_type": "OtDmaQpState",
+      "type_macro": "OT_DMA_QP",
+      "irq_count": 3,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ]
+    },
+    {
+      "module": "aes",
+      "qom_type": "ot-aes-qp",
+      "state_type": "OtAesQpState",
+      "type_macro": "OT_AES_QP",
+      "irq_count": 0,
+      "properties": [
+        {
+          "kind": "string",
+          "field": "ot_id",
+          "name_macro": "OT_COMMON_DEV_ID"
+        }
+      ],
+      "key_sink": true
+    }
+  ],
+  "backend": "opentitan"
+}

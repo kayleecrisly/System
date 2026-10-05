@@ -1,0 +1,11 @@
+{
+  "$schema_version": 1,
+  "_doc": "OT ADC controller (aon domain).  irq declared explicitly: single status-type interrupt (match_pending) whose intr_state shape the uart-class auto-detector cannot resolve; offsets are regtool ground truth (INTR_STATE=0x0 ENABLE=0x4 TEST=0x8 ALERT_TEST=0xC).",
+  "design": { "top_module": "adc_ctrl" },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 1
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qemu-passes unified hardware project v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema_version": {
+      "const": 1
+    },
+    "project": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "manual",
+              "rtl",
+              "ir",
+              "integration"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "path",
+          "revision"
+        ]
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "top_module": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "input": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "mlir": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "mlir"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rtl": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "top": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                      },
+                      "files": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "include_dirs": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "defines": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "top",
+                      "files"
+                    ]
+                  }
+                },
+                "required": [
+                  "rtl"
+                ]
+              }
+            ]
+          },
+          "backend": {
+            "enum": [
+              "generic-sysbus",
+              "opentitan"
+            ]
+          },
+          "rtl_adapter": {
+            "enum": [
+              "none",
+              "opentitan"
+            ]
+          },
+          "facts": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mmio_size": {
+                "$ref": "#/$defs/integerFact"
+              },
+              "irq_count": {
+                "$ref": "#/$defs/integerFact"
+              },
+              "data_width": {
+                "$ref": "#/$defs/integerFact"
+              },
+              "byte_order": {
+                "$ref": "#/$defs/stringFact"
+              },
+              "access_sizes": {
+                "$ref": "#/$defs/integerArrayFact"
+              }
+            },
+            "required": [
+              "mmio_size",
+              "irq_count",
+              "data_width",
+              "byte_order",
+              "access_sizes"
+            ]
+          },
+          "bus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "functional-mmio",
+                  "adapter"
+                ]
+              },
+              "roles": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "addr": {
+                    "$ref": "#/$defs/port"
+                  },
+                  "wdata": {
+                    "$ref": "#/$defs/port"
+                  },
+                  "rdata": {
+                    "$ref": "#/$defs/port"
+                  },
+                  "wr_enable": {
+                    "$ref": "#/$defs/port"
+                  }
+                },
+                "required": [
+                  "addr",
+                  "wdata",
+                  "rdata",
+                  "wr_enable"
+                ]
+              },
+              "noise_signals": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                }
+              },
+              "controls": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "read": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9223372036854775807
+                    },
+                    "propertyNames": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                    }
+                  },
+                  "write": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9223372036854775807
+                    },
+                    "propertyNames": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                    }
+                  },
+                  "idle": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9223372036854775807
+                    },
+                    "propertyNames": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                    }
+                  }
+                },
+                "required": [
+                  "read",
+                  "write",
+                  "idle"
+                ]
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "irq_outputs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "port": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                },
+                "bit": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 63
+                }
+              },
+              "required": [
+                "port",
+                "bit"
+              ]
+            }
+          },
+          "reset": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "port": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                  },
+                  "active_level": {
+                    "enum": [
+                      0,
+                      1
+                    ]
+                  }
+                },
+                "required": [
+                  "port",
+                  "active_level"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "input_ties": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+            },
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            }
+          },
+          "clocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "port": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                },
+                "kind": {
+                  "enum": [
+                    "beat",
+                    "event"
+                  ]
+                },
+                "frequency_hz": {
+                  "$ref": "#/$defs/integerFact"
+                }
+              },
+              "required": [
+                "port",
+                "kind",
+                "frequency_hz"
+              ]
+            }
+          },
+          "registers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                },
+                "offset": {
+                  "$ref": "#/$defs/integerFact"
+                },
+                "width": {
+                  "$ref": "#/$defs/integerFact"
+                },
+                "access": {
+                  "$ref": "#/$defs/stringFact"
+                },
+                "reset_value": {
+                  "$ref": "#/$defs/integerFact"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+                      },
+                      "lsb": {
+                        "$ref": "#/$defs/integerFact"
+                      },
+                      "width": {
+                        "$ref": "#/$defs/integerFact"
+                      },
+                      "access": {
+                        "$ref": "#/$defs/stringFact"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "lsb",
+                      "width",
+                      "access"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "offset",
+                "width",
+                "access",
+                "reset_value"
+              ]
+            }
+          },
+          "simulation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "pump_hz": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1000000000
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "rationale"
+            ]
+          },
+          "binding": {
+            "type": "object"
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/evidence"
+              }
+            }
+          },
+          "pin_io": {
+            "type": "object",
+            "additionalProperties": false,
+            "minProperties": 1,
+            "properties": {
+              "data_in": {
+                "$ref": "#/$defs/port"
+              },
+              "data_out": {
+                "$ref": "#/$defs/port"
+              },
+              "output_enable": {
+                "$ref": "#/$defs/port"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "top_module",
+          "input",
+          "backend",
+          "rtl_adapter",
+          "facts",
+          "bus",
+          "simulation",
+          "evidence"
+        ]
+      }
+    },
+    "board": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "$schema_version",
+    "project",
+    "sources",
+    "devices"
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "source",
+        "location"
+      ]
+    },
+    "integerFact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "unknown",
+            "conflict"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "evidence"
+      ]
+    },
+    "stringFact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "unknown",
+            "conflict"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "evidence"
+      ]
+    },
+    "integerArrayFact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9223372036854775807
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "unknown",
+            "conflict"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "value",
+        "status",
+        "evidence"
+      ]
+    },
+    "port": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "port": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        }
+      },
+      "required": [
+        "port",
+        "width"
+      ]
+    }
+  }
+}

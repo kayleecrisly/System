@@ -1,0 +1,664 @@
+{
+  "$schema_version": 1,
+  "source": "opentitan/hw/top_earlgrey/sw/autogen/top_earlgrey.h",
+  "devices": {
+    "adc_ctrl_aon": {
+      "base": "0x40440000",
+      "plic": {
+        "base_src": 155,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "adc_ctrl_aon_match_pending"
+        ]
+      },
+      "alert": {
+        "base": 28,
+        "count": 1
+      }
+    },
+    "aes": {
+      "base": "0x41100000",
+      "alert": {
+        "base": 42,
+        "count": 2
+      }
+    },
+    "alert_handler": {
+      "base": "0x40150000",
+      "plic": {
+        "base_src": 127,
+        "count": 4,
+        "contiguous": true,
+        "signals": [
+          "alert_handler_classa",
+          "alert_handler_classb",
+          "alert_handler_classc",
+          "alert_handler_classd"
+        ]
+      }
+    },
+    "aon_timer_aon": {
+      "base": "0x40470000",
+      "plic": {
+        "base_src": 156,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "aon_timer_aon_wkup_timer_expired",
+          "aon_timer_aon_wdog_timer_bark"
+        ]
+      },
+      "alert": {
+        "base": 31,
+        "count": 1
+      }
+    },
+    "ast": {
+      "base": "0x40480000"
+    },
+    "clkmgr_aon": {
+      "base": "0x40420000",
+      "alert": {
+        "base": 25,
+        "count": 2
+      }
+    },
+    "csrng": {
+      "base": "0x41150000",
+      "plic": {
+        "base_src": 174,
+        "count": 4,
+        "contiguous": true,
+        "signals": [
+          "csrng_cs_cmd_req_done",
+          "csrng_cs_entropy_req",
+          "csrng_cs_hw_inst_exc",
+          "csrng_cs_fatal_err"
+        ]
+      },
+      "alert": {
+        "base": 51,
+        "count": 2
+      }
+    },
+    "edn0": {
+      "base": "0x41170000",
+      "plic": {
+        "base_src": 182,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "edn0_edn_cmd_req_done",
+          "edn0_edn_fatal_err"
+        ]
+      },
+      "alert": {
+        "base": 55,
+        "count": 2
+      }
+    },
+    "edn1": {
+      "base": "0x41180000",
+      "plic": {
+        "base_src": 184,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "edn1_edn_cmd_req_done",
+          "edn1_edn_fatal_err"
+        ]
+      },
+      "alert": {
+        "base": 57,
+        "count": 2
+      }
+    },
+    "entropy_src": {
+      "base": "0x41160000",
+      "plic": {
+        "base_src": 178,
+        "count": 4,
+        "contiguous": true,
+        "signals": [
+          "entropy_src_es_entropy_valid",
+          "entropy_src_es_health_test_failed",
+          "entropy_src_es_observe_fifo_ready",
+          "entropy_src_es_fatal_err"
+        ]
+      },
+      "alert": {
+        "base": 53,
+        "count": 2
+      }
+    },
+    "flash_ctrl_core": {
+      "base": "0x41000000"
+    },
+    "flash_ctrl_mem": {
+      "base": "0x20000000"
+    },
+    "flash_ctrl_prim": {
+      "base": "0x41008000"
+    },
+    "gpio": {
+      "base": "0x40040000",
+      "plic": {
+        "base_src": 37,
+        "count": 32,
+        "contiguous": true,
+        "signals": [
+          "gpio_gpio 0",
+          "gpio_gpio 1",
+          "gpio_gpio 2",
+          "gpio_gpio 3",
+          "gpio_gpio 4",
+          "gpio_gpio 5",
+          "gpio_gpio 6",
+          "gpio_gpio 7",
+          "gpio_gpio 8",
+          "gpio_gpio 9",
+          "gpio_gpio 10",
+          "gpio_gpio 11",
+          "gpio_gpio 12",
+          "gpio_gpio 13",
+          "gpio_gpio 14",
+          "gpio_gpio 15",
+          "gpio_gpio 16",
+          "gpio_gpio 17",
+          "gpio_gpio 18",
+          "gpio_gpio 19",
+          "gpio_gpio 20",
+          "gpio_gpio 21",
+          "gpio_gpio 22",
+          "gpio_gpio 23",
+          "gpio_gpio 24",
+          "gpio_gpio 25",
+          "gpio_gpio 26",
+          "gpio_gpio 27",
+          "gpio_gpio 28",
+          "gpio_gpio 29",
+          "gpio_gpio 30",
+          "gpio_gpio 31"
+        ]
+      },
+      "alert": {
+        "base": 4,
+        "count": 1
+      }
+    },
+    "hmac": {
+      "base": "0x41110000",
+      "plic": {
+        "base_src": 166,
+        "count": 3,
+        "contiguous": true,
+        "signals": [
+          "hmac_hmac_done",
+          "hmac_fifo_empty",
+          "hmac_hmac_err"
+        ]
+      },
+      "alert": {
+        "base": 44,
+        "count": 1
+      }
+    },
+    "i2c0": {
+      "base": "0x40080000",
+      "plic": {
+        "base_src": 77,
+        "count": 15,
+        "contiguous": true,
+        "signals": [
+          "i2c0_fmt_threshold",
+          "i2c0_rx_threshold",
+          "i2c0_acq_threshold",
+          "i2c0_rx_overflow",
+          "i2c0_controller_halt",
+          "i2c0_scl_interference",
+          "i2c0_sda_interference",
+          "i2c0_stretch_timeout",
+          "i2c0_sda_unstable",
+          "i2c0_cmd_complete",
+          "i2c0_tx_stretch",
+          "i2c0_tx_threshold",
+          "i2c0_acq_stretch",
+          "i2c0_unexp_stop",
+          "i2c0_host_timeout"
+        ]
+      },
+      "alert": {
+        "base": 6,
+        "count": 1
+      }
+    },
+    "i2c1": {
+      "base": "0x40090000",
+      "plic": {
+        "base_src": 92,
+        "count": 15,
+        "contiguous": true,
+        "signals": [
+          "i2c1_fmt_threshold",
+          "i2c1_rx_threshold",
+          "i2c1_acq_threshold",
+          "i2c1_rx_overflow",
+          "i2c1_controller_halt",
+          "i2c1_scl_interference",
+          "i2c1_sda_interference",
+          "i2c1_stretch_timeout",
+          "i2c1_sda_unstable",
+          "i2c1_cmd_complete",
+          "i2c1_tx_stretch",
+          "i2c1_tx_threshold",
+          "i2c1_acq_stretch",
+          "i2c1_unexp_stop",
+          "i2c1_host_timeout"
+        ]
+      },
+      "alert": {
+        "base": 7,
+        "count": 1
+      }
+    },
+    "i2c2": {
+      "base": "0x400a0000",
+      "plic": {
+        "base_src": 107,
+        "count": 15,
+        "contiguous": true,
+        "signals": [
+          "i2c2_fmt_threshold",
+          "i2c2_rx_threshold",
+          "i2c2_acq_threshold",
+          "i2c2_rx_overflow",
+          "i2c2_controller_halt",
+          "i2c2_scl_interference",
+          "i2c2_sda_interference",
+          "i2c2_stretch_timeout",
+          "i2c2_sda_unstable",
+          "i2c2_cmd_complete",
+          "i2c2_tx_stretch",
+          "i2c2_tx_threshold",
+          "i2c2_acq_stretch",
+          "i2c2_unexp_stop",
+          "i2c2_host_timeout"
+        ]
+      },
+      "alert": {
+        "base": 8,
+        "count": 1
+      }
+    },
+    "keymgr": {
+      "base": "0x41140000",
+      "plic": {
+        "base_src": 173,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "keymgr_op_done"
+        ]
+      },
+      "alert": {
+        "base": 49,
+        "count": 2
+      }
+    },
+    "kmac": {
+      "base": "0x41120000",
+      "plic": {
+        "base_src": 169,
+        "count": 3,
+        "contiguous": true,
+        "signals": [
+          "kmac_kmac_done",
+          "kmac_fifo_empty",
+          "kmac_kmac_err"
+        ]
+      },
+      "alert": {
+        "base": 45,
+        "count": 2
+      }
+    },
+    "lc_ctrl_regs": {
+      "base": "0x40140000"
+    },
+    "mmio": {
+      "base": "0x40000000"
+    },
+    "otbn": {
+      "base": "0x41130000",
+      "plic": {
+        "base_src": 172,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "otbn_done"
+        ]
+      },
+      "alert": {
+        "base": 47,
+        "count": 2
+      }
+    },
+    "otp_ctrl_core": {
+      "base": "0x40130000"
+    },
+    "otp_macro_prim": {
+      "base": "0x40138000"
+    },
+    "pattgen": {
+      "base": "0x400e0000",
+      "plic": {
+        "base_src": 122,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "pattgen_done_ch0",
+          "pattgen_done_ch1"
+        ]
+      },
+      "alert": {
+        "base": 9,
+        "count": 1
+      }
+    },
+    "pinmux_aon": {
+      "base": "0x40460000",
+      "alert": {
+        "base": 30,
+        "count": 1
+      }
+    },
+    "pwm_aon": {
+      "base": "0x40450000",
+      "alert": {
+        "base": 29,
+        "count": 1
+      }
+    },
+    "pwrmgr_aon": {
+      "base": "0x40400000",
+      "plic": {
+        "base_src": 153,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "pwrmgr_aon_wakeup"
+        ]
+      },
+      "alert": {
+        "base": 22,
+        "count": 1
+      }
+    },
+    "rom_ctrl_regs": {
+      "base": "0x411e0000"
+    },
+    "rom_ctrl_rom": {
+      "base": "0x8000"
+    },
+    "rstmgr_aon": {
+      "base": "0x40410000",
+      "alert": {
+        "base": 23,
+        "count": 2
+      }
+    },
+    "rv_core_ibex_cfg": {
+      "base": "0x411f0000"
+    },
+    "rv_dm_mem": {
+      "base": "0x10000"
+    },
+    "rv_dm_regs": {
+      "base": "0x41200000"
+    },
+    "rv_plic": {
+      "base": "0x48000000",
+      "alert": {
+        "base": 41,
+        "count": 1
+      }
+    },
+    "rv_timer": {
+      "base": "0x40100000",
+      "plic": {
+        "base_src": 124,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "rv_timer_timer_expired_hart0_timer0"
+        ]
+      },
+      "alert": {
+        "base": 10,
+        "count": 1
+      }
+    },
+    "sensor_ctrl_aon": {
+      "base": "0x40490000",
+      "plic": {
+        "base_src": 158,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "sensor_ctrl_aon_io_status_change",
+          "sensor_ctrl_aon_init_status_change"
+        ]
+      },
+      "alert": {
+        "base": 32,
+        "count": 2
+      }
+    },
+    "spi_device": {
+      "base": "0x40050000",
+      "plic": {
+        "base_src": 69,
+        "count": 8,
+        "contiguous": true,
+        "signals": [
+          "spi_device_upload_cmdfifo_not_empty",
+          "spi_device_upload_payload_not_empty",
+          "spi_device_upload_payload_overflow",
+          "spi_device_readbuf_watermark",
+          "spi_device_readbuf_flip",
+          "spi_device_tpm_header_not_empty",
+          "spi_device_tpm_rdfifo_cmd_end",
+          "spi_device_tpm_rdfifo_drop"
+        ]
+      },
+      "alert": {
+        "base": 5,
+        "count": 1
+      }
+    },
+    "spi_host0": {
+      "base": "0x40300000",
+      "plic": {
+        "base_src": 131,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "spi_host0_error",
+          "spi_host0_spi_event"
+        ]
+      },
+      "alert": {
+        "base": 19,
+        "count": 1
+      }
+    },
+    "spi_host1": {
+      "base": "0x40310000",
+      "plic": {
+        "base_src": 133,
+        "count": 2,
+        "contiguous": true,
+        "signals": [
+          "spi_host1_error",
+          "spi_host1_spi_event"
+        ]
+      },
+      "alert": {
+        "base": 20,
+        "count": 1
+      }
+    },
+    "sram_ctrl_main_ram": {
+      "base": "0x10000000"
+    },
+    "sram_ctrl_main_regs": {
+      "base": "0x411c0000"
+    },
+    "sram_ctrl_ret_aon_ram": {
+      "base": "0x40600000"
+    },
+    "sram_ctrl_ret_aon_regs": {
+      "base": "0x40500000"
+    },
+    "sysrst_ctrl_aon": {
+      "base": "0x40430000",
+      "plic": {
+        "base_src": 154,
+        "count": 1,
+        "contiguous": true,
+        "signals": [
+          "sysrst_ctrl_aon_event_detected"
+        ]
+      },
+      "alert": {
+        "base": 27,
+        "count": 1
+      }
+    },
+    "uart0": {
+      "base": "0x40000000",
+      "plic": {
+        "base_src": 1,
+        "count": 9,
+        "contiguous": true,
+        "signals": [
+          "uart0_tx_watermark",
+          "uart0_rx_watermark",
+          "uart0_tx_done",
+          "uart0_rx_overflow",
+          "uart0_rx_frame_err",
+          "uart0_rx_break_err",
+          "uart0_rx_timeout",
+          "uart0_rx_parity_err",
+          "uart0_tx_empty"
+        ]
+      },
+      "alert": {
+        "base": 0,
+        "count": 1
+      }
+    },
+    "uart1": {
+      "base": "0x40010000",
+      "plic": {
+        "base_src": 10,
+        "count": 9,
+        "contiguous": true,
+        "signals": [
+          "uart1_tx_watermark",
+          "uart1_rx_watermark",
+          "uart1_tx_done",
+          "uart1_rx_overflow",
+          "uart1_rx_frame_err",
+          "uart1_rx_break_err",
+          "uart1_rx_timeout",
+          "uart1_rx_parity_err",
+          "uart1_tx_empty"
+        ]
+      },
+      "alert": {
+        "base": 1,
+        "count": 1
+      }
+    },
+    "uart2": {
+      "base": "0x40020000",
+      "plic": {
+        "base_src": 19,
+        "count": 9,
+        "contiguous": true,
+        "signals": [
+          "uart2_tx_watermark",
+          "uart2_rx_watermark",
+          "uart2_tx_done",
+          "uart2_rx_overflow",
+          "uart2_rx_frame_err",
+          "uart2_rx_break_err",
+          "uart2_rx_timeout",
+          "uart2_rx_parity_err",
+          "uart2_tx_empty"
+        ]
+      },
+      "alert": {
+        "base": 2,
+        "count": 1
+      }
+    },
+    "uart3": {
+      "base": "0x40030000",
+      "plic": {
+        "base_src": 28,
+        "count": 9,
+        "contiguous": true,
+        "signals": [
+          "uart3_tx_watermark",
+          "uart3_rx_watermark",
+          "uart3_tx_done",
+          "uart3_rx_overflow",
+          "uart3_rx_frame_err",
+          "uart3_rx_break_err",
+          "uart3_rx_timeout",
+          "uart3_rx_parity_err",
+          "uart3_tx_empty"
+        ]
+      },
+      "alert": {
+        "base": 3,
+        "count": 1
+      }
+    },
+    "usbdev": {
+      "base": "0x40320000",
+      "plic": {
+        "base_src": 135,
+        "count": 18,
+        "contiguous": true,
+        "signals": [
+          "usbdev_pkt_received",
+          "usbdev_pkt_sent",
+          "usbdev_disconnected",
+          "usbdev_host_lost",
+          "usbdev_link_reset",
+          "usbdev_link_suspend",
+          "usbdev_link_resume",
+          "usbdev_av_out_empty",
+          "usbdev_rx_full",
+          "usbdev_av_overflow",
+          "usbdev_link_in_err",
+          "usbdev_rx_crc_err",
+          "usbdev_rx_pid_err",
+          "usbdev_rx_bitstuff_err",
+          "usbdev_frame",
+          "usbdev_powered",
+          "usbdev_link_out_err",
+          "usbdev_av_setup_empty"
+        ]
+      },
+      "alert": {
+        "base": 21,
+        "count": 1
+      }
+    }
+  }
+}

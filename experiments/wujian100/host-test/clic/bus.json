@@ -1,0 +1,15 @@
+{
+  "$schema_version": 1,
+  "design": {"top_module": "cr_clic_top", "bus_adapter_modules": []},
+  "bindings": {
+    "addr": {"kind": "signal", "module": "cr_clic_top", "name": "tcipif_clic_addr", "width": 16},
+    "rdata": {"kind": "signal", "module": "cr_clic_top", "name": "clic_tcipif_rdata", "width": 32},
+    "wdata": {"kind": "signal", "module": "cr_clic_top", "name": "tcipif_clic_wdata", "width": 32},
+    "wr_enable": {"kind": "signal", "module": "cr_clic_top", "name": "tcipif_clic_write", "width": 1}
+  },
+  "noise_signals": [],
+  "transactions": [
+    {"kind": "READ", "guard": [{"op": "eq", "role": "wr_enable", "value": 0}]},
+    {"kind": "WRITE", "guard": [{"op": "eq", "role": "wr_enable", "value": 1}]}
+  ]
+}

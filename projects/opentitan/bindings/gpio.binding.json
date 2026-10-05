@@ -1,0 +1,16 @@
+{
+  "$schema_version": 1,
+  "_doc": "Declarative backend role binding for OT GPIO — the SECOND-device generalization gate (Step 6). GPIO has interrupts but NO chardev/FIFO data path, so this binding has only an `irq` block (no `chardev`). Hand-authored from bindings/gpio.digest.json + bindings/SCHEMA.md; validated by --backend-binding; drives the SAME qemu.irq_blueprint as BackendCharDevDetect, so gpio_qp_shim.c is byte-identical to the auto-detected golden.",
+  "design": { "top_module": "gpio" },
+  "irq": {
+    "intr_state_offset": 0,
+    "intr_enable_offset": 4,
+    "alert_test_offset": 12,
+    "irq_count": 1
+  },
+  "pin_io": {
+    "data_out":      { "port": "cio_gpio_o" },
+    "output_enable": { "port": "cio_gpio_en_o" },
+    "data_in":       { "port": "cio_gpio_i" }
+  }
+}

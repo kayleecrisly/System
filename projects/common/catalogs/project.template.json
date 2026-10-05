@@ -1,0 +1,27 @@
+{
+  "$schema_version": 1,
+  "project": "replace-with-project-name",
+  "fallback": "error",
+  "naming": {
+    "qom_prefix": "mychip",
+    "state_prefix": "MyChip",
+    "macro_prefix": "MYCHIP"
+  },
+  "generic_properties": [],
+  "devices": [
+    {
+      "module": "replace_with_rtl_top",
+      "irq_count": null,
+      "mmio_size": null,
+      "properties": [],
+      "sources": [
+        {
+          "document": "Replace with the manual title and revision",
+          "location": "Replace with the peripheral memory map / interrupt section"
+        }
+      ],
+      "_comment": "Fill irq_count and mmio_size before loading. Null deliberately fails validation. QOM/state/macro names are derived from naming + module."
+    }
+  ],
+  "backend": "generic-sysbus"
+}

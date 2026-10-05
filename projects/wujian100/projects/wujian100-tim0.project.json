@@ -1,0 +1,210 @@
+{
+  "$schema_version": 1,
+  "project": "wujian100",
+  "sources": [
+    {
+      "id": "wujian100",
+      "kind": "rtl",
+      "path": "../../../../wujian100_open_original/soc/tim.v",
+      "revision": "83e297583bb3454b688f9f27d6bc20ff3276ad32"
+    },
+    {
+      "id": "timer-params",
+      "kind": "rtl",
+      "path": "../../../../wujian100_open_original/soc/params/timers_params.v",
+      "revision": "83e297583bb3454b688f9f27d6bc20ff3276ad32"
+    }
+  ],
+  "devices": [
+    {
+      "id": "tim0",
+      "top_module": "tim0_sec_top",
+      "input": {
+        "rtl": {
+          "top": "tim0_sec_top",
+          "files": [
+            "../../../../wujian100_open_original/soc/tim.v"
+          ],
+          "include_dirs": [
+            "../../../../wujian100_open_original/soc/params"
+          ],
+          "defines": []
+        }
+      },
+      "backend": "generic-sysbus",
+      "rtl_adapter": "none",
+      "facts": {
+        "mmio_size": {
+          "value": 1024,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/params/apb0_params.v: TIM0 base/mask, 0x50000000..0x500003ff"
+            }
+          ]
+        },
+        "irq_count": {
+          "value": 2,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/tim.v: tim0_sec_top intr[1:0]"
+            }
+          ]
+        },
+        "data_width": {
+          "value": 32,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/tim.v: paddr/pwdata/prdata[31:0]"
+            }
+          ]
+        },
+        "byte_order": {
+          "value": "little",
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "SDK RV32 ILP32E target; soc/tim.v uses low register bits for controls"
+            }
+          ]
+        },
+        "access_sizes": {
+          "value": [
+            4
+          ],
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "Initial APB word-access model; firmware byte-access integration is being checked separately"
+            }
+          ]
+        }
+      },
+      "bus": {
+        "kind": "functional-mmio",
+        "roles": {
+          "addr": {
+            "port": "paddr",
+            "width": 32
+          },
+          "wdata": {
+            "port": "pwdata",
+            "width": 32
+          },
+          "rdata": {
+            "port": "prdata",
+            "width": 32
+          },
+          "wr_enable": {
+            "port": "pwrite",
+            "width": 1
+          }
+        },
+        "noise_signals": [],
+        "controls": {
+          "read": {
+            "psel": 1,
+            "penable": 0
+          },
+          "write": {
+            "psel": 1,
+            "penable": 1
+          },
+          "idle": {
+            "psel": 0,
+            "penable": 1
+          }
+        }
+      },
+      "irq_outputs": [
+        {
+          "port": "intr",
+          "bit": 0
+        },
+        {
+          "port": "intr",
+          "bit": 1
+        }
+      ],
+      "reset": {
+        "port": "presetn",
+        "active_level": 0
+      },
+      "input_ties": {
+        "etb_tim1_trig_en_off": 0,
+        "etb_tim1_trig_en_on": 0,
+        "etb_tim2_trig_en_off": 0,
+        "etb_tim2_trig_en_on": 0,
+        "pprot": 0,
+        "scan_mode": 0,
+        "tipc_tim0_trust": 0
+      },
+      "clocks": [
+        {
+          "port": "pclk",
+          "kind": "beat",
+          "frequency_hz": {
+            "value": 20000000,
+            "status": "confirmed",
+            "evidence": [
+              {
+                "source": "wujian100",
+                "location": "SDK soc.h IHS_VALUE and sys_freq.c drv_get_timer_freq; baseline clock configuration"
+              }
+            ]
+          }
+        }
+      ],
+      "simulation": {
+        "pump_hz": 20000000,
+        "rationale": "Functional MMIO beat processing plus autonomous counter advancement at the baseline 20 MHz clock. No claim of cycle-accurate CPU/peripheral scheduling."
+      },
+      "evidence": {
+        "top_module": [
+          {
+            "source": "wujian100",
+            "location": "soc/tim.v:11 tim0_sec_top"
+          }
+        ],
+        "bus": [
+          {
+            "source": "wujian100",
+            "location": "soc/tim.v timers_apbif write/EOI/read selection"
+          }
+        ],
+        "irq_outputs": [
+          {
+            "source": "wujian100",
+            "location": "soc/tim.v intr[1:0]; soc/core_top.v CLIC IRQ17/18"
+          }
+        ],
+        "reset": [
+          {
+            "source": "wujian100",
+            "location": "soc/tim.v active-low asynchronous presetn"
+          }
+        ],
+        "input_ties": [
+          {
+            "source": "wujian100",
+            "location": "soc/apb0_sub_top.v x_tim0_sec_top ETB and trust ties; scan inactive; pprot unused in top"
+          }
+        ],
+        "clocks": [
+          {
+            "source": "wujian100",
+            "location": "soc/tim.v pclk is APB and both channel clock"
+          }
+        ]
+      }
+    }
+  ],
+  "notes": "Timer baseline generation from clean official RTL. This is a peripheral model, not a completed rehosting board. CPU/CLIC/CORET and USI console integration remain separate."
+}

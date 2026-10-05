@@ -1,0 +1,408 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_tx_done"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_frame_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_break_err"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_rx_parity_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tx_done"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_frame_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_break_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_rx_parity_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_tx_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_watermark"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tx_done"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_overflow"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_frame_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_break_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_timeout"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_rx_parity_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_tx_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_tx"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_rx"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_nf"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_slpbk"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_llpbk"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_parity_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_parity_odd"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_rxblvl"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "ctrl_nco"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_txfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_rxfull"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_txempty"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_txidle"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_rxidle"
+    },
+    {
+      "kind": "re",
+      "offset": 20,
+      "reg": "status_rxempty"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "rdata"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "wdata"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_rxrst"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_txrst"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_rxilvl"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "fifo_ctrl_txilvl"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "fifo_status_txlvl"
+    },
+    {
+      "kind": "re",
+      "offset": 36,
+      "reg": "fifo_status_rxlvl"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "ovrd_txen"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "ovrd_txval"
+    },
+    {
+      "kind": "re",
+      "offset": 44,
+      "reg": "val"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "timeout_ctrl_val"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "timeout_ctrl_en"
+    }
+  ],
+  "fifo_instances": [
+    {
+      "instance": "u_uart_txfifo",
+      "module": "prim_fifo_sync",
+      "parent": "uart_core",
+      "wvalid_source": "reg2hw.wdata.qe"
+    },
+    {
+      "instance": "u_uart_rxfifo",
+      "module": "prim_fifo_sync_11",
+      "parent": "uart_core",
+      "wvalid_source": "uart_rx.rx_valid"
+    }
+  ],
+  "interrupts": [
+    "intr_tx_watermark_o",
+    "intr_tx_empty_o",
+    "intr_rx_watermark_o",
+    "intr_tx_done_o",
+    "intr_rx_overflow_o",
+    "intr_rx_frame_err_o",
+    "intr_rx_break_err_o",
+    "intr_rx_timeout_o",
+    "intr_rx_parity_err_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 9
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "lsio_trigger_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "cio_rx_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_tx_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "cio_tx_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tx_watermark_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tx_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_watermark_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_tx_done_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_overflow_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_frame_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_break_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_timeout_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_rx_parity_err_o",
+      "width": 1
+    }
+  ],
+  "top_module": "uart"
+}

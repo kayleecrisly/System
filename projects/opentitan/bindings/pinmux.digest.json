@@ -1,0 +1,9274 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "mio_periph_insel_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "mio_periph_insel_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "mio_periph_insel_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "mio_periph_insel_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "mio_periph_insel_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 24,
+      "reg": "mio_periph_insel_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 28,
+      "reg": "mio_periph_insel_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "mio_periph_insel_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "mio_periph_insel_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "mio_periph_insel_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "mio_periph_insel_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "mio_periph_insel_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "mio_periph_insel_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "mio_periph_insel_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "mio_periph_insel_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "mio_periph_insel_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "mio_periph_insel_regwen_16"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "mio_periph_insel_regwen_17"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "mio_periph_insel_regwen_18"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "mio_periph_insel_regwen_19"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "mio_periph_insel_regwen_20"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "mio_periph_insel_regwen_21"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "mio_periph_insel_regwen_22"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "mio_periph_insel_regwen_23"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "mio_periph_insel_regwen_24"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "mio_periph_insel_regwen_25"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "mio_periph_insel_regwen_26"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "mio_periph_insel_regwen_27"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "mio_periph_insel_regwen_28"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "mio_periph_insel_regwen_29"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "mio_periph_insel_regwen_30"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "mio_periph_insel_regwen_31"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "mio_periph_insel_regwen_32"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "mio_periph_insel_regwen_33"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "mio_periph_insel_regwen_34"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "mio_periph_insel_regwen_35"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "mio_periph_insel_regwen_36"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "mio_periph_insel_regwen_37"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "mio_periph_insel_regwen_38"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "mio_periph_insel_regwen_39"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "mio_periph_insel_regwen_40"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "mio_periph_insel_regwen_41"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "mio_periph_insel_regwen_42"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "mio_periph_insel_regwen_43"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "mio_periph_insel_regwen_44"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "mio_periph_insel_regwen_45"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "mio_periph_insel_regwen_46"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "mio_periph_insel_regwen_47"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "mio_periph_insel_regwen_48"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "mio_periph_insel_regwen_49"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "mio_periph_insel_regwen_50"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "mio_periph_insel_regwen_51"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "mio_periph_insel_regwen_52"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "mio_periph_insel_regwen_53"
+    },
+    {
+      "kind": "we",
+      "offset": 220,
+      "reg": "mio_periph_insel_regwen_54"
+    },
+    {
+      "kind": "we",
+      "offset": 224,
+      "reg": "mio_periph_insel_regwen_55"
+    },
+    {
+      "kind": "we",
+      "offset": 228,
+      "reg": "mio_periph_insel_regwen_56"
+    },
+    {
+      "kind": "we",
+      "offset": 232,
+      "reg": "mio_periph_insel_0"
+    },
+    {
+      "kind": "we",
+      "offset": 236,
+      "reg": "mio_periph_insel_1"
+    },
+    {
+      "kind": "we",
+      "offset": 240,
+      "reg": "mio_periph_insel_2"
+    },
+    {
+      "kind": "we",
+      "offset": 244,
+      "reg": "mio_periph_insel_3"
+    },
+    {
+      "kind": "we",
+      "offset": 248,
+      "reg": "mio_periph_insel_4"
+    },
+    {
+      "kind": "we",
+      "offset": 252,
+      "reg": "mio_periph_insel_5"
+    },
+    {
+      "kind": "we",
+      "offset": 256,
+      "reg": "mio_periph_insel_6"
+    },
+    {
+      "kind": "we",
+      "offset": 260,
+      "reg": "mio_periph_insel_7"
+    },
+    {
+      "kind": "we",
+      "offset": 264,
+      "reg": "mio_periph_insel_8"
+    },
+    {
+      "kind": "we",
+      "offset": 268,
+      "reg": "mio_periph_insel_9"
+    },
+    {
+      "kind": "we",
+      "offset": 272,
+      "reg": "mio_periph_insel_10"
+    },
+    {
+      "kind": "we",
+      "offset": 276,
+      "reg": "mio_periph_insel_11"
+    },
+    {
+      "kind": "we",
+      "offset": 280,
+      "reg": "mio_periph_insel_12"
+    },
+    {
+      "kind": "we",
+      "offset": 284,
+      "reg": "mio_periph_insel_13"
+    },
+    {
+      "kind": "we",
+      "offset": 288,
+      "reg": "mio_periph_insel_14"
+    },
+    {
+      "kind": "we",
+      "offset": 292,
+      "reg": "mio_periph_insel_15"
+    },
+    {
+      "kind": "we",
+      "offset": 296,
+      "reg": "mio_periph_insel_16"
+    },
+    {
+      "kind": "we",
+      "offset": 300,
+      "reg": "mio_periph_insel_17"
+    },
+    {
+      "kind": "we",
+      "offset": 304,
+      "reg": "mio_periph_insel_18"
+    },
+    {
+      "kind": "we",
+      "offset": 308,
+      "reg": "mio_periph_insel_19"
+    },
+    {
+      "kind": "we",
+      "offset": 312,
+      "reg": "mio_periph_insel_20"
+    },
+    {
+      "kind": "we",
+      "offset": 316,
+      "reg": "mio_periph_insel_21"
+    },
+    {
+      "kind": "we",
+      "offset": 320,
+      "reg": "mio_periph_insel_22"
+    },
+    {
+      "kind": "we",
+      "offset": 324,
+      "reg": "mio_periph_insel_23"
+    },
+    {
+      "kind": "we",
+      "offset": 328,
+      "reg": "mio_periph_insel_24"
+    },
+    {
+      "kind": "we",
+      "offset": 332,
+      "reg": "mio_periph_insel_25"
+    },
+    {
+      "kind": "we",
+      "offset": 336,
+      "reg": "mio_periph_insel_26"
+    },
+    {
+      "kind": "we",
+      "offset": 340,
+      "reg": "mio_periph_insel_27"
+    },
+    {
+      "kind": "we",
+      "offset": 344,
+      "reg": "mio_periph_insel_28"
+    },
+    {
+      "kind": "we",
+      "offset": 348,
+      "reg": "mio_periph_insel_29"
+    },
+    {
+      "kind": "we",
+      "offset": 352,
+      "reg": "mio_periph_insel_30"
+    },
+    {
+      "kind": "we",
+      "offset": 356,
+      "reg": "mio_periph_insel_31"
+    },
+    {
+      "kind": "we",
+      "offset": 360,
+      "reg": "mio_periph_insel_32"
+    },
+    {
+      "kind": "we",
+      "offset": 364,
+      "reg": "mio_periph_insel_33"
+    },
+    {
+      "kind": "we",
+      "offset": 368,
+      "reg": "mio_periph_insel_34"
+    },
+    {
+      "kind": "we",
+      "offset": 372,
+      "reg": "mio_periph_insel_35"
+    },
+    {
+      "kind": "we",
+      "offset": 376,
+      "reg": "mio_periph_insel_36"
+    },
+    {
+      "kind": "we",
+      "offset": 380,
+      "reg": "mio_periph_insel_37"
+    },
+    {
+      "kind": "we",
+      "offset": 384,
+      "reg": "mio_periph_insel_38"
+    },
+    {
+      "kind": "we",
+      "offset": 388,
+      "reg": "mio_periph_insel_39"
+    },
+    {
+      "kind": "we",
+      "offset": 392,
+      "reg": "mio_periph_insel_40"
+    },
+    {
+      "kind": "we",
+      "offset": 396,
+      "reg": "mio_periph_insel_41"
+    },
+    {
+      "kind": "we",
+      "offset": 400,
+      "reg": "mio_periph_insel_42"
+    },
+    {
+      "kind": "we",
+      "offset": 404,
+      "reg": "mio_periph_insel_43"
+    },
+    {
+      "kind": "we",
+      "offset": 408,
+      "reg": "mio_periph_insel_44"
+    },
+    {
+      "kind": "we",
+      "offset": 412,
+      "reg": "mio_periph_insel_45"
+    },
+    {
+      "kind": "we",
+      "offset": 416,
+      "reg": "mio_periph_insel_46"
+    },
+    {
+      "kind": "we",
+      "offset": 420,
+      "reg": "mio_periph_insel_47"
+    },
+    {
+      "kind": "we",
+      "offset": 424,
+      "reg": "mio_periph_insel_48"
+    },
+    {
+      "kind": "we",
+      "offset": 428,
+      "reg": "mio_periph_insel_49"
+    },
+    {
+      "kind": "we",
+      "offset": 432,
+      "reg": "mio_periph_insel_50"
+    },
+    {
+      "kind": "we",
+      "offset": 436,
+      "reg": "mio_periph_insel_51"
+    },
+    {
+      "kind": "we",
+      "offset": 440,
+      "reg": "mio_periph_insel_52"
+    },
+    {
+      "kind": "we",
+      "offset": 444,
+      "reg": "mio_periph_insel_53"
+    },
+    {
+      "kind": "we",
+      "offset": 448,
+      "reg": "mio_periph_insel_54"
+    },
+    {
+      "kind": "we",
+      "offset": 452,
+      "reg": "mio_periph_insel_55"
+    },
+    {
+      "kind": "we",
+      "offset": 456,
+      "reg": "mio_periph_insel_56"
+    },
+    {
+      "kind": "we",
+      "offset": 460,
+      "reg": "mio_outsel_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 464,
+      "reg": "mio_outsel_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 468,
+      "reg": "mio_outsel_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 472,
+      "reg": "mio_outsel_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 476,
+      "reg": "mio_outsel_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 480,
+      "reg": "mio_outsel_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 484,
+      "reg": "mio_outsel_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 488,
+      "reg": "mio_outsel_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 492,
+      "reg": "mio_outsel_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 496,
+      "reg": "mio_outsel_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 500,
+      "reg": "mio_outsel_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 504,
+      "reg": "mio_outsel_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 508,
+      "reg": "mio_outsel_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 512,
+      "reg": "mio_outsel_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 516,
+      "reg": "mio_outsel_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 520,
+      "reg": "mio_outsel_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 524,
+      "reg": "mio_outsel_regwen_16"
+    },
+    {
+      "kind": "we",
+      "offset": 528,
+      "reg": "mio_outsel_regwen_17"
+    },
+    {
+      "kind": "we",
+      "offset": 532,
+      "reg": "mio_outsel_regwen_18"
+    },
+    {
+      "kind": "we",
+      "offset": 536,
+      "reg": "mio_outsel_regwen_19"
+    },
+    {
+      "kind": "we",
+      "offset": 540,
+      "reg": "mio_outsel_regwen_20"
+    },
+    {
+      "kind": "we",
+      "offset": 544,
+      "reg": "mio_outsel_regwen_21"
+    },
+    {
+      "kind": "we",
+      "offset": 548,
+      "reg": "mio_outsel_regwen_22"
+    },
+    {
+      "kind": "we",
+      "offset": 552,
+      "reg": "mio_outsel_regwen_23"
+    },
+    {
+      "kind": "we",
+      "offset": 556,
+      "reg": "mio_outsel_regwen_24"
+    },
+    {
+      "kind": "we",
+      "offset": 560,
+      "reg": "mio_outsel_regwen_25"
+    },
+    {
+      "kind": "we",
+      "offset": 564,
+      "reg": "mio_outsel_regwen_26"
+    },
+    {
+      "kind": "we",
+      "offset": 568,
+      "reg": "mio_outsel_regwen_27"
+    },
+    {
+      "kind": "we",
+      "offset": 572,
+      "reg": "mio_outsel_regwen_28"
+    },
+    {
+      "kind": "we",
+      "offset": 576,
+      "reg": "mio_outsel_regwen_29"
+    },
+    {
+      "kind": "we",
+      "offset": 580,
+      "reg": "mio_outsel_regwen_30"
+    },
+    {
+      "kind": "we",
+      "offset": 584,
+      "reg": "mio_outsel_regwen_31"
+    },
+    {
+      "kind": "we",
+      "offset": 588,
+      "reg": "mio_outsel_regwen_32"
+    },
+    {
+      "kind": "we",
+      "offset": 592,
+      "reg": "mio_outsel_regwen_33"
+    },
+    {
+      "kind": "we",
+      "offset": 596,
+      "reg": "mio_outsel_regwen_34"
+    },
+    {
+      "kind": "we",
+      "offset": 600,
+      "reg": "mio_outsel_regwen_35"
+    },
+    {
+      "kind": "we",
+      "offset": 604,
+      "reg": "mio_outsel_regwen_36"
+    },
+    {
+      "kind": "we",
+      "offset": 608,
+      "reg": "mio_outsel_regwen_37"
+    },
+    {
+      "kind": "we",
+      "offset": 612,
+      "reg": "mio_outsel_regwen_38"
+    },
+    {
+      "kind": "we",
+      "offset": 616,
+      "reg": "mio_outsel_regwen_39"
+    },
+    {
+      "kind": "we",
+      "offset": 620,
+      "reg": "mio_outsel_regwen_40"
+    },
+    {
+      "kind": "we",
+      "offset": 624,
+      "reg": "mio_outsel_regwen_41"
+    },
+    {
+      "kind": "we",
+      "offset": 628,
+      "reg": "mio_outsel_regwen_42"
+    },
+    {
+      "kind": "we",
+      "offset": 632,
+      "reg": "mio_outsel_regwen_43"
+    },
+    {
+      "kind": "we",
+      "offset": 636,
+      "reg": "mio_outsel_regwen_44"
+    },
+    {
+      "kind": "we",
+      "offset": 640,
+      "reg": "mio_outsel_regwen_45"
+    },
+    {
+      "kind": "we",
+      "offset": 644,
+      "reg": "mio_outsel_regwen_46"
+    },
+    {
+      "kind": "we",
+      "offset": 648,
+      "reg": "mio_outsel_0"
+    },
+    {
+      "kind": "we",
+      "offset": 652,
+      "reg": "mio_outsel_1"
+    },
+    {
+      "kind": "we",
+      "offset": 656,
+      "reg": "mio_outsel_2"
+    },
+    {
+      "kind": "we",
+      "offset": 660,
+      "reg": "mio_outsel_3"
+    },
+    {
+      "kind": "we",
+      "offset": 664,
+      "reg": "mio_outsel_4"
+    },
+    {
+      "kind": "we",
+      "offset": 668,
+      "reg": "mio_outsel_5"
+    },
+    {
+      "kind": "we",
+      "offset": 672,
+      "reg": "mio_outsel_6"
+    },
+    {
+      "kind": "we",
+      "offset": 676,
+      "reg": "mio_outsel_7"
+    },
+    {
+      "kind": "we",
+      "offset": 680,
+      "reg": "mio_outsel_8"
+    },
+    {
+      "kind": "we",
+      "offset": 684,
+      "reg": "mio_outsel_9"
+    },
+    {
+      "kind": "we",
+      "offset": 688,
+      "reg": "mio_outsel_10"
+    },
+    {
+      "kind": "we",
+      "offset": 692,
+      "reg": "mio_outsel_11"
+    },
+    {
+      "kind": "we",
+      "offset": 696,
+      "reg": "mio_outsel_12"
+    },
+    {
+      "kind": "we",
+      "offset": 700,
+      "reg": "mio_outsel_13"
+    },
+    {
+      "kind": "we",
+      "offset": 704,
+      "reg": "mio_outsel_14"
+    },
+    {
+      "kind": "we",
+      "offset": 708,
+      "reg": "mio_outsel_15"
+    },
+    {
+      "kind": "we",
+      "offset": 712,
+      "reg": "mio_outsel_16"
+    },
+    {
+      "kind": "we",
+      "offset": 716,
+      "reg": "mio_outsel_17"
+    },
+    {
+      "kind": "we",
+      "offset": 720,
+      "reg": "mio_outsel_18"
+    },
+    {
+      "kind": "we",
+      "offset": 724,
+      "reg": "mio_outsel_19"
+    },
+    {
+      "kind": "we",
+      "offset": 728,
+      "reg": "mio_outsel_20"
+    },
+    {
+      "kind": "we",
+      "offset": 732,
+      "reg": "mio_outsel_21"
+    },
+    {
+      "kind": "we",
+      "offset": 736,
+      "reg": "mio_outsel_22"
+    },
+    {
+      "kind": "we",
+      "offset": 740,
+      "reg": "mio_outsel_23"
+    },
+    {
+      "kind": "we",
+      "offset": 744,
+      "reg": "mio_outsel_24"
+    },
+    {
+      "kind": "we",
+      "offset": 748,
+      "reg": "mio_outsel_25"
+    },
+    {
+      "kind": "we",
+      "offset": 752,
+      "reg": "mio_outsel_26"
+    },
+    {
+      "kind": "we",
+      "offset": 756,
+      "reg": "mio_outsel_27"
+    },
+    {
+      "kind": "we",
+      "offset": 760,
+      "reg": "mio_outsel_28"
+    },
+    {
+      "kind": "we",
+      "offset": 764,
+      "reg": "mio_outsel_29"
+    },
+    {
+      "kind": "we",
+      "offset": 768,
+      "reg": "mio_outsel_30"
+    },
+    {
+      "kind": "we",
+      "offset": 772,
+      "reg": "mio_outsel_31"
+    },
+    {
+      "kind": "we",
+      "offset": 776,
+      "reg": "mio_outsel_32"
+    },
+    {
+      "kind": "we",
+      "offset": 780,
+      "reg": "mio_outsel_33"
+    },
+    {
+      "kind": "we",
+      "offset": 784,
+      "reg": "mio_outsel_34"
+    },
+    {
+      "kind": "we",
+      "offset": 788,
+      "reg": "mio_outsel_35"
+    },
+    {
+      "kind": "we",
+      "offset": 792,
+      "reg": "mio_outsel_36"
+    },
+    {
+      "kind": "we",
+      "offset": 796,
+      "reg": "mio_outsel_37"
+    },
+    {
+      "kind": "we",
+      "offset": 800,
+      "reg": "mio_outsel_38"
+    },
+    {
+      "kind": "we",
+      "offset": 804,
+      "reg": "mio_outsel_39"
+    },
+    {
+      "kind": "we",
+      "offset": 808,
+      "reg": "mio_outsel_40"
+    },
+    {
+      "kind": "we",
+      "offset": 812,
+      "reg": "mio_outsel_41"
+    },
+    {
+      "kind": "we",
+      "offset": 816,
+      "reg": "mio_outsel_42"
+    },
+    {
+      "kind": "we",
+      "offset": 820,
+      "reg": "mio_outsel_43"
+    },
+    {
+      "kind": "we",
+      "offset": 824,
+      "reg": "mio_outsel_44"
+    },
+    {
+      "kind": "we",
+      "offset": 828,
+      "reg": "mio_outsel_45"
+    },
+    {
+      "kind": "we",
+      "offset": 832,
+      "reg": "mio_outsel_46"
+    },
+    {
+      "kind": "we",
+      "offset": 836,
+      "reg": "mio_pad_attr_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 840,
+      "reg": "mio_pad_attr_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 844,
+      "reg": "mio_pad_attr_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 848,
+      "reg": "mio_pad_attr_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 852,
+      "reg": "mio_pad_attr_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 856,
+      "reg": "mio_pad_attr_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 860,
+      "reg": "mio_pad_attr_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 864,
+      "reg": "mio_pad_attr_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 868,
+      "reg": "mio_pad_attr_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 872,
+      "reg": "mio_pad_attr_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 876,
+      "reg": "mio_pad_attr_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 880,
+      "reg": "mio_pad_attr_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 884,
+      "reg": "mio_pad_attr_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 888,
+      "reg": "mio_pad_attr_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 892,
+      "reg": "mio_pad_attr_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 896,
+      "reg": "mio_pad_attr_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 900,
+      "reg": "mio_pad_attr_regwen_16"
+    },
+    {
+      "kind": "we",
+      "offset": 904,
+      "reg": "mio_pad_attr_regwen_17"
+    },
+    {
+      "kind": "we",
+      "offset": 908,
+      "reg": "mio_pad_attr_regwen_18"
+    },
+    {
+      "kind": "we",
+      "offset": 912,
+      "reg": "mio_pad_attr_regwen_19"
+    },
+    {
+      "kind": "we",
+      "offset": 916,
+      "reg": "mio_pad_attr_regwen_20"
+    },
+    {
+      "kind": "we",
+      "offset": 920,
+      "reg": "mio_pad_attr_regwen_21"
+    },
+    {
+      "kind": "we",
+      "offset": 924,
+      "reg": "mio_pad_attr_regwen_22"
+    },
+    {
+      "kind": "we",
+      "offset": 928,
+      "reg": "mio_pad_attr_regwen_23"
+    },
+    {
+      "kind": "we",
+      "offset": 932,
+      "reg": "mio_pad_attr_regwen_24"
+    },
+    {
+      "kind": "we",
+      "offset": 936,
+      "reg": "mio_pad_attr_regwen_25"
+    },
+    {
+      "kind": "we",
+      "offset": 940,
+      "reg": "mio_pad_attr_regwen_26"
+    },
+    {
+      "kind": "we",
+      "offset": 944,
+      "reg": "mio_pad_attr_regwen_27"
+    },
+    {
+      "kind": "we",
+      "offset": 948,
+      "reg": "mio_pad_attr_regwen_28"
+    },
+    {
+      "kind": "we",
+      "offset": 952,
+      "reg": "mio_pad_attr_regwen_29"
+    },
+    {
+      "kind": "we",
+      "offset": 956,
+      "reg": "mio_pad_attr_regwen_30"
+    },
+    {
+      "kind": "we",
+      "offset": 960,
+      "reg": "mio_pad_attr_regwen_31"
+    },
+    {
+      "kind": "we",
+      "offset": 964,
+      "reg": "mio_pad_attr_regwen_32"
+    },
+    {
+      "kind": "we",
+      "offset": 968,
+      "reg": "mio_pad_attr_regwen_33"
+    },
+    {
+      "kind": "we",
+      "offset": 972,
+      "reg": "mio_pad_attr_regwen_34"
+    },
+    {
+      "kind": "we",
+      "offset": 976,
+      "reg": "mio_pad_attr_regwen_35"
+    },
+    {
+      "kind": "we",
+      "offset": 980,
+      "reg": "mio_pad_attr_regwen_36"
+    },
+    {
+      "kind": "we",
+      "offset": 984,
+      "reg": "mio_pad_attr_regwen_37"
+    },
+    {
+      "kind": "we",
+      "offset": 988,
+      "reg": "mio_pad_attr_regwen_38"
+    },
+    {
+      "kind": "we",
+      "offset": 992,
+      "reg": "mio_pad_attr_regwen_39"
+    },
+    {
+      "kind": "we",
+      "offset": 996,
+      "reg": "mio_pad_attr_regwen_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1000,
+      "reg": "mio_pad_attr_regwen_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1004,
+      "reg": "mio_pad_attr_regwen_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1008,
+      "reg": "mio_pad_attr_regwen_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1012,
+      "reg": "mio_pad_attr_regwen_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1016,
+      "reg": "mio_pad_attr_regwen_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1020,
+      "reg": "mio_pad_attr_regwen_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_invert_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_invert_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_virtual_od_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_virtual_od_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_pull_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_pull_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_pull_select_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_pull_select_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_keeper_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_keeper_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_schmitt_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_schmitt_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_od_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_od_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_input_disable_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_input_disable_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_slew_rate_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_slew_rate_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_drive_strength_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1024,
+      "reg": "mio_pad_attr_0_drive_strength_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_invert_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_invert_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_virtual_od_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_virtual_od_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_pull_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_pull_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_pull_select_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_pull_select_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_keeper_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_keeper_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_schmitt_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_schmitt_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_od_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_od_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_input_disable_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_input_disable_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_slew_rate_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_slew_rate_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_drive_strength_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1028,
+      "reg": "mio_pad_attr_1_drive_strength_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_invert_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_invert_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_virtual_od_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_virtual_od_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_pull_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_pull_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_pull_select_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_pull_select_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_keeper_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_keeper_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_schmitt_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_schmitt_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_od_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_od_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_input_disable_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_input_disable_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_slew_rate_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_slew_rate_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_drive_strength_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1032,
+      "reg": "mio_pad_attr_2_drive_strength_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_invert_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_invert_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_virtual_od_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_virtual_od_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_pull_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_pull_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_pull_select_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_pull_select_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_keeper_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_keeper_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_schmitt_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_schmitt_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_od_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_od_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_input_disable_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_input_disable_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_slew_rate_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_slew_rate_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_drive_strength_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1036,
+      "reg": "mio_pad_attr_3_drive_strength_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_invert_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_invert_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_virtual_od_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_virtual_od_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_pull_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_pull_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_pull_select_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_pull_select_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_keeper_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_keeper_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_schmitt_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_schmitt_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_od_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_od_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_input_disable_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_input_disable_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_slew_rate_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_slew_rate_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_drive_strength_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1040,
+      "reg": "mio_pad_attr_4_drive_strength_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_invert_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_invert_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_virtual_od_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_virtual_od_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_pull_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_pull_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_pull_select_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_pull_select_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_keeper_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_keeper_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_schmitt_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_schmitt_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_od_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_od_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_input_disable_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_input_disable_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_slew_rate_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_slew_rate_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_drive_strength_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1044,
+      "reg": "mio_pad_attr_5_drive_strength_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_invert_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_invert_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_virtual_od_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_virtual_od_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_pull_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_pull_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_pull_select_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_pull_select_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_keeper_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_keeper_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_schmitt_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_schmitt_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_od_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_od_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_input_disable_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_input_disable_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_slew_rate_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_slew_rate_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_drive_strength_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1048,
+      "reg": "mio_pad_attr_6_drive_strength_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_invert_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_invert_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_virtual_od_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_virtual_od_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_pull_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_pull_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_pull_select_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_pull_select_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_keeper_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_keeper_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_schmitt_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_schmitt_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_od_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_od_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_input_disable_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_input_disable_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_slew_rate_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_slew_rate_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_drive_strength_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1052,
+      "reg": "mio_pad_attr_7_drive_strength_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_invert_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_invert_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_virtual_od_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_virtual_od_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_pull_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_pull_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_pull_select_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_pull_select_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_keeper_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_keeper_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_schmitt_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_schmitt_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_od_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_od_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_input_disable_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_input_disable_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_slew_rate_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_slew_rate_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_drive_strength_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1056,
+      "reg": "mio_pad_attr_8_drive_strength_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_invert_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_invert_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_virtual_od_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_virtual_od_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_pull_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_pull_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_pull_select_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_pull_select_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_keeper_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_keeper_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_schmitt_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_schmitt_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_od_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_od_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_input_disable_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_input_disable_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_slew_rate_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_slew_rate_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_drive_strength_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1060,
+      "reg": "mio_pad_attr_9_drive_strength_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_invert_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_invert_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_virtual_od_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_virtual_od_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_pull_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_pull_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_pull_select_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_pull_select_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_keeper_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_keeper_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_schmitt_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_schmitt_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_od_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_od_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_input_disable_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_input_disable_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_slew_rate_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_slew_rate_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_drive_strength_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1064,
+      "reg": "mio_pad_attr_10_drive_strength_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_invert_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_invert_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_virtual_od_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_virtual_od_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_pull_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_pull_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_pull_select_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_pull_select_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_keeper_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_keeper_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_schmitt_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_schmitt_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_od_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_od_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_input_disable_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_input_disable_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_slew_rate_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_slew_rate_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_drive_strength_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1068,
+      "reg": "mio_pad_attr_11_drive_strength_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_invert_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_invert_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_virtual_od_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_virtual_od_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_pull_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_pull_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_pull_select_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_pull_select_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_keeper_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_keeper_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_schmitt_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_schmitt_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_od_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_od_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_input_disable_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_input_disable_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_slew_rate_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_slew_rate_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_drive_strength_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1072,
+      "reg": "mio_pad_attr_12_drive_strength_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_invert_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_invert_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_virtual_od_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_virtual_od_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_pull_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_pull_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_pull_select_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_pull_select_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_keeper_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_keeper_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_schmitt_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_schmitt_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_od_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_od_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_input_disable_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_input_disable_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_slew_rate_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_slew_rate_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_drive_strength_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1076,
+      "reg": "mio_pad_attr_13_drive_strength_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_invert_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_invert_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_virtual_od_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_virtual_od_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_pull_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_pull_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_pull_select_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_pull_select_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_keeper_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_keeper_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_schmitt_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_schmitt_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_od_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_od_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_input_disable_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_input_disable_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_slew_rate_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_slew_rate_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_drive_strength_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1080,
+      "reg": "mio_pad_attr_14_drive_strength_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_invert_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_invert_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_virtual_od_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_virtual_od_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_pull_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_pull_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_pull_select_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_pull_select_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_keeper_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_keeper_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_schmitt_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_schmitt_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_od_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_od_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_input_disable_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_input_disable_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_slew_rate_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_slew_rate_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_drive_strength_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1084,
+      "reg": "mio_pad_attr_15_drive_strength_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_invert_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_invert_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_virtual_od_en_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_virtual_od_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_pull_en_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_pull_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_pull_select_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_pull_select_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_keeper_en_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_keeper_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_schmitt_en_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_schmitt_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_od_en_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_od_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_input_disable_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_input_disable_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_slew_rate_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_slew_rate_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_drive_strength_16"
+    },
+    {
+      "kind": "re",
+      "offset": 1088,
+      "reg": "mio_pad_attr_16_drive_strength_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_invert_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_invert_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_virtual_od_en_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_virtual_od_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_pull_en_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_pull_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_pull_select_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_pull_select_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_keeper_en_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_keeper_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_schmitt_en_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_schmitt_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_od_en_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_od_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_input_disable_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_input_disable_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_slew_rate_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_slew_rate_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_drive_strength_17"
+    },
+    {
+      "kind": "re",
+      "offset": 1092,
+      "reg": "mio_pad_attr_17_drive_strength_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_invert_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_invert_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_virtual_od_en_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_virtual_od_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_pull_en_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_pull_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_pull_select_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_pull_select_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_keeper_en_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_keeper_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_schmitt_en_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_schmitt_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_od_en_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_od_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_input_disable_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_input_disable_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_slew_rate_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_slew_rate_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_drive_strength_18"
+    },
+    {
+      "kind": "re",
+      "offset": 1096,
+      "reg": "mio_pad_attr_18_drive_strength_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_invert_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_invert_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_virtual_od_en_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_virtual_od_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_pull_en_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_pull_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_pull_select_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_pull_select_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_keeper_en_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_keeper_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_schmitt_en_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_schmitt_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_od_en_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_od_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_input_disable_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_input_disable_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_slew_rate_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_slew_rate_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_drive_strength_19"
+    },
+    {
+      "kind": "re",
+      "offset": 1100,
+      "reg": "mio_pad_attr_19_drive_strength_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_invert_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_invert_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_virtual_od_en_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_virtual_od_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_pull_en_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_pull_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_pull_select_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_pull_select_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_keeper_en_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_keeper_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_schmitt_en_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_schmitt_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_od_en_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_od_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_input_disable_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_input_disable_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_slew_rate_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_slew_rate_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_drive_strength_20"
+    },
+    {
+      "kind": "re",
+      "offset": 1104,
+      "reg": "mio_pad_attr_20_drive_strength_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_invert_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_invert_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_virtual_od_en_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_virtual_od_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_pull_en_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_pull_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_pull_select_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_pull_select_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_keeper_en_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_keeper_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_schmitt_en_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_schmitt_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_od_en_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_od_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_input_disable_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_input_disable_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_slew_rate_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_slew_rate_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_drive_strength_21"
+    },
+    {
+      "kind": "re",
+      "offset": 1108,
+      "reg": "mio_pad_attr_21_drive_strength_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_invert_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_invert_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_virtual_od_en_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_virtual_od_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_pull_en_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_pull_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_pull_select_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_pull_select_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_keeper_en_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_keeper_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_schmitt_en_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_schmitt_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_od_en_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_od_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_input_disable_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_input_disable_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_slew_rate_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_slew_rate_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_drive_strength_22"
+    },
+    {
+      "kind": "re",
+      "offset": 1112,
+      "reg": "mio_pad_attr_22_drive_strength_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_invert_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_invert_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_virtual_od_en_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_virtual_od_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_pull_en_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_pull_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_pull_select_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_pull_select_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_keeper_en_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_keeper_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_schmitt_en_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_schmitt_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_od_en_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_od_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_input_disable_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_input_disable_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_slew_rate_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_slew_rate_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_drive_strength_23"
+    },
+    {
+      "kind": "re",
+      "offset": 1116,
+      "reg": "mio_pad_attr_23_drive_strength_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_invert_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_invert_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_virtual_od_en_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_virtual_od_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_pull_en_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_pull_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_pull_select_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_pull_select_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_keeper_en_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_keeper_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_schmitt_en_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_schmitt_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_od_en_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_od_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_input_disable_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_input_disable_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_slew_rate_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_slew_rate_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_drive_strength_24"
+    },
+    {
+      "kind": "re",
+      "offset": 1120,
+      "reg": "mio_pad_attr_24_drive_strength_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_invert_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_invert_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_virtual_od_en_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_virtual_od_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_pull_en_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_pull_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_pull_select_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_pull_select_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_keeper_en_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_keeper_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_schmitt_en_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_schmitt_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_od_en_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_od_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_input_disable_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_input_disable_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_slew_rate_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_slew_rate_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_drive_strength_25"
+    },
+    {
+      "kind": "re",
+      "offset": 1124,
+      "reg": "mio_pad_attr_25_drive_strength_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_invert_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_invert_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_virtual_od_en_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_virtual_od_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_pull_en_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_pull_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_pull_select_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_pull_select_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_keeper_en_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_keeper_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_schmitt_en_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_schmitt_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_od_en_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_od_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_input_disable_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_input_disable_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_slew_rate_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_slew_rate_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_drive_strength_26"
+    },
+    {
+      "kind": "re",
+      "offset": 1128,
+      "reg": "mio_pad_attr_26_drive_strength_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_invert_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_invert_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_virtual_od_en_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_virtual_od_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_pull_en_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_pull_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_pull_select_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_pull_select_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_keeper_en_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_keeper_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_schmitt_en_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_schmitt_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_od_en_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_od_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_input_disable_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_input_disable_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_slew_rate_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_slew_rate_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_drive_strength_27"
+    },
+    {
+      "kind": "re",
+      "offset": 1132,
+      "reg": "mio_pad_attr_27_drive_strength_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_invert_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_invert_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_virtual_od_en_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_virtual_od_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_pull_en_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_pull_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_pull_select_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_pull_select_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_keeper_en_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_keeper_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_schmitt_en_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_schmitt_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_od_en_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_od_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_input_disable_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_input_disable_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_slew_rate_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_slew_rate_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_drive_strength_28"
+    },
+    {
+      "kind": "re",
+      "offset": 1136,
+      "reg": "mio_pad_attr_28_drive_strength_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_invert_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_invert_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_virtual_od_en_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_virtual_od_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_pull_en_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_pull_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_pull_select_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_pull_select_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_keeper_en_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_keeper_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_schmitt_en_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_schmitt_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_od_en_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_od_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_input_disable_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_input_disable_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_slew_rate_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_slew_rate_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_drive_strength_29"
+    },
+    {
+      "kind": "re",
+      "offset": 1140,
+      "reg": "mio_pad_attr_29_drive_strength_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_invert_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_invert_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_virtual_od_en_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_virtual_od_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_pull_en_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_pull_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_pull_select_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_pull_select_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_keeper_en_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_keeper_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_schmitt_en_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_schmitt_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_od_en_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_od_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_input_disable_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_input_disable_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_slew_rate_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_slew_rate_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_drive_strength_30"
+    },
+    {
+      "kind": "re",
+      "offset": 1144,
+      "reg": "mio_pad_attr_30_drive_strength_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_invert_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_invert_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_virtual_od_en_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_virtual_od_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_pull_en_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_pull_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_pull_select_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_pull_select_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_keeper_en_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_keeper_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_schmitt_en_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_schmitt_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_od_en_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_od_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_input_disable_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_input_disable_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_slew_rate_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_slew_rate_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_drive_strength_31"
+    },
+    {
+      "kind": "re",
+      "offset": 1148,
+      "reg": "mio_pad_attr_31_drive_strength_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_invert_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_invert_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_virtual_od_en_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_virtual_od_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_pull_en_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_pull_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_pull_select_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_pull_select_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_keeper_en_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_keeper_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_schmitt_en_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_schmitt_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_od_en_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_od_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_input_disable_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_input_disable_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_slew_rate_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_slew_rate_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_drive_strength_32"
+    },
+    {
+      "kind": "re",
+      "offset": 1152,
+      "reg": "mio_pad_attr_32_drive_strength_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_invert_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_invert_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_virtual_od_en_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_virtual_od_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_pull_en_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_pull_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_pull_select_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_pull_select_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_keeper_en_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_keeper_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_schmitt_en_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_schmitt_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_od_en_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_od_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_input_disable_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_input_disable_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_slew_rate_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_slew_rate_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_drive_strength_33"
+    },
+    {
+      "kind": "re",
+      "offset": 1156,
+      "reg": "mio_pad_attr_33_drive_strength_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_invert_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_invert_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_virtual_od_en_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_virtual_od_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_pull_en_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_pull_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_pull_select_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_pull_select_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_keeper_en_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_keeper_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_schmitt_en_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_schmitt_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_od_en_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_od_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_input_disable_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_input_disable_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_slew_rate_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_slew_rate_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_drive_strength_34"
+    },
+    {
+      "kind": "re",
+      "offset": 1160,
+      "reg": "mio_pad_attr_34_drive_strength_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_invert_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_invert_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_virtual_od_en_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_virtual_od_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_pull_en_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_pull_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_pull_select_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_pull_select_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_keeper_en_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_keeper_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_schmitt_en_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_schmitt_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_od_en_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_od_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_input_disable_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_input_disable_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_slew_rate_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_slew_rate_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_drive_strength_35"
+    },
+    {
+      "kind": "re",
+      "offset": 1164,
+      "reg": "mio_pad_attr_35_drive_strength_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_invert_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_invert_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_virtual_od_en_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_virtual_od_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_pull_en_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_pull_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_pull_select_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_pull_select_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_keeper_en_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_keeper_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_schmitt_en_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_schmitt_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_od_en_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_od_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_input_disable_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_input_disable_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_slew_rate_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_slew_rate_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_drive_strength_36"
+    },
+    {
+      "kind": "re",
+      "offset": 1168,
+      "reg": "mio_pad_attr_36_drive_strength_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_invert_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_invert_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_virtual_od_en_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_virtual_od_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_pull_en_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_pull_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_pull_select_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_pull_select_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_keeper_en_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_keeper_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_schmitt_en_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_schmitt_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_od_en_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_od_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_input_disable_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_input_disable_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_slew_rate_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_slew_rate_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_drive_strength_37"
+    },
+    {
+      "kind": "re",
+      "offset": 1172,
+      "reg": "mio_pad_attr_37_drive_strength_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_invert_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_invert_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_virtual_od_en_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_virtual_od_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_pull_en_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_pull_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_pull_select_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_pull_select_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_keeper_en_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_keeper_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_schmitt_en_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_schmitt_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_od_en_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_od_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_input_disable_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_input_disable_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_slew_rate_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_slew_rate_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_drive_strength_38"
+    },
+    {
+      "kind": "re",
+      "offset": 1176,
+      "reg": "mio_pad_attr_38_drive_strength_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_invert_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_invert_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_virtual_od_en_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_virtual_od_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_pull_en_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_pull_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_pull_select_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_pull_select_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_keeper_en_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_keeper_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_schmitt_en_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_schmitt_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_od_en_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_od_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_input_disable_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_input_disable_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_slew_rate_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_slew_rate_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_drive_strength_39"
+    },
+    {
+      "kind": "re",
+      "offset": 1180,
+      "reg": "mio_pad_attr_39_drive_strength_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_invert_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_invert_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_virtual_od_en_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_virtual_od_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_pull_en_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_pull_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_pull_select_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_pull_select_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_keeper_en_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_keeper_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_schmitt_en_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_schmitt_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_od_en_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_od_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_input_disable_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_input_disable_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_slew_rate_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_slew_rate_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_drive_strength_40"
+    },
+    {
+      "kind": "re",
+      "offset": 1184,
+      "reg": "mio_pad_attr_40_drive_strength_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_invert_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_invert_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_virtual_od_en_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_virtual_od_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_pull_en_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_pull_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_pull_select_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_pull_select_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_keeper_en_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_keeper_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_schmitt_en_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_schmitt_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_od_en_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_od_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_input_disable_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_input_disable_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_slew_rate_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_slew_rate_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_drive_strength_41"
+    },
+    {
+      "kind": "re",
+      "offset": 1188,
+      "reg": "mio_pad_attr_41_drive_strength_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_invert_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_invert_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_virtual_od_en_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_virtual_od_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_pull_en_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_pull_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_pull_select_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_pull_select_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_keeper_en_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_keeper_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_schmitt_en_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_schmitt_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_od_en_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_od_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_input_disable_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_input_disable_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_slew_rate_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_slew_rate_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_drive_strength_42"
+    },
+    {
+      "kind": "re",
+      "offset": 1192,
+      "reg": "mio_pad_attr_42_drive_strength_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_invert_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_invert_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_virtual_od_en_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_virtual_od_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_pull_en_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_pull_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_pull_select_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_pull_select_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_keeper_en_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_keeper_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_schmitt_en_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_schmitt_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_od_en_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_od_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_input_disable_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_input_disable_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_slew_rate_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_slew_rate_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_drive_strength_43"
+    },
+    {
+      "kind": "re",
+      "offset": 1196,
+      "reg": "mio_pad_attr_43_drive_strength_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_invert_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_invert_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_virtual_od_en_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_virtual_od_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_pull_en_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_pull_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_pull_select_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_pull_select_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_keeper_en_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_keeper_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_schmitt_en_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_schmitt_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_od_en_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_od_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_input_disable_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_input_disable_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_slew_rate_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_slew_rate_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_drive_strength_44"
+    },
+    {
+      "kind": "re",
+      "offset": 1200,
+      "reg": "mio_pad_attr_44_drive_strength_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_invert_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_invert_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_virtual_od_en_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_virtual_od_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_pull_en_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_pull_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_pull_select_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_pull_select_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_keeper_en_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_keeper_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_schmitt_en_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_schmitt_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_od_en_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_od_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_input_disable_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_input_disable_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_slew_rate_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_slew_rate_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_drive_strength_45"
+    },
+    {
+      "kind": "re",
+      "offset": 1204,
+      "reg": "mio_pad_attr_45_drive_strength_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_invert_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_invert_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_virtual_od_en_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_virtual_od_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_pull_en_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_pull_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_pull_select_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_pull_select_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_keeper_en_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_keeper_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_schmitt_en_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_schmitt_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_od_en_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_od_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_input_disable_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_input_disable_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_slew_rate_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_slew_rate_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_drive_strength_46"
+    },
+    {
+      "kind": "re",
+      "offset": 1208,
+      "reg": "mio_pad_attr_46_drive_strength_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1212,
+      "reg": "dio_pad_attr_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1216,
+      "reg": "dio_pad_attr_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1220,
+      "reg": "dio_pad_attr_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1224,
+      "reg": "dio_pad_attr_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1228,
+      "reg": "dio_pad_attr_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1232,
+      "reg": "dio_pad_attr_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1236,
+      "reg": "dio_pad_attr_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1240,
+      "reg": "dio_pad_attr_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1244,
+      "reg": "dio_pad_attr_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1248,
+      "reg": "dio_pad_attr_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1252,
+      "reg": "dio_pad_attr_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1256,
+      "reg": "dio_pad_attr_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1260,
+      "reg": "dio_pad_attr_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1264,
+      "reg": "dio_pad_attr_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1268,
+      "reg": "dio_pad_attr_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1272,
+      "reg": "dio_pad_attr_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_invert_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_invert_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_virtual_od_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_virtual_od_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_pull_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_pull_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_pull_select_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_pull_select_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_keeper_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_keeper_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_schmitt_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_schmitt_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_od_en_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_od_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_input_disable_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_input_disable_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_slew_rate_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_slew_rate_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_drive_strength_0"
+    },
+    {
+      "kind": "re",
+      "offset": 1276,
+      "reg": "dio_pad_attr_0_drive_strength_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_invert_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_invert_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_virtual_od_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_virtual_od_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_pull_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_pull_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_pull_select_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_pull_select_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_keeper_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_keeper_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_schmitt_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_schmitt_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_od_en_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_od_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_input_disable_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_input_disable_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_slew_rate_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_slew_rate_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_drive_strength_1"
+    },
+    {
+      "kind": "re",
+      "offset": 1280,
+      "reg": "dio_pad_attr_1_drive_strength_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_invert_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_invert_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_virtual_od_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_virtual_od_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_pull_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_pull_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_pull_select_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_pull_select_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_keeper_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_keeper_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_schmitt_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_schmitt_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_od_en_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_od_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_input_disable_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_input_disable_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_slew_rate_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_slew_rate_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_drive_strength_2"
+    },
+    {
+      "kind": "re",
+      "offset": 1284,
+      "reg": "dio_pad_attr_2_drive_strength_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_invert_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_invert_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_virtual_od_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_virtual_od_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_pull_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_pull_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_pull_select_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_pull_select_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_keeper_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_keeper_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_schmitt_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_schmitt_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_od_en_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_od_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_input_disable_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_input_disable_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_slew_rate_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_slew_rate_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_drive_strength_3"
+    },
+    {
+      "kind": "re",
+      "offset": 1288,
+      "reg": "dio_pad_attr_3_drive_strength_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_invert_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_invert_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_virtual_od_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_virtual_od_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_pull_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_pull_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_pull_select_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_pull_select_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_keeper_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_keeper_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_schmitt_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_schmitt_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_od_en_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_od_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_input_disable_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_input_disable_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_slew_rate_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_slew_rate_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_drive_strength_4"
+    },
+    {
+      "kind": "re",
+      "offset": 1292,
+      "reg": "dio_pad_attr_4_drive_strength_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_invert_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_invert_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_virtual_od_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_virtual_od_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_pull_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_pull_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_pull_select_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_pull_select_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_keeper_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_keeper_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_schmitt_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_schmitt_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_od_en_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_od_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_input_disable_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_input_disable_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_slew_rate_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_slew_rate_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_drive_strength_5"
+    },
+    {
+      "kind": "re",
+      "offset": 1296,
+      "reg": "dio_pad_attr_5_drive_strength_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_invert_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_invert_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_virtual_od_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_virtual_od_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_pull_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_pull_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_pull_select_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_pull_select_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_keeper_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_keeper_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_schmitt_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_schmitt_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_od_en_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_od_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_input_disable_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_input_disable_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_slew_rate_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_slew_rate_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_drive_strength_6"
+    },
+    {
+      "kind": "re",
+      "offset": 1300,
+      "reg": "dio_pad_attr_6_drive_strength_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_invert_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_invert_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_virtual_od_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_virtual_od_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_pull_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_pull_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_pull_select_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_pull_select_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_keeper_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_keeper_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_schmitt_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_schmitt_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_od_en_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_od_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_input_disable_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_input_disable_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_slew_rate_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_slew_rate_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_drive_strength_7"
+    },
+    {
+      "kind": "re",
+      "offset": 1304,
+      "reg": "dio_pad_attr_7_drive_strength_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_invert_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_invert_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_virtual_od_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_virtual_od_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_pull_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_pull_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_pull_select_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_pull_select_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_keeper_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_keeper_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_schmitt_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_schmitt_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_od_en_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_od_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_input_disable_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_input_disable_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_slew_rate_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_slew_rate_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_drive_strength_8"
+    },
+    {
+      "kind": "re",
+      "offset": 1308,
+      "reg": "dio_pad_attr_8_drive_strength_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_invert_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_invert_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_virtual_od_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_virtual_od_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_pull_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_pull_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_pull_select_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_pull_select_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_keeper_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_keeper_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_schmitt_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_schmitt_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_od_en_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_od_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_input_disable_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_input_disable_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_slew_rate_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_slew_rate_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_drive_strength_9"
+    },
+    {
+      "kind": "re",
+      "offset": 1312,
+      "reg": "dio_pad_attr_9_drive_strength_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_invert_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_invert_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_virtual_od_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_virtual_od_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_pull_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_pull_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_pull_select_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_pull_select_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_keeper_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_keeper_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_schmitt_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_schmitt_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_od_en_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_od_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_input_disable_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_input_disable_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_slew_rate_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_slew_rate_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_drive_strength_10"
+    },
+    {
+      "kind": "re",
+      "offset": 1316,
+      "reg": "dio_pad_attr_10_drive_strength_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_invert_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_invert_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_virtual_od_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_virtual_od_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_pull_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_pull_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_pull_select_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_pull_select_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_keeper_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_keeper_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_schmitt_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_schmitt_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_od_en_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_od_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_input_disable_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_input_disable_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_slew_rate_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_slew_rate_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_drive_strength_11"
+    },
+    {
+      "kind": "re",
+      "offset": 1320,
+      "reg": "dio_pad_attr_11_drive_strength_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_invert_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_invert_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_virtual_od_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_virtual_od_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_pull_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_pull_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_pull_select_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_pull_select_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_keeper_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_keeper_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_schmitt_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_schmitt_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_od_en_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_od_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_input_disable_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_input_disable_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_slew_rate_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_slew_rate_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_drive_strength_12"
+    },
+    {
+      "kind": "re",
+      "offset": 1324,
+      "reg": "dio_pad_attr_12_drive_strength_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_invert_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_invert_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_virtual_od_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_virtual_od_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_pull_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_pull_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_pull_select_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_pull_select_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_keeper_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_keeper_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_schmitt_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_schmitt_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_od_en_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_od_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_input_disable_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_input_disable_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_slew_rate_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_slew_rate_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_drive_strength_13"
+    },
+    {
+      "kind": "re",
+      "offset": 1328,
+      "reg": "dio_pad_attr_13_drive_strength_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_invert_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_invert_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_virtual_od_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_virtual_od_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_pull_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_pull_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_pull_select_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_pull_select_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_keeper_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_keeper_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_schmitt_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_schmitt_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_od_en_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_od_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_input_disable_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_input_disable_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_slew_rate_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_slew_rate_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_drive_strength_14"
+    },
+    {
+      "kind": "re",
+      "offset": 1332,
+      "reg": "dio_pad_attr_14_drive_strength_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_invert_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_invert_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_virtual_od_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_virtual_od_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_pull_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_pull_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_pull_select_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_pull_select_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_keeper_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_keeper_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_schmitt_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_schmitt_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_od_en_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_od_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_input_disable_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_input_disable_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_slew_rate_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_slew_rate_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_drive_strength_15"
+    },
+    {
+      "kind": "re",
+      "offset": 1336,
+      "reg": "dio_pad_attr_15_drive_strength_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1340,
+      "reg": "mio_pad_sleep_status_0_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1344,
+      "reg": "mio_pad_sleep_status_1_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1348,
+      "reg": "mio_pad_sleep_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1352,
+      "reg": "mio_pad_sleep_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1356,
+      "reg": "mio_pad_sleep_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1360,
+      "reg": "mio_pad_sleep_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1364,
+      "reg": "mio_pad_sleep_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1368,
+      "reg": "mio_pad_sleep_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1372,
+      "reg": "mio_pad_sleep_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1376,
+      "reg": "mio_pad_sleep_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1380,
+      "reg": "mio_pad_sleep_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1384,
+      "reg": "mio_pad_sleep_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1388,
+      "reg": "mio_pad_sleep_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1392,
+      "reg": "mio_pad_sleep_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1396,
+      "reg": "mio_pad_sleep_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1400,
+      "reg": "mio_pad_sleep_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1404,
+      "reg": "mio_pad_sleep_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1408,
+      "reg": "mio_pad_sleep_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1412,
+      "reg": "mio_pad_sleep_regwen_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1416,
+      "reg": "mio_pad_sleep_regwen_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1420,
+      "reg": "mio_pad_sleep_regwen_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1424,
+      "reg": "mio_pad_sleep_regwen_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1428,
+      "reg": "mio_pad_sleep_regwen_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1432,
+      "reg": "mio_pad_sleep_regwen_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1436,
+      "reg": "mio_pad_sleep_regwen_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1440,
+      "reg": "mio_pad_sleep_regwen_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1444,
+      "reg": "mio_pad_sleep_regwen_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1448,
+      "reg": "mio_pad_sleep_regwen_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1452,
+      "reg": "mio_pad_sleep_regwen_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1456,
+      "reg": "mio_pad_sleep_regwen_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1460,
+      "reg": "mio_pad_sleep_regwen_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1464,
+      "reg": "mio_pad_sleep_regwen_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1468,
+      "reg": "mio_pad_sleep_regwen_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1472,
+      "reg": "mio_pad_sleep_regwen_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1476,
+      "reg": "mio_pad_sleep_regwen_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1480,
+      "reg": "mio_pad_sleep_regwen_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1484,
+      "reg": "mio_pad_sleep_regwen_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1488,
+      "reg": "mio_pad_sleep_regwen_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1492,
+      "reg": "mio_pad_sleep_regwen_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1496,
+      "reg": "mio_pad_sleep_regwen_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1500,
+      "reg": "mio_pad_sleep_regwen_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1504,
+      "reg": "mio_pad_sleep_regwen_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1508,
+      "reg": "mio_pad_sleep_regwen_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1512,
+      "reg": "mio_pad_sleep_regwen_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1516,
+      "reg": "mio_pad_sleep_regwen_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1520,
+      "reg": "mio_pad_sleep_regwen_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1524,
+      "reg": "mio_pad_sleep_regwen_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1528,
+      "reg": "mio_pad_sleep_regwen_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1532,
+      "reg": "mio_pad_sleep_regwen_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1536,
+      "reg": "mio_pad_sleep_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1540,
+      "reg": "mio_pad_sleep_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1544,
+      "reg": "mio_pad_sleep_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1548,
+      "reg": "mio_pad_sleep_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1552,
+      "reg": "mio_pad_sleep_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1556,
+      "reg": "mio_pad_sleep_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1560,
+      "reg": "mio_pad_sleep_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1564,
+      "reg": "mio_pad_sleep_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1568,
+      "reg": "mio_pad_sleep_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1572,
+      "reg": "mio_pad_sleep_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1576,
+      "reg": "mio_pad_sleep_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1580,
+      "reg": "mio_pad_sleep_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1584,
+      "reg": "mio_pad_sleep_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1588,
+      "reg": "mio_pad_sleep_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1592,
+      "reg": "mio_pad_sleep_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1596,
+      "reg": "mio_pad_sleep_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1600,
+      "reg": "mio_pad_sleep_en_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1604,
+      "reg": "mio_pad_sleep_en_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1608,
+      "reg": "mio_pad_sleep_en_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1612,
+      "reg": "mio_pad_sleep_en_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1616,
+      "reg": "mio_pad_sleep_en_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1620,
+      "reg": "mio_pad_sleep_en_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1624,
+      "reg": "mio_pad_sleep_en_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1628,
+      "reg": "mio_pad_sleep_en_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1632,
+      "reg": "mio_pad_sleep_en_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1636,
+      "reg": "mio_pad_sleep_en_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1640,
+      "reg": "mio_pad_sleep_en_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1644,
+      "reg": "mio_pad_sleep_en_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1648,
+      "reg": "mio_pad_sleep_en_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1652,
+      "reg": "mio_pad_sleep_en_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1656,
+      "reg": "mio_pad_sleep_en_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1660,
+      "reg": "mio_pad_sleep_en_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1664,
+      "reg": "mio_pad_sleep_en_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1668,
+      "reg": "mio_pad_sleep_en_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1672,
+      "reg": "mio_pad_sleep_en_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1676,
+      "reg": "mio_pad_sleep_en_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1680,
+      "reg": "mio_pad_sleep_en_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1684,
+      "reg": "mio_pad_sleep_en_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1688,
+      "reg": "mio_pad_sleep_en_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1692,
+      "reg": "mio_pad_sleep_en_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1696,
+      "reg": "mio_pad_sleep_en_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1700,
+      "reg": "mio_pad_sleep_en_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1704,
+      "reg": "mio_pad_sleep_en_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1708,
+      "reg": "mio_pad_sleep_en_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1712,
+      "reg": "mio_pad_sleep_en_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1716,
+      "reg": "mio_pad_sleep_en_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1720,
+      "reg": "mio_pad_sleep_en_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1724,
+      "reg": "mio_pad_sleep_mode_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1728,
+      "reg": "mio_pad_sleep_mode_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1732,
+      "reg": "mio_pad_sleep_mode_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1736,
+      "reg": "mio_pad_sleep_mode_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1740,
+      "reg": "mio_pad_sleep_mode_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1744,
+      "reg": "mio_pad_sleep_mode_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1748,
+      "reg": "mio_pad_sleep_mode_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1752,
+      "reg": "mio_pad_sleep_mode_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1756,
+      "reg": "mio_pad_sleep_mode_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1760,
+      "reg": "mio_pad_sleep_mode_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1764,
+      "reg": "mio_pad_sleep_mode_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1768,
+      "reg": "mio_pad_sleep_mode_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1772,
+      "reg": "mio_pad_sleep_mode_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1776,
+      "reg": "mio_pad_sleep_mode_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1780,
+      "reg": "mio_pad_sleep_mode_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1784,
+      "reg": "mio_pad_sleep_mode_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1788,
+      "reg": "mio_pad_sleep_mode_16"
+    },
+    {
+      "kind": "we",
+      "offset": 1792,
+      "reg": "mio_pad_sleep_mode_17"
+    },
+    {
+      "kind": "we",
+      "offset": 1796,
+      "reg": "mio_pad_sleep_mode_18"
+    },
+    {
+      "kind": "we",
+      "offset": 1800,
+      "reg": "mio_pad_sleep_mode_19"
+    },
+    {
+      "kind": "we",
+      "offset": 1804,
+      "reg": "mio_pad_sleep_mode_20"
+    },
+    {
+      "kind": "we",
+      "offset": 1808,
+      "reg": "mio_pad_sleep_mode_21"
+    },
+    {
+      "kind": "we",
+      "offset": 1812,
+      "reg": "mio_pad_sleep_mode_22"
+    },
+    {
+      "kind": "we",
+      "offset": 1816,
+      "reg": "mio_pad_sleep_mode_23"
+    },
+    {
+      "kind": "we",
+      "offset": 1820,
+      "reg": "mio_pad_sleep_mode_24"
+    },
+    {
+      "kind": "we",
+      "offset": 1824,
+      "reg": "mio_pad_sleep_mode_25"
+    },
+    {
+      "kind": "we",
+      "offset": 1828,
+      "reg": "mio_pad_sleep_mode_26"
+    },
+    {
+      "kind": "we",
+      "offset": 1832,
+      "reg": "mio_pad_sleep_mode_27"
+    },
+    {
+      "kind": "we",
+      "offset": 1836,
+      "reg": "mio_pad_sleep_mode_28"
+    },
+    {
+      "kind": "we",
+      "offset": 1840,
+      "reg": "mio_pad_sleep_mode_29"
+    },
+    {
+      "kind": "we",
+      "offset": 1844,
+      "reg": "mio_pad_sleep_mode_30"
+    },
+    {
+      "kind": "we",
+      "offset": 1848,
+      "reg": "mio_pad_sleep_mode_31"
+    },
+    {
+      "kind": "we",
+      "offset": 1852,
+      "reg": "mio_pad_sleep_mode_32"
+    },
+    {
+      "kind": "we",
+      "offset": 1856,
+      "reg": "mio_pad_sleep_mode_33"
+    },
+    {
+      "kind": "we",
+      "offset": 1860,
+      "reg": "mio_pad_sleep_mode_34"
+    },
+    {
+      "kind": "we",
+      "offset": 1864,
+      "reg": "mio_pad_sleep_mode_35"
+    },
+    {
+      "kind": "we",
+      "offset": 1868,
+      "reg": "mio_pad_sleep_mode_36"
+    },
+    {
+      "kind": "we",
+      "offset": 1872,
+      "reg": "mio_pad_sleep_mode_37"
+    },
+    {
+      "kind": "we",
+      "offset": 1876,
+      "reg": "mio_pad_sleep_mode_38"
+    },
+    {
+      "kind": "we",
+      "offset": 1880,
+      "reg": "mio_pad_sleep_mode_39"
+    },
+    {
+      "kind": "we",
+      "offset": 1884,
+      "reg": "mio_pad_sleep_mode_40"
+    },
+    {
+      "kind": "we",
+      "offset": 1888,
+      "reg": "mio_pad_sleep_mode_41"
+    },
+    {
+      "kind": "we",
+      "offset": 1892,
+      "reg": "mio_pad_sleep_mode_42"
+    },
+    {
+      "kind": "we",
+      "offset": 1896,
+      "reg": "mio_pad_sleep_mode_43"
+    },
+    {
+      "kind": "we",
+      "offset": 1900,
+      "reg": "mio_pad_sleep_mode_44"
+    },
+    {
+      "kind": "we",
+      "offset": 1904,
+      "reg": "mio_pad_sleep_mode_45"
+    },
+    {
+      "kind": "we",
+      "offset": 1908,
+      "reg": "mio_pad_sleep_mode_46"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1912,
+      "reg": "dio_pad_sleep_status_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1916,
+      "reg": "dio_pad_sleep_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1920,
+      "reg": "dio_pad_sleep_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1924,
+      "reg": "dio_pad_sleep_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1928,
+      "reg": "dio_pad_sleep_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1932,
+      "reg": "dio_pad_sleep_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 1936,
+      "reg": "dio_pad_sleep_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 1940,
+      "reg": "dio_pad_sleep_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 1944,
+      "reg": "dio_pad_sleep_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 1948,
+      "reg": "dio_pad_sleep_regwen_8"
+    },
+    {
+      "kind": "we",
+      "offset": 1952,
+      "reg": "dio_pad_sleep_regwen_9"
+    },
+    {
+      "kind": "we",
+      "offset": 1956,
+      "reg": "dio_pad_sleep_regwen_10"
+    },
+    {
+      "kind": "we",
+      "offset": 1960,
+      "reg": "dio_pad_sleep_regwen_11"
+    },
+    {
+      "kind": "we",
+      "offset": 1964,
+      "reg": "dio_pad_sleep_regwen_12"
+    },
+    {
+      "kind": "we",
+      "offset": 1968,
+      "reg": "dio_pad_sleep_regwen_13"
+    },
+    {
+      "kind": "we",
+      "offset": 1972,
+      "reg": "dio_pad_sleep_regwen_14"
+    },
+    {
+      "kind": "we",
+      "offset": 1976,
+      "reg": "dio_pad_sleep_regwen_15"
+    },
+    {
+      "kind": "we",
+      "offset": 1980,
+      "reg": "dio_pad_sleep_en_0"
+    },
+    {
+      "kind": "we",
+      "offset": 1984,
+      "reg": "dio_pad_sleep_en_1"
+    },
+    {
+      "kind": "we",
+      "offset": 1988,
+      "reg": "dio_pad_sleep_en_2"
+    },
+    {
+      "kind": "we",
+      "offset": 1992,
+      "reg": "dio_pad_sleep_en_3"
+    },
+    {
+      "kind": "we",
+      "offset": 1996,
+      "reg": "dio_pad_sleep_en_4"
+    },
+    {
+      "kind": "we",
+      "offset": 2000,
+      "reg": "dio_pad_sleep_en_5"
+    },
+    {
+      "kind": "we",
+      "offset": 2004,
+      "reg": "dio_pad_sleep_en_6"
+    },
+    {
+      "kind": "we",
+      "offset": 2008,
+      "reg": "dio_pad_sleep_en_7"
+    },
+    {
+      "kind": "we",
+      "offset": 2012,
+      "reg": "dio_pad_sleep_en_8"
+    },
+    {
+      "kind": "we",
+      "offset": 2016,
+      "reg": "dio_pad_sleep_en_9"
+    },
+    {
+      "kind": "we",
+      "offset": 2020,
+      "reg": "dio_pad_sleep_en_10"
+    },
+    {
+      "kind": "we",
+      "offset": 2024,
+      "reg": "dio_pad_sleep_en_11"
+    },
+    {
+      "kind": "we",
+      "offset": 2028,
+      "reg": "dio_pad_sleep_en_12"
+    },
+    {
+      "kind": "we",
+      "offset": 2032,
+      "reg": "dio_pad_sleep_en_13"
+    },
+    {
+      "kind": "we",
+      "offset": 2036,
+      "reg": "dio_pad_sleep_en_14"
+    },
+    {
+      "kind": "we",
+      "offset": 2040,
+      "reg": "dio_pad_sleep_en_15"
+    },
+    {
+      "kind": "we",
+      "offset": 2044,
+      "reg": "dio_pad_sleep_mode_0"
+    },
+    {
+      "kind": "we",
+      "offset": 2048,
+      "reg": "dio_pad_sleep_mode_1"
+    },
+    {
+      "kind": "we",
+      "offset": 2052,
+      "reg": "dio_pad_sleep_mode_2"
+    },
+    {
+      "kind": "we",
+      "offset": 2056,
+      "reg": "dio_pad_sleep_mode_3"
+    },
+    {
+      "kind": "we",
+      "offset": 2060,
+      "reg": "dio_pad_sleep_mode_4"
+    },
+    {
+      "kind": "we",
+      "offset": 2064,
+      "reg": "dio_pad_sleep_mode_5"
+    },
+    {
+      "kind": "we",
+      "offset": 2068,
+      "reg": "dio_pad_sleep_mode_6"
+    },
+    {
+      "kind": "we",
+      "offset": 2072,
+      "reg": "dio_pad_sleep_mode_7"
+    },
+    {
+      "kind": "we",
+      "offset": 2076,
+      "reg": "dio_pad_sleep_mode_8"
+    },
+    {
+      "kind": "we",
+      "offset": 2080,
+      "reg": "dio_pad_sleep_mode_9"
+    },
+    {
+      "kind": "we",
+      "offset": 2084,
+      "reg": "dio_pad_sleep_mode_10"
+    },
+    {
+      "kind": "we",
+      "offset": 2088,
+      "reg": "dio_pad_sleep_mode_11"
+    },
+    {
+      "kind": "we",
+      "offset": 2092,
+      "reg": "dio_pad_sleep_mode_12"
+    },
+    {
+      "kind": "we",
+      "offset": 2096,
+      "reg": "dio_pad_sleep_mode_13"
+    },
+    {
+      "kind": "we",
+      "offset": 2100,
+      "reg": "dio_pad_sleep_mode_14"
+    },
+    {
+      "kind": "we",
+      "offset": 2104,
+      "reg": "dio_pad_sleep_mode_15"
+    },
+    {
+      "kind": "we",
+      "offset": 2108,
+      "reg": "wkup_detector_regwen_0"
+    },
+    {
+      "kind": "we",
+      "offset": 2112,
+      "reg": "wkup_detector_regwen_1"
+    },
+    {
+      "kind": "we",
+      "offset": 2116,
+      "reg": "wkup_detector_regwen_2"
+    },
+    {
+      "kind": "we",
+      "offset": 2120,
+      "reg": "wkup_detector_regwen_3"
+    },
+    {
+      "kind": "we",
+      "offset": 2124,
+      "reg": "wkup_detector_regwen_4"
+    },
+    {
+      "kind": "we",
+      "offset": 2128,
+      "reg": "wkup_detector_regwen_5"
+    },
+    {
+      "kind": "we",
+      "offset": 2132,
+      "reg": "wkup_detector_regwen_6"
+    },
+    {
+      "kind": "we",
+      "offset": 2136,
+      "reg": "wkup_detector_regwen_7"
+    },
+    {
+      "kind": "we",
+      "offset": 2236,
+      "reg": "wkup_detector_padsel_0"
+    },
+    {
+      "kind": "we",
+      "offset": 2240,
+      "reg": "wkup_detector_padsel_1"
+    },
+    {
+      "kind": "we",
+      "offset": 2244,
+      "reg": "wkup_detector_padsel_2"
+    },
+    {
+      "kind": "we",
+      "offset": 2248,
+      "reg": "wkup_detector_padsel_3"
+    },
+    {
+      "kind": "we",
+      "offset": 2252,
+      "reg": "wkup_detector_padsel_4"
+    },
+    {
+      "kind": "we",
+      "offset": 2256,
+      "reg": "wkup_detector_padsel_5"
+    },
+    {
+      "kind": "we",
+      "offset": 2260,
+      "reg": "wkup_detector_padsel_6"
+    },
+    {
+      "kind": "we",
+      "offset": 2264,
+      "reg": "wkup_detector_padsel_7"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [],
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_sys_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "scanmode_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "clk_aon_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_aon_ni",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "pin_wkup_req_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_wkup_req_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "sleep_en_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "strap_en_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "strap_en_override_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "lc_dft_en_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "lc_hw_debug_clr_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "lc_hw_debug_en_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "lc_check_byp_en_i",
+      "width": 4
+    },
+    {
+      "dir": "in",
+      "name": "lc_escalate_en_i",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "pinmux_hw_debug_en_o",
+      "width": 4
+    },
+    {
+      "dir": "out",
+      "name": "dft_strap_test_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "dft_hold_tap_sel_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "lc_jtag_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "lc_jtag_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "rv_jtag_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "rv_jtag_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "dft_jtag_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "dft_jtag_i",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "usbdev_dppullup_en_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usbdev_dnpullup_en_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_dppullup_en_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usb_dnpullup_en_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usbdev_suspend_req_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "usbdev_wake_ack_i",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usbdev_bus_not_idle_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usbdev_bus_reset_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usbdev_sense_lost_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "usbdev_wake_detect_active_o",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "periph_to_mio_i",
+      "width": 75
+    },
+    {
+      "dir": "in",
+      "name": "periph_to_mio_oe_i",
+      "width": 75
+    },
+    {
+      "dir": "out",
+      "name": "mio_to_periph_o",
+      "width": 57
+    },
+    {
+      "dir": "in",
+      "name": "periph_to_dio_i",
+      "width": 16
+    },
+    {
+      "dir": "in",
+      "name": "periph_to_dio_oe_i",
+      "width": 16
+    },
+    {
+      "dir": "out",
+      "name": "dio_to_periph_o",
+      "width": 16
+    },
+    {
+      "dir": "out",
+      "name": "mio_attr_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "mio_out_o",
+      "width": 47
+    },
+    {
+      "dir": "out",
+      "name": "mio_oe_o",
+      "width": 47
+    },
+    {
+      "dir": "in",
+      "name": "mio_in_i",
+      "width": 47
+    },
+    {
+      "dir": "out",
+      "name": "dio_attr_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "dio_out_o",
+      "width": 16
+    },
+    {
+      "dir": "out",
+      "name": "dio_oe_o",
+      "width": 16
+    },
+    {
+      "dir": "in",
+      "name": "dio_in_i",
+      "width": 16
+    }
+  ],
+  "top_module": "pinmux"
+}

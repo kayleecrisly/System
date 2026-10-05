@@ -1,0 +1,211 @@
+{
+  "$schema_version": 1,
+  "project": "wujian100",
+  "sources": [
+    {
+      "id": "wujian100",
+      "kind": "rtl",
+      "path": "../../../../wujian100_open_original/soc/usi0.v",
+      "revision": "83e297583bb3454b688f9f27d6bc20ff3276ad32"
+    }
+  ],
+  "devices": [
+    {
+      "id": "usi0",
+      "top_module": "usi0_sec_top",
+      "input": {
+        "rtl": {
+          "top": "usi0_sec_top",
+          "files": [
+            "../../../../wujian100_open_original/soc/usi0.v"
+          ],
+          "include_dirs": [],
+          "defines": []
+        }
+      },
+      "backend": "generic-sysbus",
+      "rtl_adapter": "none",
+      "facts": {
+        "mmio_size": {
+          "value": 4096,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/params/apb0_params.v leaf4: 0x50028000..0x50028fff"
+            }
+          ]
+        },
+        "irq_count": {
+          "value": 1,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/usi0.v usi_intr; soc/core_top.v IRQ28"
+            }
+          ]
+        },
+        "data_width": {
+          "value": 32,
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "soc/usi0.v paddr/pwdata/prdata[31:0]"
+            }
+          ]
+        },
+        "byte_order": {
+          "value": "little",
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "SDK RV32 ILP32E target; soc/usi0.v low-order register fields"
+            }
+          ]
+        },
+        "access_sizes": {
+          "value": [
+            4
+          ],
+          "status": "confirmed",
+          "evidence": [
+            {
+              "source": "wujian100",
+              "location": "SDK wj_usi_usart.c uses 32-bit USI registers for baseline console"
+            }
+          ]
+        }
+      },
+      "bus": {
+        "kind": "functional-mmio",
+        "roles": {
+          "addr": {
+            "port": "paddr",
+            "width": 32
+          },
+          "wdata": {
+            "port": "pwdata",
+            "width": 32
+          },
+          "rdata": {
+            "port": "prdata",
+            "width": 32
+          },
+          "wr_enable": {
+            "port": "pwrite",
+            "width": 1
+          }
+        },
+        "noise_signals": [],
+        "controls": {
+          "read": {
+            "psel": 1,
+            "penable": 0
+          },
+          "write": {
+            "psel": 1,
+            "penable": 0
+          },
+          "idle": {
+            "psel": 0,
+            "penable": 1
+          }
+        }
+      },
+      "irq_outputs": [
+        {
+          "port": "usi_intr",
+          "bit": 0
+        }
+      ],
+      "reset": {
+        "port": "rst_n",
+        "active_level": 0
+      },
+      "input_ties": {
+        "dma_ack_rx": 0,
+        "dma_ack_tx": 0,
+        "pprot": 0,
+        "tipc_usi0_trust": 0,
+        "nss_in": 1,
+        "sclk_in": 1,
+        "sd0_in": 1,
+        "sd1_in": 1
+      },
+      "pin_io": {
+        "data_out": {
+          "port": "sd0_out",
+          "width": 1
+        }
+      },
+      "clocks": [
+        {
+          "port": "clk",
+          "kind": "beat",
+          "frequency_hz": {
+            "value": 20000000,
+            "status": "confirmed",
+            "evidence": [
+              {
+                "source": "wujian100",
+                "location": "SDK baseline g_system_clock and drv_get_usi_freq"
+              }
+            ]
+          }
+        }
+      ],
+      "simulation": {
+        "pump_hz": 20000000,
+        "rationale": "Baseline console TX only: RX sclk_in held at UART idle-high, other disconnected serial inputs high, DMA acknowledgements low. Exposes TX pad as GPIO; no host character backend is synthesized by this configuration. Functional MMIO plus autonomous clock pump, not a cycle-accuracy claim."
+      },
+      "evidence": {
+        "top_module": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v:3765 usi0_sec_top"
+          }
+        ],
+        "bus": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v:522-523 apb_wen/ren require penable=0"
+          }
+        ],
+        "irq_outputs": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v top usi_intr"
+          }
+        ],
+        "reset": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v active-low rst_n"
+          }
+        ],
+        "input_ties": [
+          {
+            "source": "wujian100",
+            "location": "soc/apb0_sub_top.v DMA/trust tied low; baseline environment assumption: unconnected serial pins high, UART RX idle"
+          }
+        ],
+        "clocks": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v clk; SDK sys_freq.c"
+          }
+        ],
+        "pin_io": [
+          {
+            "source": "wujian100",
+            "location": "soc/usi0.v sdata_if maps UART txd_out to sd0_out"
+          }
+        ]
+      }
+    }
+  ],
+  "notes": "Original official RTL. This model exposes UART TX as a pin; serial character decoding and CPU/CLIC/CORET board integration are separate."
+}

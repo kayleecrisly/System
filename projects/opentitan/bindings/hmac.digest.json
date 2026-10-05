@@ -1,0 +1,586 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_hmac_done"
+    },
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "intr_state_hmac_err"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_hmac_done"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_fifo_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "intr_enable_hmac_err"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_hmac_done"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_fifo_empty"
+    },
+    {
+      "kind": "we",
+      "offset": 8,
+      "reg": "intr_test_hmac_err"
+    },
+    {
+      "kind": "we",
+      "offset": 12,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_hmac_en"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_hmac_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_sha_en"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_sha_en"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_endian_swap"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_endian_swap"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_digest_swap"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_digest_swap"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_key_swap"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_key_swap"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_digest_size"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_digest_size"
+    },
+    {
+      "kind": "we",
+      "offset": 16,
+      "reg": "cfg_key_length"
+    },
+    {
+      "kind": "re",
+      "offset": 16,
+      "reg": "cfg_key_length"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cmd_hash_start"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cmd_hash_process"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cmd_hash_stop"
+    },
+    {
+      "kind": "we",
+      "offset": 20,
+      "reg": "cmd_hash_continue"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_hmac_idle"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_fifo_empty"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_fifo_full"
+    },
+    {
+      "kind": "re",
+      "offset": 24,
+      "reg": "status_fifo_depth"
+    },
+    {
+      "kind": "we",
+      "offset": 32,
+      "reg": "wipe_secret"
+    },
+    {
+      "kind": "we",
+      "offset": 36,
+      "reg": "key_0"
+    },
+    {
+      "kind": "we",
+      "offset": 40,
+      "reg": "key_1"
+    },
+    {
+      "kind": "we",
+      "offset": 44,
+      "reg": "key_2"
+    },
+    {
+      "kind": "we",
+      "offset": 48,
+      "reg": "key_3"
+    },
+    {
+      "kind": "we",
+      "offset": 52,
+      "reg": "key_4"
+    },
+    {
+      "kind": "we",
+      "offset": 56,
+      "reg": "key_5"
+    },
+    {
+      "kind": "we",
+      "offset": 60,
+      "reg": "key_6"
+    },
+    {
+      "kind": "we",
+      "offset": 64,
+      "reg": "key_7"
+    },
+    {
+      "kind": "we",
+      "offset": 68,
+      "reg": "key_8"
+    },
+    {
+      "kind": "we",
+      "offset": 72,
+      "reg": "key_9"
+    },
+    {
+      "kind": "we",
+      "offset": 76,
+      "reg": "key_10"
+    },
+    {
+      "kind": "we",
+      "offset": 80,
+      "reg": "key_11"
+    },
+    {
+      "kind": "we",
+      "offset": 84,
+      "reg": "key_12"
+    },
+    {
+      "kind": "we",
+      "offset": 88,
+      "reg": "key_13"
+    },
+    {
+      "kind": "we",
+      "offset": 92,
+      "reg": "key_14"
+    },
+    {
+      "kind": "we",
+      "offset": 96,
+      "reg": "key_15"
+    },
+    {
+      "kind": "we",
+      "offset": 100,
+      "reg": "key_16"
+    },
+    {
+      "kind": "we",
+      "offset": 104,
+      "reg": "key_17"
+    },
+    {
+      "kind": "we",
+      "offset": 108,
+      "reg": "key_18"
+    },
+    {
+      "kind": "we",
+      "offset": 112,
+      "reg": "key_19"
+    },
+    {
+      "kind": "we",
+      "offset": 116,
+      "reg": "key_20"
+    },
+    {
+      "kind": "we",
+      "offset": 120,
+      "reg": "key_21"
+    },
+    {
+      "kind": "we",
+      "offset": 124,
+      "reg": "key_22"
+    },
+    {
+      "kind": "we",
+      "offset": 128,
+      "reg": "key_23"
+    },
+    {
+      "kind": "we",
+      "offset": 132,
+      "reg": "key_24"
+    },
+    {
+      "kind": "we",
+      "offset": 136,
+      "reg": "key_25"
+    },
+    {
+      "kind": "we",
+      "offset": 140,
+      "reg": "key_26"
+    },
+    {
+      "kind": "we",
+      "offset": 144,
+      "reg": "key_27"
+    },
+    {
+      "kind": "we",
+      "offset": 148,
+      "reg": "key_28"
+    },
+    {
+      "kind": "we",
+      "offset": 152,
+      "reg": "key_29"
+    },
+    {
+      "kind": "we",
+      "offset": 156,
+      "reg": "key_30"
+    },
+    {
+      "kind": "we",
+      "offset": 160,
+      "reg": "key_31"
+    },
+    {
+      "kind": "we",
+      "offset": 164,
+      "reg": "digest_0"
+    },
+    {
+      "kind": "re",
+      "offset": 164,
+      "reg": "digest_0"
+    },
+    {
+      "kind": "we",
+      "offset": 168,
+      "reg": "digest_1"
+    },
+    {
+      "kind": "re",
+      "offset": 168,
+      "reg": "digest_1"
+    },
+    {
+      "kind": "we",
+      "offset": 172,
+      "reg": "digest_2"
+    },
+    {
+      "kind": "re",
+      "offset": 172,
+      "reg": "digest_2"
+    },
+    {
+      "kind": "we",
+      "offset": 176,
+      "reg": "digest_3"
+    },
+    {
+      "kind": "re",
+      "offset": 176,
+      "reg": "digest_3"
+    },
+    {
+      "kind": "we",
+      "offset": 180,
+      "reg": "digest_4"
+    },
+    {
+      "kind": "re",
+      "offset": 180,
+      "reg": "digest_4"
+    },
+    {
+      "kind": "we",
+      "offset": 184,
+      "reg": "digest_5"
+    },
+    {
+      "kind": "re",
+      "offset": 184,
+      "reg": "digest_5"
+    },
+    {
+      "kind": "we",
+      "offset": 188,
+      "reg": "digest_6"
+    },
+    {
+      "kind": "re",
+      "offset": 188,
+      "reg": "digest_6"
+    },
+    {
+      "kind": "we",
+      "offset": 192,
+      "reg": "digest_7"
+    },
+    {
+      "kind": "re",
+      "offset": 192,
+      "reg": "digest_7"
+    },
+    {
+      "kind": "we",
+      "offset": 196,
+      "reg": "digest_8"
+    },
+    {
+      "kind": "re",
+      "offset": 196,
+      "reg": "digest_8"
+    },
+    {
+      "kind": "we",
+      "offset": 200,
+      "reg": "digest_9"
+    },
+    {
+      "kind": "re",
+      "offset": 200,
+      "reg": "digest_9"
+    },
+    {
+      "kind": "we",
+      "offset": 204,
+      "reg": "digest_10"
+    },
+    {
+      "kind": "re",
+      "offset": 204,
+      "reg": "digest_10"
+    },
+    {
+      "kind": "we",
+      "offset": 208,
+      "reg": "digest_11"
+    },
+    {
+      "kind": "re",
+      "offset": 208,
+      "reg": "digest_11"
+    },
+    {
+      "kind": "we",
+      "offset": 212,
+      "reg": "digest_12"
+    },
+    {
+      "kind": "re",
+      "offset": 212,
+      "reg": "digest_12"
+    },
+    {
+      "kind": "we",
+      "offset": 216,
+      "reg": "digest_13"
+    },
+    {
+      "kind": "re",
+      "offset": 216,
+      "reg": "digest_13"
+    },
+    {
+      "kind": "we",
+      "offset": 220,
+      "reg": "digest_14"
+    },
+    {
+      "kind": "re",
+      "offset": 220,
+      "reg": "digest_14"
+    },
+    {
+      "kind": "we",
+      "offset": 224,
+      "reg": "digest_15"
+    },
+    {
+      "kind": "re",
+      "offset": 224,
+      "reg": "digest_15"
+    },
+    {
+      "kind": "we",
+      "offset": 228,
+      "reg": "msg_length_lower"
+    },
+    {
+      "kind": "re",
+      "offset": 228,
+      "reg": "msg_length_lower"
+    },
+    {
+      "kind": "we",
+      "offset": 232,
+      "reg": "msg_length_upper"
+    },
+    {
+      "kind": "re",
+      "offset": 232,
+      "reg": "msg_length_upper"
+    }
+  ],
+  "clock_roots": [
+    {
+      "clock_sigs": 36,
+      "decision": "beat (primary/bus clock; cannot be event)",
+      "kind": "beat",
+      "port": "clk_i",
+      "primary": true,
+      "processes": 77
+    }
+  ],
+  "fifo_instances": [
+    {
+      "instance": "u_msg_fifo",
+      "module": "prim_fifo_sync",
+      "parent": "hmac",
+      "wvalid_source": "sha_en"
+    }
+  ],
+  "interrupts": [
+    "intr_hmac_done_o",
+    "intr_fifo_empty_o",
+    "intr_hmac_err_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 12,
+    "intr_enable_offset": 4,
+    "intr_state_offset": 0,
+    "irq_count": 3
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_hmac_done_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_fifo_empty_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "intr_hmac_err_o",
+      "width": 1
+    },
+    {
+      "dir": "out",
+      "name": "idle_o",
+      "width": 4
+    }
+  ],
+  "top_module": "hmac"
+}

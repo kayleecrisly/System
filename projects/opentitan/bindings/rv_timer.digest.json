@@ -1,0 +1,117 @@
+{
+  "addr_decode": [
+    {
+      "kind": "we",
+      "offset": 0,
+      "reg": "alert_test"
+    },
+    {
+      "kind": "we",
+      "offset": 4,
+      "reg": "ctrl"
+    },
+    {
+      "kind": "we",
+      "offset": 256,
+      "reg": "intr_enable0"
+    },
+    {
+      "kind": "we",
+      "offset": 260,
+      "reg": "intr_state0"
+    },
+    {
+      "kind": "we",
+      "offset": 264,
+      "reg": "intr_test0"
+    },
+    {
+      "kind": "we",
+      "offset": 268,
+      "reg": "cfg0_prescale"
+    },
+    {
+      "kind": "we",
+      "offset": 268,
+      "reg": "cfg0_step"
+    },
+    {
+      "kind": "we",
+      "offset": 272,
+      "reg": "timer_v_lower0"
+    },
+    {
+      "kind": "we",
+      "offset": 276,
+      "reg": "timer_v_upper0"
+    },
+    {
+      "kind": "we",
+      "offset": 280,
+      "reg": "compare_lower0_0"
+    },
+    {
+      "kind": "we",
+      "offset": 284,
+      "reg": "compare_upper0_0"
+    }
+  ],
+  "fifo_instances": [],
+  "interrupts": [
+    "intr_timer_expired_hart0_timer0_o"
+  ],
+  "irq_suggestion": {
+    "alert_test_offset": 0,
+    "intr_enable_offset": 256,
+    "intr_state_offset": 260,
+    "irq_count": 1
+  },
+  "ports": [
+    {
+      "dir": "in",
+      "name": "clk_i",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "rst_ni",
+      "width": 1
+    },
+    {
+      "dir": "in",
+      "name": "tl_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "tl_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "alert_rx_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "alert_tx_o",
+      "width": 0
+    },
+    {
+      "dir": "in",
+      "name": "racl_policies_i",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "racl_error_o",
+      "width": 0
+    },
+    {
+      "dir": "out",
+      "name": "intr_timer_expired_hart0_timer0_o",
+      "width": 1
+    }
+  ],
+  "top_module": "rv_timer"
+}
